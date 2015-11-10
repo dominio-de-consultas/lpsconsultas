@@ -78,5 +78,20 @@ public class SchedulingSystem
 		;
 	}
 	
+	public void printListOfUser()
+	{
+		for(int i = 0; i < this.listOfUser.size(); i++)
+		{
+			System.out.println(i+" : "+this.listOfUser.get(i).toString());
+		}
+	}
+	
+	void printListOfUserType()
+	{
+		for(int i = 0; i < this.listOfUserType.size(); i++)
+		{
+			System.out.println(i+" : "+this.listOfUserType.get(i).toString());
+		}
+	}
 	
 }
