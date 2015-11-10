@@ -16,6 +16,25 @@ public class SchedulingSystem
 		this.listOfUser = new ArrayList<User>();
 	}
 	
+	Boolean hasUserType()
+	{
+		if(listOfUserType.size() != 0)
+		{
+			return true;
+		}
+		
+		return false;
+	}
+	Boolean hasUser()
+	{
+		if(listOfUser.size() != 0)
+		{
+			return true;
+		}
+		
+		return false;
+	}
+	
 	//----------UserType methods----------
 	public void createUserType(String name, Boolean[] listOfAttributes)
 	{

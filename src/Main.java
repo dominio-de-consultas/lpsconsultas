@@ -16,7 +16,15 @@ public class Main
 		{
 			System.out.println("Escolha a opção");
 			System.out.println("1 - cria um novo tipo de usuario");
-			System.out.println("2 - cria um novo usuario");
+			if(schedulingSystem.hasUserType())
+			{
+				System.out.println("2 - cria um novo usuario");
+			}
+			if(schedulingSystem.hasUser())
+			{
+				;
+			}
+			
 			System.out.println("0 - encerrra o sistema");
 			System.out.print("Opcao escolhida:");
 			option = scanner.nextLine();
@@ -57,8 +65,16 @@ public class Main
 					
 				//2 - cria um novo usuario
 				case "2":
-					//User user = userType.createUser();
-					;
+					
+					if(schedulingSystem.hasUserType())
+					{
+						//User user = userType.createUser();
+					}
+					else
+					{
+						System.out.println("Operação negada: É necessário criar um tipo de usuário");
+					}
+						
 					
 				//0 - encerrra o sistema
 				case "0":
