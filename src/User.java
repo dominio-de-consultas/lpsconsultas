@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class User {
-	
-	private Integer ID;
 	private HashMap<Integer, Object> attributesOfUserType;
 	
 	

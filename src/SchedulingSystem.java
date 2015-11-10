@@ -1,24 +1,62 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class SchedulingSystem
 {
 
-	public HashMap<Integer, UserType> listOfUserType;
-	public HashMap<Integer, User> listOfUser;
+	//----------Attributes----------
+	public List<UserType> listOfUserType;
+	public List<User> listOfUser;
 	
+	//----------Constructor methods----------
 	SchedulingSystem()
 	{
-		this.listOfUserType = new HashMap<Integer, UserType>();
-		this.listOfUser = new HashMap<Integer, User>();
-		
-		
+		this.listOfUserType = new ArrayList<UserType>();
+		this.listOfUser = new ArrayList<User>();
 	}
 	
-	void createUserType(Integer ID, String name, Boolean[] listOfAttributes)
+	//----------UserType methods----------
+	public void createUserType(String name, Boolean[] listOfAttributes)
 	{
 		UserType userType = new UserType(name, listOfAttributes);
-		listOfUserType.put(ID, userType);
+		listOfUserType.add(userType);
+	}
+	
+	public void editUserType()
+	{
+		;
+	}
+	
+	public void removeUserType()
+	{
+		;
+	}
+	
+	public void searchUserType()
+	{
+		;
+	}
+	
+	//----------User methods----------
+	public void createUser()
+	{
+		;
+	}
+
+	public void editUser()
+	{
+		;
+	}
+	
+	public void removeUser()
+	{
+		;
+	}
+	
+	public void searchUser()
+	{
+		;
 	}
 	
 	
