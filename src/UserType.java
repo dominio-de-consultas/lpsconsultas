@@ -4,10 +4,10 @@ import java.util.Map;
 
 public class UserType {
 	
-	private Integer id;
-	private Integer numberOfAttributes;
-	private Boolean[] listOfAttributes;
-	private String nameOfType;
+	public Integer id;
+	public Integer numberOfAttributes;
+	public Boolean[] listOfAttributes;
+	public String nameOfType;
 	
 	public UserType(String nameOfType, Boolean[] listOfAttributes)
 	{
