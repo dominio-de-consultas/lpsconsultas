@@ -29,4 +29,10 @@ public class User {
 	{
 		;
 	}
+	
+	String getName()
+	{
+		return this.attributesOfUser.get(Attributes.nome.ordinal()).toString();
+		
+	}
 }

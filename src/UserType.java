@@ -70,4 +70,9 @@ public class UserType {
 		User user = new User(attributesOfUserType);
 		return user;
 	}
+	
+	String getName()
+	{
+		return this.nameOfType;
+	}
 }

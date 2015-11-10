@@ -82,7 +82,7 @@ public class SchedulingSystem
 	{
 		for(int i = 0; i < this.listOfUser.size(); i++)
 		{
-			System.out.println(i+" : "+this.listOfUser.get(i).toString());
+			System.out.println(i+" : "+this.listOfUser.get(i).getName());
 		}
 	}
 	
@@ -90,7 +90,7 @@ public class SchedulingSystem
 	{
 		for(int i = 0; i < this.listOfUserType.size(); i++)
 		{
-			System.out.println(i+" : "+this.listOfUserType.get(i).toString());
+			System.out.println(i+" : "+this.listOfUserType.get(i).getName());
 		}
 	}
 	

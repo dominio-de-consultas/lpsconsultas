@@ -69,6 +69,7 @@ public class Main
 					if(schedulingSystem.hasUserType())
 					{
 						//User user = userType.createUser();
+						schedulingSystem.printListOfUserType();
 					}
 					else
 					{
