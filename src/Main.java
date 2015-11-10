@@ -49,6 +49,9 @@ public class Main
 							listOfAttributes[i] = false;
 						}
 					}
+					// O CPF eh a chave
+					listOfAttributes[Attributes.CPF.ordinal()] = true;
+					
 					schedulingSystem.createUserType(name, listOfAttributes);
 					break;
 					
@@ -65,7 +68,6 @@ public class Main
 				
 			}
 			
-
 		}
 		scanner.close();
 
