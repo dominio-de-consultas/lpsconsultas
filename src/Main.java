@@ -14,13 +14,18 @@ public class Main
 		Boolean flag = true;
 		while(flag)
 		{
-			System.out.println("Escolha a opção (IUT / IU)");
+			System.out.println("Escolha a opção");
+			System.out.println("1 - cria um novo tipo de usuario");
+			System.out.println("2 - cria um novo usuario");
+			System.out.println("0 - encerrra o sistema");
+			System.out.print("Opcao escolhida:");
 			option = scanner.nextLine();
 			option = option.toUpperCase();
 			
 			switch (option)
 			{
-				case "IUT":
+				//1 - cria um novo tipo de usuario
+				case "1":
 					Boolean[] listOfAttributes = new Boolean[Attributes.values().length];
 							
 					System.out.println("Entre com o nome do tipo de usuario:");
@@ -46,11 +51,14 @@ public class Main
 					}
 					schedulingSystem.createUserType(name, listOfAttributes);
 					break;
-	
-				case "IU":
+					
+				//2 - cria um novo usuario
+				case "2":
 					//User user = userType.createUser();
 					;
-				case "END":
+					
+				//0 - encerrra o sistema
+				case "0":
 					flag = false;
 				default:
 					break;
