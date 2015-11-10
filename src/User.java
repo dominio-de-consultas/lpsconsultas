@@ -4,21 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class User {
-	private HashMap<Integer, Object> attributesOfUserType;
+	private HashMap<Integer, Object> attributesOfUser;
 	
 	
 	User(HashMap<Integer, Object> attributesOfUserType)
 	{
-		Collection<Object> attributes = attributesOfUserType.values();
-		Object[] a = attributes.toArray();
-		
-		/*
-		for(Object i:a)
-		
+		Set<Integer> key = attributesOfUserType.keySet();
+		for(int i = 0; i < key.size(); i++)
 		{
-			System.out.println(i.toString());
+			Object aux = attributesOfUserType.get(key[i]);
+			this.attributesOfUser.put(key, aux);
 		}
-		*/
 	}
 	
 	void editAttribute(Integer attributeID, Object content)
