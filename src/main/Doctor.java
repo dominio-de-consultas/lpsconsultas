@@ -31,7 +31,7 @@ public class Doctor
 		}
 		else
 		{
-			System.out.println("JÃ¡ existem um cronograma neste horÃ¡rio");
+			System.out.println("Já existem um cronograma neste horário");
 		}
 		
 	}
@@ -41,20 +41,20 @@ public class Doctor
 		for(int i = 0 ; i < this.listOfSchedules.size(); i++)
 		{
 			Schedule actualSchedule = this.listOfSchedules.get(i);
-			if(true)
+			if
+			(
+				(starterDate.after(actualSchedule.starterDate) && starterDate.before(actualSchedule.finalDate))	
+				||
+				(finalDate.before(actualSchedule.finalDate) && finalDate.after(actualSchedule.starterDate))
+				||
+				(starterDate.before(actualSchedule.starterDate) && finalDate.after(actualSchedule.finalDate))
+			)
 			{
-				if
-				(
-					(starterDate.after(actualSchedule.starterDate) && starterDate.before(actualSchedule.finalDate))	
-					||
-					(finalDate.before(actualSchedule.finalDate) && finalDate.after(actualSchedule.starterDate))
-				)
-				{
-					return false;
-				}
+				return false;
 			}
-			
 		}
+			
+		
 		return true;
 	}
 }
