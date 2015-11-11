@@ -25,7 +25,7 @@ public class Doctor
 		
 	}
 	
-	Boolean verifySchedule(Date starterDate, Date finalDate)
+	Boolean verifySchedules(Date starterDate, Date finalDate)
 	{
 		for(int i = 0 ; i < this.listOfSchedules.size(); i++)
 		{
