@@ -45,4 +45,9 @@ public class Schedule
 		this.starterDate = starterDate;
 		this.available = available;
 	}
+	
+	public Schedule()
+	{
+		;
+	}
 }

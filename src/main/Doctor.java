@@ -18,6 +18,12 @@ public class Doctor
 	public void setCRM(long CRM) {
 		this.listOfAttributes[DoctorAttributes.CRM.ordinal()] = CRM;
 	}
+	
+	public Doctor()
+	{
+		this.listOfSchedules = new ArrayList<Schedule>();
+		this.listOfAttributes = new Object[DoctorAttributes.values().length];
+	}
 
 	public Doctor(Object[] listOfAttributes)
 	{
@@ -27,6 +33,21 @@ public class Doctor
 		for(int i = 0; i < DoctorAttributes.values().length; i++)
 		{
 			this.listOfAttributes[i] = listOfAttributes[i];
+		}
+	}
+	
+	public void listSchedules()
+	{
+		System.out.println("\nCRONOGRAMA\n");
+		
+		for(int i = 0; i < this.listOfSchedules.size(); i++)
+		{
+			Schedule schedule = this.listOfSchedules.get(i);
+			
+			System.out.println("\nID: "+schedule.getPid());
+			System.out.println("Início: "+schedule.starterDate.toString());
+			System.out.println("Término: "+schedule.finalDate.toString());
+			System.out.println("Disponibilidade: "+schedule.available.toString());
 		}
 	}
 	
