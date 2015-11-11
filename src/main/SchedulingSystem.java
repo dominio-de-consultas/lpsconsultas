@@ -61,8 +61,8 @@ public class SchedulingSystem
 	public void createUser(String[] attributesOfUser)
 	{
 		User newUser = new User(attributesOfUser);
-		daoUser = new DaoUser();
-		daoUser.insertUpdate(newUser);
+		//daoUser = new DaoUser();
+		//daoUser.insertUpdate(newUser);
 		listOfUser.add(newUser);
 	}
 

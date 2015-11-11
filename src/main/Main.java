@@ -12,17 +12,20 @@ public class Main
 	{ 
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
-		DaoUser daoUser = new DaoUser();
+		//DaoUser daoUser = new DaoUser();
 		
 		
 		Boolean validPassword = false;
 		do
 		{
 			
+			/*
 			List<User> listaUser = daoUser.select();
 			for(User i : listaUser)
 				System.out.println(i.getPid());	
-			 
+			*/
+			System.out.println("\nLOGIN\n");
+			
 			System.out.print("CPF:");
 			String userID = scanner.nextLine();
 			
