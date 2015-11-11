@@ -6,8 +6,21 @@ public class Main
 	public static void main(String[] args)
 	{
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
-		
 		Scanner scanner = new Scanner(System.in);
+		
+		
+		
+		Boolean validPassword = false;
+		do
+		{
+			System.out.print("CPF:");
+			String userID = scanner.nextLine();
+			
+			System.out.print("senha:");
+			String password = scanner.nextLine();
+			
+			validPassword = !schedulingSystem.login(userID, password);
+		}while(!validPassword);
 		
 		String option;
 		
@@ -22,7 +35,9 @@ public class Main
 				System.out.println("2 - Editar um usuario");
 				System.out.println("3 - Listar usuarios");
 				//System.out.println("4 - Buscar um usuario");
+				//System.out.println("3 - Remover um usuario");
 			}
+			
 			
 			System.out.println("0 - encerrra o sistema");
 			System.out.print("Opcao escolhida:");
@@ -118,5 +133,7 @@ public class Main
 		
 		
 	}
+	
+	
 
 }

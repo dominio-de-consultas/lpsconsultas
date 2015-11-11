@@ -11,6 +11,35 @@ public class SchedulingSystem
 	SchedulingSystem()
 	{
 		this.listOfUser = new ArrayList<User>();
+		
+		String[] attributesOfDefaultUser = new String[Attributes.values().length];
+		attributesOfDefaultUser[Attributes.nome.ordinal()] = "admin";
+		attributesOfDefaultUser[Attributes.senha.ordinal()] = "admin";
+		attributesOfDefaultUser[Attributes.CPF.ordinal()] = "000";
+		attributesOfDefaultUser[Attributes.telefone.ordinal()] = "[vazio]";
+		attributesOfDefaultUser[Attributes.email.ordinal()] = "[vazio]";
+		
+		User defaultUser = new User(attributesOfDefaultUser);
+		this.listOfUser.add(defaultUser);
+	}
+	
+	Boolean login(String userID, String password)
+	{
+		for(int i = 0; i < this.listOfUser.size(); i++)
+		{
+			User user = this.listOfUser.get(i);
+			if
+			(
+				user.attributesOfUser[Attributes.CPF.ordinal()] == userID
+				&&
+				user.attributesOfUser[Attributes.senha.ordinal()] == password
+			)
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	Boolean hasUser()

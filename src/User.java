@@ -1,7 +1,7 @@
 
 
 public class User {
-	private String[] attributesOfUser;
+	public String[] attributesOfUser;
 	
 	
 	User(String[] attributesOfUser)
