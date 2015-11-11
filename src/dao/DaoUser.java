@@ -34,5 +34,18 @@ public class DaoUser {
 		
 		return lista;
 	}
+	
+	public void insertUpdate(User user){
+		try{
+			this.session = HibernateHelper.getSessao();
+			transaction = session.beginTransaction();
+			session.saveOrUpdate(user);
+			transaction.commit();
+			session.close();
+			System.out.println("Salvo");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 
 }

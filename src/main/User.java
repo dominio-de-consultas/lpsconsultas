@@ -4,6 +4,14 @@ public class User {
 	public String[] attributesOfUser;
 	
 	
+	public long getPid() {
+		return pid;
+	}
+
+	public void setPid(long pid) {
+		this.pid = pid;
+	}
+
 	User(String[] attributesOfUser)
 	{
 		

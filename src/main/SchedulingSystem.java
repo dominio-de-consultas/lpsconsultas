@@ -2,9 +2,11 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.DaoUser;
+
 public class SchedulingSystem
 {
-
+	DaoUser daoUser;
 	//----------Attributes----------
 	public List<User> listOfUser;
 	
@@ -59,6 +61,8 @@ public class SchedulingSystem
 	public void createUser(String[] attributesOfUser)
 	{
 		User newUser = new User(attributesOfUser);
+		daoUser = new DaoUser();
+		daoUser.insertUpdate(newUser);
 		listOfUser.add(newUser);
 	}
 

@@ -30,6 +30,8 @@ public class HibernateHelper {
         SchemaUpdate se = new SchemaUpdate(hibernateConfig);
         se.execute(true, true);
     }
+    
+    
 	
 	
 }

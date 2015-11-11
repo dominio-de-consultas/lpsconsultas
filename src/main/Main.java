@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import dao.DaoUser;
+import util.HibernateHelper;
 
 public class Main
 {
@@ -17,9 +18,11 @@ public class Main
 		Boolean validPassword = false;
 		do
 		{
+			
 			List<User> listaUser = daoUser.select();
 			for(User i : listaUser)
-				System.out.println(i);	
+				System.out.println(i.getPid());	
+			 
 			System.out.print("CPF:");
 			String userID = scanner.nextLine();
 			

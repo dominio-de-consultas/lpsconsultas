@@ -8,11 +8,5 @@
             <column name="PID" />
             <generator class="assigned" />
         </id>
-        <property name="name" type="java.lang.String">         
-            <column name="NAME" />
-        </property>
-        <property name="age" type="java.lang.Integer">
-            <column name="AGE" />
-        </property>
     </class>
 </hibernate-mapping>
