@@ -11,9 +11,9 @@ public class Doctor
 		this.listOfSchedules = new ArrayList<Schedule>();
 	}
 	
-	public void addSchedule(Date date, Boolean available)
+	public void addSchedule(Date starterDate, Date finalDate, Boolean available)
 	{
-		Schedule schedule = new Schedule(date, available);
+		Schedule schedule = new Schedule(starterDate, finalDate, available);
 		listOfSchedules.add(schedule);
 	}
 }

@@ -2,12 +2,13 @@ import java.util.Date;
 
 public class Schedule
 {
-	public Date date;
+	public Date starterDate;
+	public Date finalDate;
 	public Boolean available;
 	
-	public Schedule(Date data, Boolean available)
+	public Schedule(Date starterDate, Date finalDate, Boolean available)
 	{
-		this.date = date;
+		this.starterDate = starterDate;
 		this.available = available;
 	}
 }
