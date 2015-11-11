@@ -24,4 +24,12 @@ public class User {
 		return this.attributesOfUser[Attributes.nome.ordinal()].toString();
 		
 	}
+	
+	void listAttributes()
+	{
+		for(int i = 0; i < Attributes.values().length; i++)
+		{
+			System.out.println(i+" : "+Attributes.values()[i].toString()+" : "+this.attributesOfUser[i].toString());
+		}
+	}
 }

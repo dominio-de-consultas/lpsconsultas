@@ -14,7 +14,7 @@ public class Main
 		Boolean flag = true;
 		while(flag)
 		{
-			System.out.println("Escolha a opção");
+			System.out.println("\n>>> Escolha a opção");
 			System.out.println("1 - Cria um novo usuario");
 			
 			if(schedulingSystem.hasUser())
@@ -52,6 +52,22 @@ public class Main
 					if(schedulingSystem.hasUser())
 					{
 						schedulingSystem.printListOfUsers();
+						System.out.println("Escolha um usuario pelo indice:");
+						Integer userIndex = Integer.valueOf(scanner.nextLine());
+						
+						User user = schedulingSystem.listOfUser.get(userIndex);
+						
+						System.out.println("Escolha um atributo pelo indice");
+						user.listAttributes();
+						Integer attributeIndex = Integer.valueOf(scanner.nextLine());
+						
+						System.out.println("Digite o novo conteudo do atributo  escolhido");
+						String attributeContent = scanner.nextLine();
+						
+						user.editAttribute(attributeIndex, attributeContent);
+						
+						System.out.println("Atributos do usuario apos a alteracao");
+						user.listAttributes();
 					}
 					
 					else
