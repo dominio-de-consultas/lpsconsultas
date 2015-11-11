@@ -22,39 +22,7 @@ public class Doctor
 		this.listOfSchedules = new ArrayList<Schedule>();
 	}
 	
-	public void addSchedule(Date starterDate, Date finalDate, Boolean available)
-	{
-		if(verifySchedules(starterDate, finalDate))
-		{
-			Schedule schedule = new Schedule(starterDate, finalDate, available);
-			listOfSchedules.add(schedule);
-		}
-		else
-		{
-			System.out.println("Já existem um cronograma neste horário");
-		}
-		
-	}
 	
-	Boolean verifySchedules(Date starterDate, Date finalDate)
-	{
-		for(int i = 0 ; i < this.listOfSchedules.size(); i++)
-		{
-			Schedule actualSchedule = this.listOfSchedules.get(i);
-			if
-			(
-				(starterDate.after(actualSchedule.starterDate) && starterDate.before(actualSchedule.finalDate))	
-				||
-				(finalDate.before(actualSchedule.finalDate) && finalDate.after(actualSchedule.starterDate))
-				||
-				(starterDate.before(actualSchedule.starterDate) && finalDate.after(actualSchedule.finalDate))
-			)
-			{
-				return false;
-			}
-		}
-			
-		
-		return true;
-	}
+	
+	
 }
