@@ -39,6 +39,7 @@ public class Main
 			}
 			
 			
+			
 			System.out.println("0 - encerrra o sistema");
 			System.out.print("Opcao escolhida:");
 			option = scanner.nextLine();
