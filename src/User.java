@@ -1,38 +1,27 @@
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public class User {
-	private HashMap<Integer, Object> attributesOfUser;
+	private String[] attributesOfUser;
 	
 	
-	User(HashMap<Integer, Object> attributesOfUserType)
+	User(String[] attributesOfUser)
 	{
 		
-		Set<Integer> key = attributesOfUserType.keySet();
-		Integer[] attributesArray = (Integer[]) key.toArray();
-		for(int i = 0; i < key.size(); i++)
+		this.attributesOfUser = new String[Attributes.values().length];
+		for(int i = 0; i < Attributes.values().length; i++)
 		{
-			
-			Object aux = attributesOfUserType.get(attributesArray[i]);
-			this.attributesOfUser.put(attributesArray[i], aux);
+			this.attributesOfUser[i] = attributesOfUser[i];
 		}
-		
 	}
 	
-	void editAttribute(Integer attributeID, Object content)
+	void editAttribute(Integer attributeID, String content)
 	{
-		;
+		this.attributesOfUser[attributeID] = content;
 	}
-	
+		
 	String getName()
 	{
-		return this.attributesOfUser.get(Attributes.nome.ordinal()).toString();
+		return this.attributesOfUser[Attributes.nome.ordinal()].toString();
 		
 	}
 }

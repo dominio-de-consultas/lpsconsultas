@@ -15,14 +15,13 @@ public class Main
 		while(flag)
 		{
 			System.out.println("Escolha a opção");
-			System.out.println("1 - cria um novo tipo de usuario");
-			if(schedulingSystem.hasUserType())
-			{
-				System.out.println("2 - cria um novo usuario");
-			}
+			System.out.println("1 - Cria um novo usuario");
+			
 			if(schedulingSystem.hasUser())
 			{
-				;
+				System.out.println("2 - Editar um usuario");
+				System.out.println("3 - Listar usuarios");
+				//System.out.println("4 - Buscar um usuario");
 			}
 			
 			System.out.println("0 - encerrra o sistema");
@@ -32,54 +31,66 @@ public class Main
 			
 			switch (option)
 			{
-				//1 - cria um novo tipo de usuario
+				
+				//2 - Cria um novo usuario
 				case "1":
-					Boolean[] listOfAttributes = new Boolean[Attributes.values().length];
-							
-					System.out.println("Entre com o nome do tipo de usuario:");
-					String name = scanner.nextLine();
-					
-					
-					System.out.println("Escolha quais atributos estarao no tipo de usuario(S/N)");
-					Attributes[] aux = Attributes.values();
-					for(int i = 0; i < Attributes.values().length ; i++)
+					System.out.println("Entre com os atributos do usuario");
+					String[] attributesOfUser = new String[Attributes.values().length];
+					for(int i = 0; i < Attributes.values().length; i++)
 					{
-						System.out.println(aux[i].toString());
-						String attributeOption = scanner.nextLine();
-						attributeOption = attributeOption.toUpperCase();
-						
-						if(attributeOption == "S")
-						{
-							listOfAttributes[i] = true;
-						}
-						else
-						{
-							listOfAttributes[i] = false;
-						}
+						System.out.print(Attributes.values()[i].toString()+" : ");
+						String attribute = scanner.nextLine();
+						attributesOfUser[i] = attribute;
 					}
-					// O CPF eh a chave
-					listOfAttributes[Attributes.CPF.ordinal()] = true;
 					
-					schedulingSystem.createUserType(name, listOfAttributes);
+					
+					schedulingSystem.createUser(attributesOfUser);
 					break;
-					
-				//2 - cria um novo usuario
+			
+				//Editar usuario		
 				case "2":
-					
-					if(schedulingSystem.hasUserType())
+					if(schedulingSystem.hasUser())
 					{
-						//User user = userType.createUser();
-						schedulingSystem.printListOfUserType();
+						schedulingSystem.printListOfUsers();;
 					}
+					
 					else
 					{
-						System.out.println("Operação negada: É necessário criar um tipo de usuário");
+						System.out.println("Operação negada: É necessário criar um usuário");
 					}
-						
+					break;
+					
+				// Listar usuarios	
+				case "3":
+					if(schedulingSystem.hasUser())
+					{
+						schedulingSystem.printListOfUsers();
+					}
+					
+					else
+					{
+						System.out.println("Operação negada: É necessário criar um usuário");
+					}
+					break;
+					
+				//
+				case "4":
+					if(schedulingSystem.hasUser())
+					{
+						;
+					}
+					
+					else
+					{
+						System.out.println("Operação negada: É necessário criar um usuário");
+					}
+					break;
 					
 				//0 - encerrra o sistema
 				case "0":
 					flag = false;
+					break;
+					
 				default:
 					break;
 				

@@ -1,30 +1,18 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class SchedulingSystem
 {
 
 	//----------Attributes----------
-	public List<UserType> listOfUserType;
 	public List<User> listOfUser;
 	
-	//----------Constructor methods----------
+	//----------Constructor method----------
 	SchedulingSystem()
 	{
-		this.listOfUserType = new ArrayList<UserType>();
 		this.listOfUser = new ArrayList<User>();
 	}
 	
-	Boolean hasUserType()
-	{
-		if(listOfUserType.size() != 0)
-		{
-			return true;
-		}
-		
-		return false;
-	}
 	Boolean hasUser()
 	{
 		if(listOfUser.size() != 0)
@@ -35,32 +23,13 @@ public class SchedulingSystem
 		return false;
 	}
 	
-	//----------UserType methods----------
-	public void createUserType(String name, Boolean[] listOfAttributes)
-	{
-		UserType userType = new UserType(name, listOfAttributes);
-		listOfUserType.add(userType);
-	}
 	
-	public void editUserType()
-	{
-		;
-	}
-	
-	public void removeUserType()
-	{
-		;
-	}
-	
-	public void searchUserType()
-	{
-		;
-	}
 	
 	//----------User methods----------
-	public void createUser()
+	public void createUser(String[] attributesOfUser)
 	{
-		;
+		User newUser = new User(attributesOfUser);
+		listOfUser.add(newUser);
 	}
 
 	public void editUser()
@@ -78,20 +47,14 @@ public class SchedulingSystem
 		;
 	}
 	
-	public void printListOfUser()
+	public void printListOfUsers()
 	{
+		System.out.println("\n");
 		for(int i = 0; i < this.listOfUser.size(); i++)
 		{
 			System.out.println(i+" : "+this.listOfUser.get(i).getName());
 		}
-	}
-	
-	void printListOfUserType()
-	{
-		for(int i = 0; i < this.listOfUserType.size(); i++)
-		{
-			System.out.println(i+" : "+this.listOfUserType.get(i).getName());
-		}
+		System.out.println("\n");
 	}
 	
 }
