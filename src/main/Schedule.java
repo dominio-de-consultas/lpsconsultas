@@ -3,6 +3,7 @@ import java.util.Date;
 
 public class Schedule
 {
+	private long pid;
 	public Date starterDate;
 	public Date finalDate;
 	public Boolean available;

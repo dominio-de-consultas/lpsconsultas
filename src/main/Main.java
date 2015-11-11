@@ -1,19 +1,25 @@
 package main;
+import java.util.List;
 import java.util.Scanner;
+
+import dao.DaoUser;
 
 public class Main
 {
-
+	
 	public static void main(String[] args)
-	{
+	{ 
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
-		
+		DaoUser daoUser = new DaoUser();
 		
 		
 		Boolean validPassword = false;
 		do
 		{
+			List<User> listaUser = daoUser.select();
+			for(User i : listaUser)
+				System.out.println(i);	
 			System.out.print("CPF:");
 			String userID = scanner.nextLine();
 			

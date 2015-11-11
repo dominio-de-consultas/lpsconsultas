@@ -1,5 +1,6 @@
 package main;
 public class User {
+	private long pid;
 	public String[] attributesOfUser;
 	
 	
