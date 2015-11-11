@@ -51,7 +51,7 @@ public class Main
 				case "2":
 					if(schedulingSystem.hasUser())
 					{
-						schedulingSystem.printListOfUsers();;
+						schedulingSystem.printListOfUsers();
 					}
 					
 					else
