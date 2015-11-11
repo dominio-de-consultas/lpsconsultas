@@ -32,7 +32,15 @@ public class Doctor
 			Schedule actualSchedule = this.listOfSchedules.get(i);
 			if(true)
 			{
-				;
+				if
+				(
+					(starterDate.after(actualSchedule.starterDate) && starterDate.before(actualSchedule.finalDate))	
+					||
+					(finalDate.before(actualSchedule.finalDate) && finalDate.after(actualSchedule.starterDate))
+				)
+				{
+					return false;
+				}
 			}
 			
 		}
