@@ -13,7 +13,29 @@ public class Doctor
 	
 	public void addSchedule(Date starterDate, Date finalDate, Boolean available)
 	{
-		Schedule schedule = new Schedule(starterDate, finalDate, available);
-		listOfSchedules.add(schedule);
+		if(verifySchedules(starterDate, finalDate))
+		{
+			Schedule schedule = new Schedule(starterDate, finalDate, available);
+			listOfSchedules.add(schedule);
+		}
+		else
+		{
+			System.out.println("Já existem um cronograma neste horário");
+		}
+		
+	}
+	
+	Boolean verifySchedule(Date starterDate, Date finalDate)
+	{
+		for(int i = 0 ; i < this.listOfSchedules.size(); i++)
+		{
+			Schedule actualSchedule = this.listOfSchedules.get(i);
+			if(true)
+			{
+				;
+			}
+			
+		}
+		return true;
 	}
 }
