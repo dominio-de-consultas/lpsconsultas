@@ -67,7 +67,7 @@ public class Main
 				//System.out.println("15 - Remover cronograma");
 			}
 			
-			//System.out.println("16 - Criar um Paciente");
+			System.out.println("16 - Criar um Paciente");
 			if(schedulingSystem.hasPatient())
 			{
 				//System.out.println("17 - Listar pacientes");
@@ -162,7 +162,45 @@ public class Main
 						System.out.println("Operação negada: É necessário criar um usuário");
 					}
 					break;
+				//System.out.println("16 - Criar um Paciente");
+				case "16":
+					Patient newPatient = new Patient();
 					
+					
+					for(int i = 0; i < PatientAttributes.values().length; i++)
+					{
+						System.out.println(PatientAttributes.values()[i].toString()+": ");
+						if
+						(
+							i == PatientAttributes.nome.ordinal()
+							|| i == PatientAttributes.CPF.ordinal()
+							|| i == PatientAttributes.rua.ordinal()
+							|| i == PatientAttributes.CEP.ordinal()
+							|| i == PatientAttributes.bairro.ordinal()
+							|| i == PatientAttributes.municipio.ordinal()
+							|| i == PatientAttributes.estado.ordinal()
+							|| i == PatientAttributes.complemento.ordinal()
+							|| i == PatientAttributes.telefone.ordinal()
+							|| i == PatientAttributes.email.ordinal()
+							|| i == PatientAttributes.tipoSanguineo.ordinal()
+							|| i == PatientAttributes.alergias.ordinal()
+							|| i == PatientAttributes.descricaoHistoricoEscolar.ordinal()
+						)
+						{
+							;
+						}
+						else if(i == PatientAttributes.numero.ordinal())
+						{
+							;
+						}
+						else if(i == PatientAttributes.doadorDeOrgaos.ordinal())
+						{
+							;
+						}
+					}
+					
+					
+					Object attribute = scanner.nextLine();
 				//0 - encerrra o sistema
 				case "0":
 					flag = false;
