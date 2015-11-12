@@ -2,11 +2,13 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.DaoDoctor;
 import dao.DaoUser;
 
 public class SchedulingSystem
 {
-	DaoUser daoUser;
+	private DaoUser daoUser;
+	private DaoDoctor daoDoctor;
 	//----------Attributes----------
 	public List<User> listOfUsers;
 	public List<Doctor> listOfDoctors;
@@ -19,7 +21,8 @@ public class SchedulingSystem
 		this.listOfPatients = new ArrayList<Patient>();
 		
 		this.listOfUsers = new ArrayList<User>();
-		
+		daoUser = new DaoUser();
+		daoDoctor = new DaoDoctor();
 		
 		String[] attributesOfDefaultUser = new String[Attributes.values().length];
 		attributesOfDefaultUser[Attributes.nome.ordinal()] = "admin";
@@ -72,8 +75,7 @@ public class SchedulingSystem
 	public void createUser(String[] attributesOfUser)
 	{
 		User newUser = new User(attributesOfUser);
-		//daoUser = new DaoUser();
-		//daoUser.insertUpdate(newUser);
+		daoUser.insertUpdate(newUser);
 		listOfUsers.add(newUser);
 	}
 
@@ -87,18 +89,15 @@ public class SchedulingSystem
 		;
 	}
 	
-	public void searchUser()
+	public User searchUser(String nome)
 	{
-		;
-	}
-	public void printListOfDoctors()
-	{
-		System.out.println("\n");
-		for(int i = 0; i < this.listOfDoctors.size(); i++)
-		{
-			System.out.println(i+" : "+this.listOfDoctors.get(i).getNome());
-		}
-		System.out.println("\n");
+		List<User> ls = daoUser.select();
+		for(int i = 0; i < ls.size(); i++)
+			if(ls.get(i).getNome().equals(nome)){
+				return ls.get(i);
+			}
+		return null;
+	
 	}
 	public void printListOfUsers()
 	{
@@ -109,6 +108,24 @@ public class SchedulingSystem
 		}
 		System.out.println("\n");
 	}
+	
+
+	//----------Doctors methods----------
+	public void createDoctor(Doctor doctor){
+		daoDoctor.insertUpdate(doctor);
+	}
+	public void printListOfDoctors()
+	{
+		System.out.println("\n");
+		for(int i = 0; i < this.listOfDoctors.size(); i++)
+		{
+			System.out.println(i+" : "+this.listOfDoctors.get(i).getNome());
+		}
+		System.out.println("\n");
+	}
+	
+	
+	//----------Patientss methods----------
 	public void printListOfPatients()
 	{
 		System.out.println("\n");

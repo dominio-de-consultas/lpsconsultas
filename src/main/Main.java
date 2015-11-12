@@ -27,8 +27,9 @@ public class Main
 			
 			
 			List<User> listaUser = daoUser.select();
+			System.out.println("Lista de usuários cadastrados:");
 			for(User i : listaUser)
-				System.out.println(i.getPid());	
+				System.out.println("Nome: " + i.getNome() + " Email: " + i.getEmail());	
 			
 			System.out.println("\nLOGIN\n");
 			
@@ -200,12 +201,13 @@ public class Main
 							Date date = dataFormat.parse(aux);
 							newDoctor.setDataDeNascimento(date);
 						}
-						else if(i == DoctorAttributes.numero.ordinal())
+						else if(i == DoctorAttributes.numero.ordinal() || i == DoctorAttributes.CRM.ordinal())
 						{
 							newDoctor.listOfAttributes[i] = Integer.parseInt(aux);
 						}
 					}
-					schedulingSystem.listOfDoctors.add(newDoctor);
+					schedulingSystem.createDoctor(newDoctor);
+					//schedulingSystem.listOfDoctors.add(newDoctor);
 					
 					break;
 				//------------------------------------------------------------

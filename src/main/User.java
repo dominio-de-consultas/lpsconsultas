@@ -5,7 +5,10 @@ import java.util.Date;
 public class User {
 	private long pid;
 	public String[] listOfAttributes;
-	
+
+	User(){
+		this.listOfAttributes = new String[Attributes.values().length];
+	}
 	
 	public long getPid() {
 		return pid;
