@@ -97,7 +97,16 @@ public class SchedulingSystem
 		System.out.println("\n");
 		for(int i = 0; i < this.listOfUsers.size(); i++)
 		{
-			System.out.println(i+" : "+this.listOfUsers.get(i).getName());
+			System.out.println(i+" : "+this.listOfUsers.get(i).getNome());
+		}
+		System.out.println("\n");
+	}
+	public void printListOfPatients()
+	{
+		System.out.println("\n");
+		for(int i = 0; i < this.listOfPatients.size(); i++)
+		{
+			System.out.println(i+" : "+this.listOfPatients.get(i).getNome());
 		}
 		System.out.println("\n");
 	}

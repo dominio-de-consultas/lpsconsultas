@@ -75,7 +75,7 @@ public class Main
 			System.out.println("16 - Criar um Paciente");
 			if(schedulingSystem.hasPatient())
 			{
-				//System.out.println("17 - Listar pacientes");
+				System.out.println("17 - Listar pacientes");
 				//System.out.println("18 - Alterar pacientes");
 				//System.out.println("19 - Buscar pacientes");
 				//System.out.println("20 - Remover pacientes");
@@ -210,9 +210,11 @@ public class Main
 							newPatient.setDataDeNascimento(date);
 						}
 					}
-					
-					
-					Object attribute = scanner.nextLine();
+					schedulingSystem.listOfPatients.add(newPatient);
+					break;
+				//System.out.println("17 - Listar pacientes");
+				case "17":
+					schedulingSystem.printListOfPatients();
 				//0 - encerrra o sistema
 				case "0":
 					flag = false;

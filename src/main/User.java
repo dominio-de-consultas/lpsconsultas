@@ -41,7 +41,7 @@ public class User {
 		this.listOfAttributes[attributeID] = content;
 	}
 		
-	String getName()
+	String getNome()
 	{
 		return this.listOfAttributes[Attributes.nome.ordinal()].toString();
 		
