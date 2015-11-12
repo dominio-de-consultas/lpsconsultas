@@ -44,6 +44,7 @@ public class DaoUser {
 			session.close();
 			System.out.println("Salvo");
 		}catch(Exception e){
+			session.close();
 			e.printStackTrace();
 		}
 	}

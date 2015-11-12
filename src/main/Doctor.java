@@ -6,7 +6,7 @@ import java.util.Date;
 public class Doctor
 {
 	private Object[] listOfAttributes;
-		
+	private int pid;	
 	
 	public ArrayList<Schedule> listOfSchedules;
 	
@@ -19,6 +19,14 @@ public class Doctor
 		this.listOfAttributes[DoctorAttributes.CRM.ordinal()] = CRM;
 	}
 	
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+
 	public Doctor()
 	{
 		this.listOfSchedules = new ArrayList<Schedule>();

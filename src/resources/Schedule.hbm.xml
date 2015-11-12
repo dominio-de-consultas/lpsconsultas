@@ -6,7 +6,7 @@
     <class name="main.Schedule" table="SCHEDULE">
         <id name="pid" type="long">
             <column name="PID" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
     </class>
 </hibernate-mapping>

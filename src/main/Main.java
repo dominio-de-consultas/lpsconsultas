@@ -7,9 +7,9 @@ import util.HibernateHelper;
 
 public class Main
 {
-	
 	public static void main(String[] args)
-	{ 
+	{
+		HibernateHelper helper = new HibernateHelper();
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
 		//DaoUser daoUser = new DaoUser();
@@ -27,7 +27,7 @@ public class Main
 			System.out.println("\nLOGIN\n");
 			
 			System.out.print("CPF:");
-			String userID = scanner.nextLine();
+			int userID = Integer.parseInt(scanner.nextLine());
 			
 			System.out.print("senha:");
 			String password = scanner.nextLine();
@@ -73,7 +73,7 @@ public class Main
 					}
 					
 					
-					schedulingSystem.createUser(attributesOfUser);
+					schedulingSystem.createUser(new User(attributesOfUser));
 					break;
 			
 				//Editar usuario		
@@ -85,7 +85,7 @@ public class Main
 						Integer userIndex = Integer.valueOf(scanner.nextLine());
 						
 						User user = schedulingSystem.listOfUser.get(userIndex);
-						
+						/*
 						System.out.println("Escolha um atributo pelo indice");
 						user.listAttributes();
 						Integer attributeIndex = Integer.valueOf(scanner.nextLine());
@@ -97,6 +97,7 @@ public class Main
 						
 						System.out.println("Atributos do usuario apos a alteracao");
 						user.listAttributes();
+						*/
 					}
 					
 					else

@@ -1,5 +1,6 @@
 package main;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import dao.DaoUser;
@@ -15,27 +16,28 @@ public class SchedulingSystem
 	{
 		this.listOfUser = new ArrayList<User>();
 		
+		/*
 		String[] attributesOfDefaultUser = new String[Attributes.values().length];
 		attributesOfDefaultUser[Attributes.nome.ordinal()] = "admin";
 		attributesOfDefaultUser[Attributes.senha.ordinal()] = "admin";
 		attributesOfDefaultUser[Attributes.CPF.ordinal()] = "000";
 		attributesOfDefaultUser[Attributes.telefone.ordinal()] = "[vazio]";
 		attributesOfDefaultUser[Attributes.email.ordinal()] = "[vazio]";
-		
-		User defaultUser = new User(attributesOfDefaultUser);
+		*/
+		User defaultUser = new User("admin",000,"",0,"","","","",0,"",new Date(),"","","",false,"",000,"admin");
 		this.listOfUser.add(defaultUser);
 	}
 	
-	Boolean login(String userID, String password)
+	Boolean login(int userID, String password)
 	{
 		for(int i = 0; i < this.listOfUser.size(); i++)
 		{
 			User user = this.listOfUser.get(i);
 			if
 			(
-				user.attributesOfUser[Attributes.CPF.ordinal()] == userID
+				user.getCpf() == userID
 				&&
-				user.attributesOfUser[Attributes.senha.ordinal()] == password
+				user.getSenha() == password
 			)
 			{
 				return true;
@@ -58,12 +60,11 @@ public class SchedulingSystem
 	
 	
 	//----------User methods----------
-	public void createUser(String[] attributesOfUser)
+	public void createUser(User user)
 	{
-		User newUser = new User(attributesOfUser);
-		//daoUser = new DaoUser();
-		//daoUser.insertUpdate(newUser);
-		listOfUser.add(newUser);
+		daoUser = new DaoUser();
+		daoUser.insertUpdate(user);
+		listOfUser.add(user);
 	}
 
 	public void editUser()
@@ -86,7 +87,7 @@ public class SchedulingSystem
 		System.out.println("\n");
 		for(int i = 0; i < this.listOfUser.size(); i++)
 		{
-			System.out.println(i+" : "+this.listOfUser.get(i).getName());
+			System.out.println(i+" : "+this.listOfUser.get(i).getNome());
 		}
 		System.out.println("\n");
 	}

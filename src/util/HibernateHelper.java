@@ -16,6 +16,7 @@ public class HibernateHelper {
             fabricaSessao = hibernateConfig.buildSessionFactory();
             atualizarBD();
         } catch (Exception e){
+        	fabricaSessao.close();
             e.printStackTrace();
         }
     }
