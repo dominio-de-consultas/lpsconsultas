@@ -13,7 +13,8 @@ public class Main
 	
 	public static void main(String[] args) throws ParseException
 	{ 
-		String dateFormat = "HH:mm dd/MM/yyyy";
+		String dateFormat = "dd/MM/yyyy";
+		String dateAndHourFormat = "HH:mm dd/MM/yyyy";
 		HibernateHelper helper = new HibernateHelper();
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
@@ -100,7 +101,7 @@ public class Main
 			{
 				
 				//Cria um novo usuario
-				case "1":
+				case "01":
 					System.out.println("Entre com os atributos do usuario");
 					String[] attributesOfUser = new String[Attributes.values().length];
 					for(int i = 0; i < Attributes.values().length; i++)
@@ -115,7 +116,7 @@ public class Main
 					break;
 			
 				//Editar usuario		
-				case "2":
+				case "02":
 					if(schedulingSystem.hasUser())
 					{
 						schedulingSystem.printListOfUsers();
@@ -144,7 +145,7 @@ public class Main
 					break;
 					
 				// Listar usuarios	
-				case "3":
+				case "03":
 					if(schedulingSystem.hasUser())
 					{
 						schedulingSystem.printListOfUsers();
@@ -157,7 +158,7 @@ public class Main
 					break;
 					
 				//
-				case "4":
+				case "04":
 					if(schedulingSystem.hasUser())
 					{
 						;
