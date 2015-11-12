@@ -154,9 +154,9 @@ public class Patient
 	}
 	//--------------------
 	//----------tipoSanguineo----------
-	Date getTipoSanguineo()
+	String getTipoSanguineo()
 	{
-		return (Date) this.listOfAttributes[PatientAttributes.tipoSanguineo.ordinal()];
+		return (String) this.listOfAttributes[PatientAttributes.tipoSanguineo.ordinal()];
 	}
 	
 	void setTipoSanguineo(String tipoSanguineo)
@@ -176,14 +176,14 @@ public class Patient
 	}
 	//--------------------
 	//----------descricaoHistoricoEscolar----------
-	String getDescricaoHistoricoEscolar()
+	String getDescricaoHistoricoFamiliar()
 	{
-		return (String) this.listOfAttributes[PatientAttributes.descricaoHistoricoEscolar.ordinal()];
+		return (String) this.listOfAttributes[PatientAttributes.descricaoHistoricoFamiliar.ordinal()];
 	}
 	
-	void setDescricaoHistoricoEscolar(String descricaoHistoricoEscolar)
+	void setDescricaoHistoricoFamiliar(String descricaoHistoricoEscolar)
 	{
-		this.listOfAttributes[PatientAttributes.descricaoHistoricoEscolar.ordinal()] = descricaoHistoricoEscolar;
+		this.listOfAttributes[PatientAttributes.descricaoHistoricoFamiliar.ordinal()] = descricaoHistoricoEscolar;
 	}
 	//--------------------
 	//----------doadorDeOrgaos----------

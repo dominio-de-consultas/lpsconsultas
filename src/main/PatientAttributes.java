@@ -16,6 +16,6 @@ public enum PatientAttributes
 	dataDeNascimento,
 	tipoSanguineo,
 	alergias,
-	descricaoHistoricoEscolar,
+	descricaoHistoricoFamiliar,
 	doadorDeOrgaos
 }

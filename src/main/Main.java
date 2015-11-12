@@ -191,7 +191,7 @@ public class Main
 							|| i == PatientAttributes.email.ordinal()
 							|| i == PatientAttributes.tipoSanguineo.ordinal()
 							|| i == PatientAttributes.alergias.ordinal()
-							|| i == PatientAttributes.descricaoHistoricoEscolar.ordinal()
+							|| i == PatientAttributes.descricaoHistoricoFamiliar.ordinal()
 						)
 						{
 							newPatient.listOfAttributes[i] = aux.toString();
