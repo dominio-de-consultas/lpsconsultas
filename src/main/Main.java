@@ -79,10 +79,11 @@ public class Main
 			if(schedulingSystem.hasDoctor() && schedulingSystem.hasPatient())
 			{
 				//System.out.println("22 - Criar consulta");
+				//System.out.println("23 - Listar consulta");
+				//System.out.println("24 - Alterar consulta");
+				//System.out.println("25 - Buscar consulta");
+				//System.out.println("26 - Remover consulta");
 			}
-			
-			
-			
 			
 			System.out.println("0 - encerrra o sistema");
 			System.out.print("Opcao escolhida:");
