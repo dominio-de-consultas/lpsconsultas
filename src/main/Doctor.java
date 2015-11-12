@@ -8,7 +8,7 @@ public class Doctor
 		
 	
 	public ArrayList<Schedule> listOfSchedules;
-	//----------Getter e Setter generico----------
+	//----------Getter e Setter genericos----------
 	Object getX(int attributeID)
 	{
 		return this.listOfAttributes[attributeID];

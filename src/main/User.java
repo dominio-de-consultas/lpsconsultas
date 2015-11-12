@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class User {
 	private long pid;
-	public String[] attributesOfUser;
+	public String[] listOfAttributes;
 	
 	
 	public long getPid() {
@@ -15,24 +15,35 @@ public class User {
 		this.pid = pid;
 	}
 
+	//----------Getter e Setter genericos----------
+	Object getX(int attributeID)
+	{
+		return this.listOfAttributes[attributeID];
+	}
+	
+	void setX(Integer attributeID, String x)
+	{
+		this.listOfAttributes[attributeID] = x;
+	}
+	//--------------------
 	User(String[] attributesOfUser)
 	{
 		
-		this.attributesOfUser = new String[Attributes.values().length];
+		this.listOfAttributes = new String[Attributes.values().length];
 		for(int i = 0; i < Attributes.values().length; i++)
 		{
-			this.attributesOfUser[i] = attributesOfUser[i];
+			this.listOfAttributes[i] = attributesOfUser[i];
 		}
 	}
 	
 	void editAttribute(Integer attributeID, String content)
 	{
-		this.attributesOfUser[attributeID] = content;
+		this.listOfAttributes[attributeID] = content;
 	}
 		
 	String getName()
 	{
-		return this.attributesOfUser[Attributes.nome.ordinal()].toString();
+		return this.listOfAttributes[Attributes.nome.ordinal()].toString();
 		
 	}
 	
@@ -40,7 +51,7 @@ public class User {
 	{
 		for(int i = 0; i < Attributes.values().length; i++)
 		{
-			System.out.println(i+" : "+Attributes.values()[i].toString()+" : "+this.attributesOfUser[i].toString());
+			System.out.println(i+" : "+Attributes.values()[i].toString()+" : "+this.listOfAttributes[i].toString());
 		}
 	}
 	

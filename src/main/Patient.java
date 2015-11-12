@@ -1,8 +1,20 @@
+package main;
 
 public class Patient
 {
 	public Object[] listOfAttributes;
 	
+	//----------Getter e Setter genericos----------
+	Object getX(int attributeID)
+	{
+		return this.listOfAttributes[attributeID];
+	}
+	
+	void setX(int attributeID, Object x)
+	{
+		this.listOfAttributes[attributeID] = x;
+	}
+	//--------------------
 	//----------Nome----------
 	String getNome()
 	{
@@ -60,6 +72,28 @@ public class Patient
 	void setNumero(String numero)
 	{
 		this.listOfAttributes[PatientAttributes.numero.ordinal()] = numero;
+	}
+	//--------------------
+	//----------bairro----------
+	Integer getBairro()
+	{
+		return (Integer) this.listOfAttributes[PatientAttributes.bairro.ordinal()];
+	}
+	
+	void setBairro(String bairro)
+	{
+		this.listOfAttributes[PatientAttributes.bairro.ordinal()] = bairro;
+	}
+	//--------------------
+	//----------municipio----------
+	Integer getMunicipio()
+	{
+		return (Integer) this.listOfAttributes[PatientAttributes.municipio.ordinal()];
+	}
+	
+	void setMunicipio(String municipio)
+	{
+		this.listOfAttributes[PatientAttributes.municipio.ordinal()] = municipio;
 	}
 	//--------------------
 	Patient()

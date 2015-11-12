@@ -33,9 +33,9 @@ public class SchedulingSystem
 			User user = this.listOfUser.get(i);
 			if
 			(
-				user.attributesOfUser[Attributes.CPF.ordinal()] == userID
+				user.listOfAttributes[Attributes.CPF.ordinal()] == userID
 				&&
-				user.attributesOfUser[Attributes.senha.ordinal()] == password
+				user.listOfAttributes[Attributes.senha.ordinal()] == password
 			)
 			{
 				return true;
