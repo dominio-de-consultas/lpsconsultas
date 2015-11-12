@@ -9,7 +9,7 @@ public class Main
 	
 	public static void main(String[] args)
 	{ 
-		HibernateHelper helper = new HibernateHelper();
+		//HibernateHelper helper = new HibernateHelper();
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
 		//DaoUser daoUser = new DaoUser();
@@ -171,6 +171,7 @@ public class Main
 					for(int i = 0; i < PatientAttributes.values().length; i++)
 					{
 						System.out.println(PatientAttributes.values()[i].toString()+": ");
+						String aux = scanner.nextLine();
 						if
 						(
 							i == PatientAttributes.nome.ordinal()
@@ -188,13 +189,17 @@ public class Main
 							|| i == PatientAttributes.descricaoHistoricoEscolar.ordinal()
 						)
 						{
-							;
+							newPatient.listOfAttributes[i] = aux.toString();
 						}
 						else if(i == PatientAttributes.numero.ordinal())
 						{
-							;
+							newPatient.listOfAttributes[i] = Integer.parseInt(aux);
 						}
 						else if(i == PatientAttributes.doadorDeOrgaos.ordinal())
+						{
+							newPatient.listOfAttributes[i] = Boolean.parseBoolean(aux);
+						}
+						else if(i == PatientAttributes.dataDeNascimento.ordinal())
 						{
 							;
 						}
@@ -214,7 +219,7 @@ public class Main
 			
 		}
 		scanner.close();
-		helper.close();
+		//helper.close();
 		
 		
 	}
