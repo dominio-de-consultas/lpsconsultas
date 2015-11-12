@@ -40,49 +40,49 @@ public class Main
 		while(flag)
 		{
 			System.out.println("\n>>> Escolha a opção");
-			System.out.println(MenuOptions.novoUsuario+" : "+"Cria um novo usuario");
+			System.out.println("01 - Cria um novo usuario");
 			
 			if(schedulingSystem.hasUser())
 			{
-				System.out.println(MenuOptions.editarUsuario + " : "+"Editar um usuario");
-				System.out.println(MenuOptions.listarUsuarios + " : "+"Listar usuarios");
-				//System.out.println("4 - Buscar um usuario");
-				//System.out.println("6 - Remover um usuario");
+				System.out.println("02 - Editar um usuario");
+				System.out.println("03 - Listar usuarios");
+				//System.out.println("04 - Buscar um usuario");
+				//System.out.println("05 - Remover um usuario");
 			}
 			
-			//System.out.println("7 - Criar um medico");
+			//System.out.println("06 - Criar um medico");
 			if(schedulingSystem.hasDoctor())
 			{
-				//System.out.println("8 - Listar medicos");
-				//System.out.println("9 - Alterar medico");
-				//System.out.println("10 - Buscar medicos");
-				//System.out.println("11 - Remover medico");
+				//System.out.println("07 - Listar medicos");
+				//System.out.println("08 - Alterar medico");
+				//System.out.println("09 - Buscar medicos");
+				//System.out.println("10 - Remover medico");
 				
 				//--------------------
 				
-				//System.out.println("12 - Criar cronograma");
-				//System.out.println("13 - Editar cronograma");
-				//System.out.println("14 - Listar cronograma");
-				//System.out.println("15 - Buscar cronograma");
-				//System.out.println("16 - Remover cronograma");
+				//System.out.println("11 - Criar cronograma");
+				//System.out.println("12 - Editar cronograma");
+				//System.out.println("13 - Listar cronograma");
+				//System.out.println("14 - Buscar cronograma");
+				//System.out.println("15 - Remover cronograma");
 			}
 			
-			//System.out.println("17 - Criar um Paciente");
+			//System.out.println("16 - Criar um Paciente");
 			if(schedulingSystem.hasPatient())
 			{
-				//System.out.println("18 - Listar pacientes");
-				//System.out.println("19 - Alterar pacientes");
-				//System.out.println("20 - Buscar pacientes");
-				//System.out.println("21 - Remover pacientes");
+				//System.out.println("17 - Listar pacientes");
+				//System.out.println("18 - Alterar pacientes");
+				//System.out.println("19 - Buscar pacientes");
+				//System.out.println("20 - Remover pacientes");
 			}
 			
 			if(schedulingSystem.hasDoctor() && schedulingSystem.hasPatient())
 			{
-				//System.out.println("22 - Criar consulta");
-				//System.out.println("23 - Listar consulta");
-				//System.out.println("24 - Alterar consulta");
-				//System.out.println("25 - Buscar consulta");
-				//System.out.println("26 - Remover consulta");
+				//System.out.println("21 - Criar consulta");
+				//System.out.println("22 - Listar consulta");
+				//System.out.println("23 - Alterar consulta");
+				//System.out.println("24 - Buscar consulta");
+				//System.out.println("25 - Remover consulta");
 			}
 			
 			System.out.println("0 - encerrra o sistema");
