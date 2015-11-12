@@ -57,10 +57,10 @@ public class Main
 				//System.out.println("05 - Remover um usuario");
 			}
 			
-			//System.out.println("06 - Criar um medico");
+			System.out.println("06 - Criar um medico");
 			if(schedulingSystem.hasDoctor())
 			{
-				//System.out.println("07 - Listar medicos");
+				System.out.println("07 - Listar medicos");
 				//System.out.println("08 - Alterar medico");
 				//System.out.println("09 - Buscar medicos");
 				//System.out.println("10 - Remover medico");
@@ -99,7 +99,7 @@ public class Main
 			
 			switch (option)
 			{
-				
+				//------------------------------------------------------------
 				//Cria um novo usuario
 				case "01":
 					System.out.println("Entre com os atributos do usuario");
@@ -114,7 +114,7 @@ public class Main
 					
 					schedulingSystem.createUser(attributesOfUser);
 					break;
-			
+				//------------------------------------------------------------
 				//Editar usuario		
 				case "02":
 					if(schedulingSystem.hasUser())
@@ -143,7 +143,7 @@ public class Main
 						System.out.println("Operação negada: É necessário criar um usuário");
 					}
 					break;
-					
+				//------------------------------------------------------------	
 				// Listar usuarios	
 				case "03":
 					if(schedulingSystem.hasUser())
@@ -157,7 +157,7 @@ public class Main
 					}
 					break;
 					
-				//
+				//------------------------------------------------------------
 				case "04":
 					if(schedulingSystem.hasUser())
 					{
@@ -169,6 +169,51 @@ public class Main
 						System.out.println("Operação negada: É necessário criar um usuário");
 					}
 					break;
+				//------------------------------------------------------------
+				//System.out.println("06 - Criar um medico");
+				case "06":
+					Doctor newDoctor = new Doctor();
+					for(int i = 0; i < DoctorAttributes.values().length; i++)
+					{
+						System.out.println(DoctorAttributes.values()[i].toString()+": ");
+						String aux = scanner.nextLine();
+						if
+						(
+							i == DoctorAttributes.nome.ordinal()
+							|| i == DoctorAttributes.CPF.ordinal()
+							|| i == DoctorAttributes.especialidade.ordinal()
+							|| i == DoctorAttributes.email.ordinal()
+							|| i == DoctorAttributes.rua.ordinal()
+							|| i == DoctorAttributes.CEP.ordinal()
+							|| i == DoctorAttributes.bairro.ordinal()
+							|| i == DoctorAttributes.municipio.ordinal()
+							|| i == DoctorAttributes.estado.ordinal()
+							|| i == DoctorAttributes.complemento.ordinal()
+							|| i == DoctorAttributes.telefone.ordinal()
+						)
+						{
+							newDoctor.listOfAttributes[i] = aux;
+						}	
+						else if(i == DoctorAttributes.dataDeNascimento.ordinal())
+						{
+							SimpleDateFormat dataFormat = new SimpleDateFormat (dateFormat);
+							Date date = dataFormat.parse(aux);
+							newDoctor.setDataDeNascimento(date);
+						}
+						else if(i == DoctorAttributes.numero.ordinal())
+						{
+							newDoctor.listOfAttributes[i] = Integer.parseInt(aux);
+						}
+					}
+					schedulingSystem.listOfDoctors.add(newDoctor);
+					
+					break;
+				//------------------------------------------------------------
+				//System.out.println("07 - Listar medicos");
+				case "07":
+					schedulingSystem.printListOfDoctors();
+					break;
+				//------------------------------------------------------------
 				//System.out.println("16 - Criar um Paciente");
 				case "16":
 					Patient newPatient = new Patient();

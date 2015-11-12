@@ -91,7 +91,15 @@ public class SchedulingSystem
 	{
 		;
 	}
-	
+	public void printListOfDoctors()
+	{
+		System.out.println("\n");
+		for(int i = 0; i < this.listOfDoctors.size(); i++)
+		{
+			System.out.println(i+" : "+this.listOfDoctors.get(i).getNome());
+		}
+		System.out.println("\n");
+	}
 	public void printListOfUsers()
 	{
 		System.out.println("\n");

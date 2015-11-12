@@ -4,18 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor {
-	private int id;
-	private Object[] listOfAttributes;
+	public Object[] listOfAttributes;
 
 	public ArrayList<Schedule> listOfSchedules;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	// ----------Getter e Setter genericos----------
 	Object getX(int attributeID) {
@@ -159,8 +150,8 @@ public class Doctor {
 			Schedule schedule = this.listOfSchedules.get(i);
 
 			System.out.println("\nID: " + schedule.getPid());
-			System.out.println("Início: " + schedule.starterDate.toString());
-			System.out.println("Término: " + schedule.finalDate.toString());
+			System.out.println("InÃ­cio: " + schedule.starterDate.toString());
+			System.out.println("TÃ©rmino: " + schedule.finalDate.toString());
 			System.out.println("Disponibilidade: " + schedule.available.toString());
 		}
 	}
