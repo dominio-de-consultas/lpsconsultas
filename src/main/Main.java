@@ -2,6 +2,7 @@ package main;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 import dao.DaoUser;
@@ -13,21 +14,21 @@ public class Main
 	public static void main(String[] args) throws ParseException
 	{ 
 		String dateFormat = "HH:mm dd/MM/yyyy";
-		//HibernateHelper helper = new HibernateHelper();
+		HibernateHelper helper = new HibernateHelper();
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
-		//DaoUser daoUser = new DaoUser();
+		DaoUser daoUser = new DaoUser();
 		
 		
 		Boolean validPassword = false;
 		do
 		{
 			
-			/*
+			
 			List<User> listaUser = daoUser.select();
 			for(User i : listaUser)
 				System.out.println(i.getPid());	
-			*/
+			
 			System.out.println("\nLOGIN\n");
 			
 			System.out.print("CPF:");
@@ -227,7 +228,7 @@ public class Main
 			
 		}
 		scanner.close();
-		//helper.close();
+		helper.close();
 		
 		
 	}
