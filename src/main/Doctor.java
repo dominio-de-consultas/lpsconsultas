@@ -8,7 +8,17 @@ public class Doctor
 		
 	
 	public ArrayList<Schedule> listOfSchedules;
+	//----------Getter e Setter generico----------
+	Object getX(int attributeID)
+	{
+		return this.listOfAttributes[attributeID];
+	}
 	
+	void setX(int attributeID, Object x)
+	{
+		this.listOfAttributes[attributeID] = x;
+	}
+	//--------------------
 
 	public long getCRM() {
 		return (long) this.listOfAttributes[DoctorAttributes.CRM.ordinal()];
