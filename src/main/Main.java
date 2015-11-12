@@ -40,14 +40,13 @@ public class Main
 		while(flag)
 		{
 			System.out.println("\n>>> Escolha a opção");
-			System.out.println("1 - Cria um novo usuario");
+			System.out.println(MenuOptions.novoUsuario+" : "+"Cria um novo usuario");
 			
 			if(schedulingSystem.hasUser())
 			{
-				System.out.println("2 - Editar um usuario");
-				System.out.println("3 - Listar usuarios");
+				System.out.println(MenuOptions.editarUsuario + " : "+"Editar um usuario");
+				System.out.println(MenuOptions.listarUsuarios + " : "+"Listar usuarios");
 				//System.out.println("4 - Buscar um usuario");
-				//System.out.println("5 - Alterar um usuario");
 				//System.out.println("6 - Remover um usuario");
 			}
 			
@@ -67,6 +66,7 @@ public class Main
 				//System.out.println("15 - Buscar cronograma");
 				//System.out.println("16 - Remover cronograma");
 			}
+			
 			//System.out.println("17 - Criar um Paciente");
 			if(schedulingSystem.hasPatient())
 			{
@@ -93,7 +93,7 @@ public class Main
 			switch (option)
 			{
 				
-				//2 - Cria um novo usuario
+				//Cria um novo usuario
 				case "1":
 					System.out.println("Entre com os atributos do usuario");
 					String[] attributesOfUser = new String[Attributes.values().length];
