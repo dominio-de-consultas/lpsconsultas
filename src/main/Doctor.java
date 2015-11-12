@@ -9,7 +9,7 @@ public class Doctor
 	
 	public ArrayList<Schedule> listOfSchedules;
 	//----------Getter e Setter genericos----------
-	Object getX(int attributeID)
+	Object getX(Integer attributeID)
 	{
 		return this.listOfAttributes[attributeID];
 	}
@@ -19,7 +19,6 @@ public class Doctor
 		this.listOfAttributes[attributeID] = x;
 	}
 	//--------------------
-
 	public Integer getCRM() {
 		return (Integer) this.listOfAttributes[DoctorAttributes.CRM.ordinal()];
 	}

@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Date;
+
 public class Patient
 {
 	public Object[] listOfAttributes;
@@ -75,9 +77,9 @@ public class Patient
 	}
 	//--------------------
 	//----------bairro----------
-	Integer getBairro()
+	String getBairro()
 	{
-		return (Integer) this.listOfAttributes[PatientAttributes.bairro.ordinal()];
+		return (String) this.listOfAttributes[PatientAttributes.bairro.ordinal()];
 	}
 	
 	void setBairro(String bairro)
@@ -86,9 +88,9 @@ public class Patient
 	}
 	//--------------------
 	//----------municipio----------
-	Integer getMunicipio()
+	String getMunicipio()
 	{
-		return (Integer) this.listOfAttributes[PatientAttributes.municipio.ordinal()];
+		return (String) this.listOfAttributes[PatientAttributes.municipio.ordinal()];
 	}
 	
 	void setMunicipio(String municipio)
@@ -96,6 +98,106 @@ public class Patient
 		this.listOfAttributes[PatientAttributes.municipio.ordinal()] = municipio;
 	}
 	//--------------------
+	//----------estado----------
+	String getEstado()
+	{
+		return (String) this.listOfAttributes[PatientAttributes.estado.ordinal()];
+	}
+	
+	void setEstado(String estado)
+	{
+		this.listOfAttributes[PatientAttributes.estado.ordinal()] = estado;
+	}
+	//--------------------
+	//----------complemento----------
+	String getComplemento()
+	{
+		return (String) this.listOfAttributes[PatientAttributes.estado.ordinal()];
+	}
+	
+	void setComplemento(String complemento)
+	{
+		this.listOfAttributes[PatientAttributes.complemento.ordinal()] = complemento;
+	}
+	//--------------------
+	//----------telefone----------
+	String getTelefone()
+	{
+		return (String) this.listOfAttributes[PatientAttributes.telefone.ordinal()];
+	}
+	
+	void setTelefone(String telefone)
+	{
+		this.listOfAttributes[PatientAttributes.telefone.ordinal()] = telefone;
+	}
+	//--------------------
+	//----------email----------
+	String getEmail()
+	{
+		return (String) this.listOfAttributes[PatientAttributes.email.ordinal()];
+	}
+	
+	void setEmail(String email)
+	{
+		this.listOfAttributes[PatientAttributes.email.ordinal()] = email;
+	}
+	//--------------------
+	//----------dataDeNascimento----------
+	Date getDataDeNascimento()
+	{
+		return (Date) this.listOfAttributes[PatientAttributes.dataDeNascimento.ordinal()];
+	}
+	
+	void setDataDeNascimento(Date dataDeNascimento)
+	{
+		this.listOfAttributes[PatientAttributes.dataDeNascimento.ordinal()] = dataDeNascimento;
+	}
+	//--------------------
+	//----------tipoSanguineo----------
+	Date getTipoSanguineo()
+	{
+		return (Date) this.listOfAttributes[PatientAttributes.tipoSanguineo.ordinal()];
+	}
+	
+	void setTipoSanguineo(String tipoSanguineo)
+	{
+		this.listOfAttributes[PatientAttributes.tipoSanguineo.ordinal()] = tipoSanguineo;
+	}
+	//--------------------
+	//----------alergias----------
+	String getAlergias()
+	{
+		return (String) this.listOfAttributes[PatientAttributes.alergias.ordinal()];
+	}
+	
+	void setAlergias(String alergias)
+	{
+		this.listOfAttributes[PatientAttributes.alergias.ordinal()] = alergias;
+	}
+	//--------------------
+	//----------descricaoHistoricoEscolar----------
+	String getDescricaoHistoricoEscolar()
+	{
+		return (String) this.listOfAttributes[PatientAttributes.descricaoHistoricoEscolar.ordinal()];
+	}
+	
+	void setDescricaoHistoricoEscolar(String descricaoHistoricoEscolar)
+	{
+		this.listOfAttributes[PatientAttributes.descricaoHistoricoEscolar.ordinal()] = descricaoHistoricoEscolar;
+	}
+	//--------------------
+	//----------doadorDeOrgaos----------
+	Boolean getDoadorDeOrgaos()
+	{
+		return (Boolean) this.listOfAttributes[PatientAttributes.doadorDeOrgaos.ordinal()];
+	}
+	
+	void setDoadorDeOrgaos(String doadorDeOrgaos)
+	{
+		this.listOfAttributes[PatientAttributes.doadorDeOrgaos.ordinal()] = doadorDeOrgaos;
+	}
+	//--------------------
+	
 	Patient()
 	{
 		this.listOfAttributes = new Object[PatientAttributes.values().length];
