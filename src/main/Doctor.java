@@ -20,11 +20,11 @@ public class Doctor
 	}
 	//--------------------
 
-	public long getCRM() {
-		return (long) this.listOfAttributes[DoctorAttributes.CRM.ordinal()];
+	public Integer getCRM() {
+		return (Integer) this.listOfAttributes[DoctorAttributes.CRM.ordinal()];
 	}
 
-	public void setCRM(long CRM) {
+	public void setCRM(Integer CRM) {
 		this.listOfAttributes[DoctorAttributes.CRM.ordinal()] = CRM;
 	}
 	
@@ -59,8 +59,5 @@ public class Doctor
 			System.out.println("Disponibilidade: "+schedule.available.toString());
 		}
 	}
-	
-	
-	
 	
 }

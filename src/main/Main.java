@@ -47,8 +47,40 @@ public class Main
 				System.out.println("2 - Editar um usuario");
 				System.out.println("3 - Listar usuarios");
 				//System.out.println("4 - Buscar um usuario");
-				//System.out.println("3 - Remover um usuario");
+				//System.out.println("5 - Alterar um usuario");
+				//System.out.println("6 - Remover um usuario");
 			}
+			
+			//System.out.println("7 - Criar um medico");
+			if(schedulingSystem.hasDoctor())
+			{
+				//System.out.println("8 - Listar medicos");
+				//System.out.println("9 - Alterar medico");
+				//System.out.println("10 - Buscar medicos");
+				//System.out.println("11 - Remover medico");
+				
+				//--------------------
+				
+				//System.out.println("12 - Criar cronograma");
+				//System.out.println("13 - Editar cronograma");
+				//System.out.println("14 - Listar cronograma");
+				//System.out.println("15 - Buscar cronograma");
+				//System.out.println("16 - Remover cronograma");
+			}
+			//System.out.println("17 - Criar um Paciente");
+			if(schedulingSystem.hasPatient())
+			{
+				//System.out.println("18 - Listar pacientes");
+				//System.out.println("19 - Alterar pacientes");
+				//System.out.println("20 - Buscar pacientes");
+				//System.out.println("21 - Remover pacientes");
+			}
+			
+			if(schedulingSystem.hasDoctor() && schedulingSystem.hasPatient())
+			{
+				//System.out.println("22 - Criar consulta");
+			}
+			
 			
 			
 			
@@ -83,7 +115,7 @@ public class Main
 						System.out.println("Escolha um usuario pelo indice:");
 						Integer userIndex = Integer.valueOf(scanner.nextLine());
 						
-						User user = schedulingSystem.listOfUser.get(userIndex);
+						User user = schedulingSystem.listOfUsers.get(userIndex);
 						
 						System.out.println("Escolha um atributo pelo indice");
 						user.listAttributes();
