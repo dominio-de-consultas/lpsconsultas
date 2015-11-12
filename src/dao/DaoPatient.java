@@ -16,7 +16,7 @@ public class DaoPatient {
 	private Transaction transaction;
 	private Query query;
 
-	public List select() {
+	public List<Patient> select() {
 		List<Patient> lista = new ArrayList<>();
 
 		try {

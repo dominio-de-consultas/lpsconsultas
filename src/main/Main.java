@@ -264,6 +264,7 @@ public class Main
 				//System.out.println("17 - Listar pacientes");
 				case "17":
 					schedulingSystem.printListOfPatients();
+					break;
 				//0 - encerrra o sistema
 				case "0":
 					flag = false;

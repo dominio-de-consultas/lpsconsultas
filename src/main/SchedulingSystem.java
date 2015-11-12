@@ -3,12 +3,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dao.DaoDoctor;
+import dao.DaoPatient;
 import dao.DaoUser;
 
 public class SchedulingSystem
 {
 	private DaoUser daoUser;
 	private DaoDoctor daoDoctor;
+	private DaoPatient daoPatient;
 	//----------Attributes----------
 	public List<User> listOfUsers;
 	public List<Doctor> listOfDoctors;
@@ -19,10 +21,14 @@ public class SchedulingSystem
 	{
 		this.listOfDoctors = new ArrayList<Doctor>();
 		this.listOfPatients = new ArrayList<Patient>();
-		
 		this.listOfUsers = new ArrayList<User>();
+		
 		daoUser = new DaoUser();
 		daoDoctor = new DaoDoctor();
+		daoPatient = new DaoPatient();
+		this.listOfDoctors = daoDoctor.select();
+		this.listOfUsers = daoUser.select();
+		this.listOfPatients = daoPatient.select();		
 		
 		String[] attributesOfDefaultUser = new String[Attributes.values().length];
 		attributesOfDefaultUser[Attributes.nome.ordinal()] = "admin";

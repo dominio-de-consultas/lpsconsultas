@@ -16,7 +16,7 @@ public class DaoDoctor {
 	private Transaction transaction;
 	private Query query;
 
-	public List select() {
+	public List<Doctor> select() {
 		List<Doctor> lista = new ArrayList<>();
 
 		try {
