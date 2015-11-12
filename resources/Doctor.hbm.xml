@@ -35,19 +35,19 @@
         <property name="numero" type="java.lang.Integer">
         	<column name="numero"></column>
         </property>
-        <property name="bairro" type="java.lang.Integer">
+        <property name="bairro" type="java.lang.String">
         	<column name="BAIRRO"></column>
         </property>
-        <property name="municipio" type="java.lang.Integer">
+        <property name="municipio" type="java.lang.String">
         	<column name="MUNICIPIO"></column>
         </property>
-        <property name="estado" type="java.lang.Integer">
+        <property name="estado" type="java.lang.String">
         	<column name="ESTADO"></column>
         </property>
-        <property name="complemento" type="java.lang.Integer">
+        <property name="complemento" type="java.lang.String">
         	<column name="COMPLEMENTO"></column>
         </property>
-        <property name="telefone" type="java.lang.Integer">
+        <property name="telefone" type="java.lang.String">
         	<column name="TELEFONE"></column>
         </property>
     </class>

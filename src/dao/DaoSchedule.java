@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -7,23 +8,23 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import main.User;
+import main.Schedule;
 import util.HibernateHelper;
 
-public class DaoUser {
+public class DaoSchedule {
 	private Session session;
 	private Transaction transaction;
 	private Query query;
 
-	public List<User> select() {
-		List<User> lista = null;
+	public List select() {
+		List<Schedule> lista = new ArrayList<>();
 
 		try {
 			this.session = HibernateHelper.getSessao();
 			transaction = session.beginTransaction();
-			query = session.createQuery("from User");
-			lista = query.list();
-			transaction.commit();
+			query = session.createQuery("from Schedule");
+			if (query.list() != null)
+				lista = query.list();
 			session.close();
 		} catch (HibernateException e) {
 			session.close();
@@ -33,11 +34,11 @@ public class DaoUser {
 		return lista;
 	}
 
-	public void insertUpdate(User user) {
+	public void insertUpdate(Schedule schedule) {
 		try {
 			this.session = HibernateHelper.getSessao();
 			transaction = session.beginTransaction();
-			session.saveOrUpdate(user);
+			session.saveOrUpdate(schedule);
 			transaction.commit();
 			session.close();
 			System.out.println("Salvo");
@@ -47,11 +48,11 @@ public class DaoUser {
 		}
 	}
 
-	public void delete(User user) {
+	public void delete(Schedule schedule) {
 		try {
 			this.session = HibernateHelper.getSessao();
 			transaction = session.beginTransaction();
-			session.delete(user);
+			session.delete(schedule);
 			transaction.commit();
 			session.close();
 		} catch (HibernateException e) {
