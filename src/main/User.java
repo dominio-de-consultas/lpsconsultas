@@ -44,8 +44,50 @@ public class User {
 	String getNome()
 	{
 		return this.listOfAttributes[Attributes.nome.ordinal()].toString();
+	}
+	
+	void setNome(String nome)
+	{
+		this.listOfAttributes[Attributes.nome.ordinal()] = nome;
+	}
+	
+	String getCPF()
+	{
+		return this.listOfAttributes[Attributes.CPF.ordinal()].toString();
 		
 	}
+	void setCPF(String cpf)
+	{
+		this.listOfAttributes[Attributes.CPF.ordinal()] = cpf;		
+	}
+	String getEmail()
+	{
+		return this.listOfAttributes[Attributes.email.ordinal()].toString();
+		
+	}
+	void setEmail(String email)
+	{
+		this.listOfAttributes[Attributes.email.ordinal()] = email;		
+	}
+	String getTelefone()
+	{
+		return this.listOfAttributes[Attributes.telefone.ordinal()].toString();
+		
+	}
+	void setTelefone(String telefone)
+	{
+		this.listOfAttributes[Attributes.telefone.ordinal()] = telefone;		
+	}
+	String getSenha()
+	{
+		return this.listOfAttributes[Attributes.senha.ordinal()].toString();
+		
+	}
+	void setSenha(String senha)
+	{
+		this.listOfAttributes[Attributes.senha.ordinal()] = senha;		
+	}
+	
 	
 	void listAttributes()
 	{

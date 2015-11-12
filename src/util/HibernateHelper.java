@@ -15,7 +15,7 @@ public class HibernateHelper {
     
     static {
         try {
-            configuration = new Configuration().configure("resources\\hibernate.cfg.xml");
+            configuration = new Configuration().configure("hibernate.cfg.xml");
              registry = new StandardServiceRegistryBuilder()
 					.applySettings(configuration.getProperties()).build();
              sessionFactory = configuration.buildSessionFactory(registry);

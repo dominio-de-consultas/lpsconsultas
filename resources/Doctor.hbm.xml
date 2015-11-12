@@ -8,5 +8,47 @@
             <column name="ID" />
             <generator class="native" />
         </id>
+        <property name="CRM" type="java.lang.Integer">
+        	<column name="CRM"></column>
+        </property>
+        <property name="nome" type="java.lang.String">
+        	<column name="NOME"></column>
+        </property>
+        <property name="CPF" type="java.lang.String">
+        	<column name="CPF"></column>
+        </property>
+        <property name="dataDeNascimento" type="java.util.Date">
+        	<column name="DATADENASCIMENTO"></column>
+        </property>
+        <property name="especialidade" type="java.lang.String">
+        	<column name="ESPECIALIDADE"></column>
+        </property>
+        <property name="email" type="java.lang.String">
+        	<column name="EMAIL"></column>
+        </property>
+        <property name="rua" type="java.lang.String">
+        	<column name="RUA"></column>
+        </property>
+        <property name="CEP" type="java.lang.String">
+        	<column name="CEP"></column>
+        </property>
+        <property name="numero" type="java.lang.Integer">
+        	<column name="numero"></column>
+        </property>
+        <property name="bairro" type="java.lang.Integer">
+        	<column name="BAIRRO"></column>
+        </property>
+        <property name="municipio" type="java.lang.Integer">
+        	<column name="MUNICIPIO"></column>
+        </property>
+        <property name="estado" type="java.lang.Integer">
+        	<column name="ESTADO"></column>
+        </property>
+        <property name="complemento" type="java.lang.Integer">
+        	<column name="COMPLEMENTO"></column>
+        </property>
+        <property name="telefone" type="java.lang.Integer">
+        	<column name="TELEFONE"></column>
+        </property>
     </class>
 </hibernate-mapping>

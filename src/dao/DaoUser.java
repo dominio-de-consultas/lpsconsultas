@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Transaction;
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -27,7 +28,7 @@ public class DaoUser {
 			if(query.list() != null)
 				lista = query.list();
 			session.close();
-		}catch(Exception e){
+		}catch(HibernateException e){
 			session.close();
 			e.printStackTrace();
 		}
@@ -43,10 +44,23 @@ public class DaoUser {
 			transaction.commit();
 			session.close();
 			System.out.println("Salvo");
-		}catch(Exception e){
+		}catch(HibernateException e){
 			session.close();
 			e.printStackTrace();
 		}
 	}
+	
+	public void delete(User user){
+        try{
+            this.session = HibernateHelper.getSessao();
+            transaction = session.beginTransaction();
+            session.delete(user);
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
+			session.close(); 
+            e.printStackTrace(); 
+        }
+    }
 
 }
