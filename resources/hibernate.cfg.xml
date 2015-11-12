@@ -9,9 +9,9 @@
   <property name="hibernate.connection.password">root</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.show_sql">true</property>
-  <property name="hibernate.hbm2ddl.auto">create</property>
-  <mapping resource="resources\\Doctor.hbm.xml"/>
-  <mapping resource="resources\\User.hbm.xml"/>
-  <mapping resource="resources\\Schedule.hbm.xml"/>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <mapping resource="Doctor.hbm.xml"/>
+  <mapping resource="User.hbm.xml"/>
+  <mapping resource="Schedule.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

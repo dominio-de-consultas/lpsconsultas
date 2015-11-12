@@ -7,23 +7,23 @@ import org.hibernate.Transaction;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import main.User;
+import main.Doctor;
 
 import util.HibernateHelper;
 
-public class DaoUser {
+public class DaoDoctor {
 	private Session session;
 	private Transaction transaction;
 	private Query query;
 	
 	public List select(){
-		List<User> lista = new ArrayList<>();
+		List<Doctor> lista = new ArrayList<>();
 		
 		
 		try{
 			this.session = HibernateHelper.getSessao();
 			transaction = session.beginTransaction();
-			query = session.createQuery("from User");
+			query = session.createQuery("from Doctor");
 			if(query.list() != null)
 				lista = query.list();
 			session.close();
@@ -35,11 +35,11 @@ public class DaoUser {
 		return lista;
 	}
 	
-	public void insertUpdate(User user){
+	public void insertUpdate(Doctor doctor){
 		try{
 			this.session = HibernateHelper.getSessao();
 			transaction = session.beginTransaction();
-			session.saveOrUpdate(user);
+			session.saveOrUpdate(doctor);
 			transaction.commit();
 			session.close();
 			System.out.println("Salvo");

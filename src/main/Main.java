@@ -9,6 +9,7 @@ public class Main
 	
 	public static void main(String[] args)
 	{ 
+		HibernateHelper helper = new HibernateHelper();
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
 		//DaoUser daoUser = new DaoUser();
@@ -213,7 +214,7 @@ public class Main
 			
 		}
 		scanner.close();
-
+		helper.close();
 		
 		
 	}
