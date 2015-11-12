@@ -1,4 +1,7 @@
 package main;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 import dao.DaoUser;
@@ -7,8 +10,9 @@ import util.HibernateHelper;
 public class Main
 {
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws ParseException
 	{ 
+		String dateFormat = "HH:mm dd/MM/yyyy";
 		//HibernateHelper helper = new HibernateHelper();
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
@@ -193,15 +197,17 @@ public class Main
 						}
 						else if(i == PatientAttributes.numero.ordinal())
 						{
-							newPatient.listOfAttributes[i] = Integer.parseInt(aux);
+							newPatient.setNumero(Integer.parseInt(aux));
 						}
 						else if(i == PatientAttributes.doadorDeOrgaos.ordinal())
 						{
-							newPatient.listOfAttributes[i] = Boolean.parseBoolean(aux);
+							newPatient.setDoadorDeOrgaos(Boolean.parseBoolean(aux));
 						}
 						else if(i == PatientAttributes.dataDeNascimento.ordinal())
 						{
-							;
+							SimpleDateFormat dataFormat = new SimpleDateFormat (dateFormat);
+							Date date = dataFormat.parse(aux);
+							newPatient.setDataDeNascimento(date);
 						}
 					}
 					

@@ -71,7 +71,7 @@ public class Patient
 		return (Integer) this.listOfAttributes[PatientAttributes.numero.ordinal()];
 	}
 	
-	void setNumero(String numero)
+	void setNumero(Integer numero)
 	{
 		this.listOfAttributes[PatientAttributes.numero.ordinal()] = numero;
 	}
@@ -192,7 +192,7 @@ public class Patient
 		return (Boolean) this.listOfAttributes[PatientAttributes.doadorDeOrgaos.ordinal()];
 	}
 	
-	void setDoadorDeOrgaos(String doadorDeOrgaos)
+	void setDoadorDeOrgaos(Boolean doadorDeOrgaos)
 	{
 		this.listOfAttributes[PatientAttributes.doadorDeOrgaos.ordinal()] = doadorDeOrgaos;
 	}
