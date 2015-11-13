@@ -1,8 +1,11 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.TreeSet;
 
+
+/// @class Doctor
 public class Doctor {
 	public Object[] listOfAttributes;
 

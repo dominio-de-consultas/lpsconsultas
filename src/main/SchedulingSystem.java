@@ -6,19 +6,28 @@ import dao.DaoDoctor;
 import dao.DaoPatient;
 import dao.DaoUser;
 
+/// @class SchedulingSystem
 public class SchedulingSystem
 {
+	/** referência para a classe que gerencia o relacionamento entre objetos da classe User e o BD*/
 	private DaoUser daoUser;
+	/** referência para a classe que gerencia o relacionamento entre objetos da classe Doctor e o BD*/
 	private DaoDoctor daoDoctor;
+	/** referência para a classe que gerencia o relacionamento entre objetos da classe Patient e o BD*/
 	private DaoPatient daoPatient;
 	//----------Attributes----------
+	/** Lista de usuários*/
 	public List<User> listOfUsers;
+	/** Lista de médicos*/
 	public List<Doctor> listOfDoctors;
+	/** Lista de pacientes*/
 	public List<Patient> listOfPatients;
 	
 	//----------Constructor method----------
+	/** construtor de um objeto da classe SchedulingSystem*/
 	SchedulingSystem()
 	{
+	
 		this.listOfDoctors = new ArrayList<Doctor>();
 		this.listOfPatients = new ArrayList<Patient>();
 		this.listOfUsers = new ArrayList<User>();
@@ -41,6 +50,11 @@ public class SchedulingSystem
 		this.listOfUsers.add(defaultUser);
 	}
 	
+	/**
+	 * Método que realiza a verificação do login
+	 * @param userID código valor único que se refere a um certo usuário (O CPF no nosso caso)
+	 * @param password senha do usuário
+	 */
 	Boolean login(String userID, String password)
 	{
 		for(int i = 0; i < this.listOfUsers.size(); i++)
@@ -60,30 +74,34 @@ public class SchedulingSystem
 		return false;
 	}
 	
+	/**Método que verifica se já existe um usuário cadastrado no sistema*/
 	Boolean hasUser()
 	{
 		return ! this.listOfUsers.isEmpty();
 	}
-	
+	/**Método que verifica se já existe um médico cadastrado no sistema*/
 	Boolean hasDoctor()
 	{
 		return ! this.listOfDoctors.isEmpty();
 		
 	}
-	
+	/**Método que verifica se já existe um paciente cadastrado no sistema*/
 	Boolean hasPatient()
 	{
 		return ! this.listOfPatients.isEmpty();
 	}
 	
 	//----------User methods----------
+	/**Método que cria um usuário e o adiciona no sistema
+	 * @param attributesOfUser Atributos referentes ao usuário que será adicionado
+	 */
 	public void createUser(String[] attributesOfUser)
 	{
 		User newUser = new User(attributesOfUser);
 		daoUser.insertUpdate(newUser);
 		listOfUsers.add(newUser);
 	}
-
+	
 	public void editUser()
 	{
 		;
@@ -94,7 +112,12 @@ public class SchedulingSystem
 		;
 	}
 	
-	public User searchUser(String nome)
+	/**
+	 * Busca por usuário no sistema à partir do seu nome
+	 * @param nome Nome a ser buscado no sistema
+	 * @return Usuário cujo nome é igual ao buscado ou Null
+	 */
+	public User searchUserByName(String nome)
 	{
 		List<User> ls = daoUser.select();
 		for(int i = 0; i < ls.size(); i++)
@@ -104,6 +127,9 @@ public class SchedulingSystem
 		return null;
 	
 	}
+	/**
+	 * Imprime no terminal uma lista contendo todos os usuários cadastrados no sistema
+	 */
 	public void printListOfUsers()
 	{
 		System.out.println("\n");
@@ -116,9 +142,16 @@ public class SchedulingSystem
 	
 
 	//----------Doctors methods----------
+	/**
+	 * Método que insere um médico no BD
+	 * @param doctor médico a ser inserido no BD
+	 */
 	public void createDoctor(Doctor doctor){
 		daoDoctor.insertUpdate(doctor);
 	}
+	/**
+	 * Imprime no terminal uma lista contendo todos os médicos cadastrados no sistema
+	 */
 	public void printListOfDoctors()
 	{
 		System.out.println("\n");
