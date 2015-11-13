@@ -164,6 +164,9 @@ public class SchedulingSystem
 	
 	
 	//----------Patientss methods----------
+	/**
+	 * Imprime no terminal uma lista contendo todos os pacientes cadastrados no sistema
+	 */
 	public void printListOfPatients()
 	{
 		System.out.println("\n");
