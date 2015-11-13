@@ -85,8 +85,8 @@ public class Main
 			
 			if(schedulingSystem.hasDoctor() && schedulingSystem.hasPatient())
 			{
-				//System.out.println("21 - Criar consulta");
-				//System.out.println("22 - Listar consulta");
+				System.out.println("21 - Criar consulta");
+				System.out.println("22 - Listar consulta");
 				//System.out.println("23 - Alterar consulta");
 				//System.out.println("24 - Buscar consulta");
 				//System.out.println("25 - Remover consulta");
@@ -264,6 +264,16 @@ public class Main
 				case "17":
 					schedulingSystem.printListOfPatients();
 					break;
+				
+				
+				//System.out.println("21 - Criar consulta");
+				case "21":
+					break;
+				//System.out.println("22 - Listar consulta");
+				case "22":
+					break;
+				
+					
 				//0 - encerrra o sistema
 				case "0":
 					flag = false;

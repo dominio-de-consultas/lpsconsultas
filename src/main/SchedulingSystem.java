@@ -76,7 +76,6 @@ public class SchedulingSystem
 		return ! this.listOfPatients.isEmpty();
 	}
 	
-	
 	//----------User methods----------
 	public void createUser(String[] attributesOfUser)
 	{
