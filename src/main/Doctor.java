@@ -2,12 +2,12 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.TreeSet;
 
 public class Doctor {
 	public Object[] listOfAttributes;
 
-	public ArrayList<Schedule> listOfSchedules;
-
+	TreeSet<Schedule> listOfSchedules = new TreeSet<Schedule>();
 	// ----------Getter e Setter genericos----------
 	Object getX(int attributeID) {
 		return this.listOfAttributes[attributeID];
@@ -130,29 +130,19 @@ public class Doctor {
 	}
 
 	public Doctor() {
-		this.listOfSchedules = new ArrayList<Schedule>();
+		this.listOfSchedules = new TreeSet<Schedule>();
 		this.listOfAttributes = new Object[DoctorAttributes.values().length];
 	}
-
-	public Doctor(Object[] listOfAttributes) {
-		this.listOfSchedules = new ArrayList<Schedule>();
-
-		this.listOfAttributes = new Object[DoctorAttributes.values().length];
-		for (int i = 0; i < DoctorAttributes.values().length; i++) {
-			this.listOfAttributes[i] = listOfAttributes[i];
-		}
-	}
-
 	public void listSchedules() {
 		System.out.println("\nCRONOGRAMA\n");
 
-		for (int i = 0; i < this.listOfSchedules.size(); i++) {
-			Schedule schedule = this.listOfSchedules.get(i);
+		for (Schedule s: this.listOfSchedules) {
+			
 
-			System.out.println("\nID: " + schedule.getPid());
-			System.out.println("Início: " + schedule.starterDate.toString());
-			System.out.println("Término: " + schedule.finalDate.toString());
-			System.out.println("Disponibilidade: " + schedule.available.toString());
+			System.out.println("\nID: " + s.getPid());
+			System.out.println("Início: " + s.starterDate.toString());
+			System.out.println("Término: " + s.finalDate.toString());
+			System.out.println("Disponibilidade: " + s.available.toString());
 		}
 	}
 

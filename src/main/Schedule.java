@@ -1,12 +1,14 @@
 package main;
+import java.util.Comparator;
 import java.util.Date;
 
-public class Schedule
+public class Schedule implements Comparator<Date>
 {
 	private long pid;
 	public Date starterDate;
 	public Date finalDate;
 	public Boolean available;
+	
 	
 	public long getPid() {
 		return pid;
@@ -49,5 +51,11 @@ public class Schedule
 	public Schedule()
 	{
 		;
+	}
+
+	@Override
+	public int compare(Date d1, Date d2)
+	{
+		return d1.compareTo(d2);
 	}
 }

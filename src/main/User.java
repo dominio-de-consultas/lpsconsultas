@@ -115,16 +115,15 @@ public class User {
 	}
 	Boolean verifySchedules(Doctor doctor, Date starterDate, Date finalDate)
 	{
-		for(int i = 0 ; i < doctor.listOfSchedules.size(); i++)
+		for(Schedule s : doctor.listOfSchedules)
 		{
-			Schedule actualSchedule = doctor.listOfSchedules.get(i);
 			if
 			(
-				(starterDate.after(actualSchedule.starterDate) && starterDate.before(actualSchedule.finalDate))	
+				(starterDate.after(s.starterDate) && starterDate.before(s.finalDate))	
 				||
-				(finalDate.before(actualSchedule.finalDate) && finalDate.after(actualSchedule.starterDate))
+				(finalDate.before(s.finalDate) && finalDate.after(s.starterDate))
 				||
-				(starterDate.before(actualSchedule.starterDate) && finalDate.after(actualSchedule.finalDate))
+				(starterDate.before(s.starterDate) && finalDate.after(s.finalDate))
 			)
 			{
 				return false;
