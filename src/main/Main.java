@@ -2,7 +2,6 @@ package main;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 import dao.DaoUser;
@@ -15,7 +14,7 @@ public class Main
 	{ 
 		
 		String dateString = "dd/MM/yyyy";
-		String dateAndHourString = "dd/MM/yyyy HH:mm";
+		String dateAndHourString = "dd/MM/yyyy HH:mms";
 		SimpleDateFormat dateFormat = new SimpleDateFormat (dateString);
 		SimpleDateFormat dateAndHourFormat = new SimpleDateFormat(dateAndHourString);
 		Date dateAux;
@@ -201,7 +200,7 @@ public class Main
 						}	
 						else if(i == DoctorAttributes.dataDeNascimento.ordinal())
 						{
-							
+						
 							dateAux = dateFormat.parse(aux);
 							newDoctor.setDataDeNascimento(dateAux);
 						}
