@@ -42,6 +42,7 @@ public class Schedule implements Comparator<Date>
 		this.available = available;
 	}
 
+	
 	public Schedule(Date starterDate, Date finalDate, Boolean available)
 	{
 		this.starterDate = starterDate;

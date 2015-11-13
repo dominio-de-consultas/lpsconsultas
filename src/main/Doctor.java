@@ -133,7 +133,7 @@ public class Doctor {
 		this.listOfSchedules = new TreeSet<Schedule>();
 		this.listOfAttributes = new Object[DoctorAttributes.values().length];
 	}
-	public void listSchedules() {
+	public void printListOfSchedules() {
 		System.out.println("\nCRONOGRAMA\n");
 
 		for (Schedule s: this.listOfSchedules) {

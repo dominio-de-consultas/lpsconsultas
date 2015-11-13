@@ -13,13 +13,18 @@ public class Main
 	
 	public static void main(String[] args) throws ParseException
 	{ 
-		String dateFormat = "dd/MM/yyyy";
-		String dateAndHourFormat = "HH:mm dd/MM/yyyy";
+		
+		String dateString = "dd/MM/yyyy";
+		String dateAndHourString = "dd/MM/yyyy HH:mm";
+		SimpleDateFormat dateFormat = new SimpleDateFormat (dateString);
+		SimpleDateFormat dateAndHourFormat = new SimpleDateFormat(dateAndHourString);
+		Date dateAux;
+		
 		HibernateHelper helper = new HibernateHelper();
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
 		Scanner scanner = new Scanner(System.in);
 		DaoUser daoUser = new DaoUser();
-		
+		String aux;
 		
 		Boolean validPassword = false;
 		do
@@ -67,9 +72,9 @@ public class Main
 				
 				//--------------------
 				
-				//System.out.println("11 - Criar cronograma");
+				System.out.println("11 - Criar cronograma");
 				//System.out.println("12 - Editar cronograma");
-				//System.out.println("13 - Listar cronograma");
+				System.out.println("13 - Listar cronograma");
 				//System.out.println("14 - Buscar cronograma");
 				//System.out.println("15 - Remover cronograma");
 			}
@@ -85,8 +90,8 @@ public class Main
 			
 			if(schedulingSystem.hasDoctor() && schedulingSystem.hasPatient())
 			{
-				System.out.println("21 - Criar consulta");
-				System.out.println("22 - Listar consulta");
+				//System.out.println("21 - Criar consulta");
+				//System.out.println("22 - Listar consulta");
 				//System.out.println("23 - Alterar consulta");
 				//System.out.println("24 - Buscar consulta");
 				//System.out.println("25 - Remover consulta");
@@ -176,7 +181,7 @@ public class Main
 					for(int i = 0; i < DoctorAttributes.values().length; i++)
 					{
 						System.out.println(DoctorAttributes.values()[i].toString()+": ");
-						String aux = scanner.nextLine();
+						aux = scanner.nextLine();
 						if
 						(
 							i == DoctorAttributes.nome.ordinal()
@@ -196,9 +201,9 @@ public class Main
 						}	
 						else if(i == DoctorAttributes.dataDeNascimento.ordinal())
 						{
-							SimpleDateFormat dataFormat = new SimpleDateFormat (dateFormat);
-							Date date = dataFormat.parse(aux);
-							newDoctor.setDataDeNascimento(date);
+							
+							dateAux = dateFormat.parse(aux);
+							newDoctor.setDataDeNascimento(dateAux);
 						}
 						else if(i == DoctorAttributes.numero.ordinal() || i == DoctorAttributes.CRM.ordinal())
 						{
@@ -215,7 +220,43 @@ public class Main
 					schedulingSystem.printListOfDoctors();
 					break;
 				//------------------------------------------------------------
+				//System.out.println("11 - Criar cronograma");
+				case "11":
+					System.out.println("\nEscolha um médico:");
+					schedulingSystem.printListOfDoctors();
+					aux = scanner.nextLine();
+					Doctor doctor = schedulingSystem.listOfDoctors.get(Integer.parseInt(aux));
+					Schedule newSchedule = new Schedule();
+					
+					System.out.println("Cronogramas existentes:");
+					doctor.printListOfSchedules();
+					
+					
+					
+					System.out.println("Entre com a data inicial:");
+					aux = scanner.nextLine();
+					dateAux = dateAndHourFormat.parse(aux);
+					newSchedule.setStarterDate(dateAux);
+					
+					
+					
+					System.out.println("Entre com a data final:");
+					aux = scanner.nextLine();
+					
+					dateAux = dateAndHourFormat.parse(aux);
+					newSchedule.setFinalDate(dateAux);
+							
+					doctor.listOfSchedules.add(newSchedule);
+					
+					break;
+				//------------------------------------------------------------
+				//System.out.println("13 - Listar cronograma");
+				case "13":
+					break;	
+					
+				//------------------------------------------------------------
 				//System.out.println("16 - Criar um Paciente");
+	
 				case "16":
 					Patient newPatient = new Patient();
 					
@@ -223,7 +264,7 @@ public class Main
 					for(int i = 0; i < PatientAttributes.values().length; i++)
 					{
 						System.out.println(PatientAttributes.values()[i].toString()+": ");
-						String aux = scanner.nextLine();
+						aux = scanner.nextLine();
 						if
 						(
 							i == PatientAttributes.nome.ordinal()
@@ -253,31 +294,19 @@ public class Main
 						}
 						else if(i == PatientAttributes.dataDeNascimento.ordinal())
 						{
-							SimpleDateFormat dataFormat = new SimpleDateFormat (dateFormat);
-							Date date = dataFormat.parse(aux);
-							newPatient.setDataDeNascimento(date);
+							dateAux = dateFormat.parse(aux);
+							newPatient.setDataDeNascimento(dateAux);
 						}
 					}
 					schedulingSystem.listOfPatients.add(newPatient);
 					break;
-				//System.out.println("17 - Listar pacientes");
+				
+				//------------------------------------------------------------
+				//System.out.println("17 - Listar paciente");
 				case "17":
 					schedulingSystem.printListOfPatients();
 					break;
-				
-				
-				//System.out.println("21 - Criar consulta");
-				case "21":
-					System.out.println("Escolha um médico:");
-					schedulingSystem.printListOfDoctors();
-					String aux = scanner.nextLine();
-					
-					break;
-				//System.out.println("22 - Listar consulta");
-				case "22":
-					break;
-				
-					
+				//------------------------------------------------------------
 				//0 - encerrra o sistema
 				case "0":
 					flag = false;
