@@ -268,6 +268,10 @@ public class Main
 				
 				//System.out.println("21 - Criar consulta");
 				case "21":
+					System.out.println("Escolha um médico:");
+					schedulingSystem.printListOfDoctors();
+					String aux = scanner.nextLine();
+					
 					break;
 				//System.out.println("22 - Listar consulta");
 				case "22":
