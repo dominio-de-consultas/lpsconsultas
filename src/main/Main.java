@@ -24,12 +24,8 @@ public class Main
 		Boolean validPassword = false;
 		do
 		{
-			
-			
-			List<User> listaUser = daoUser.select();
 			System.out.println("Lista de usuários cadastrados:");
-			for(User i : listaUser)
-				System.out.println("Nome: " + i.getNome() + " Email: " + i.getEmail());	
+			schedulingSystem.printListOfUsers();
 			
 			System.out.println("\nLOGIN\n");
 			
@@ -39,7 +35,10 @@ public class Main
 			System.out.print("senha:");
 			String password = scanner.nextLine();
 			
-			validPassword = !schedulingSystem.login(userID, password);
+			validPassword = schedulingSystem.login(userID, password);
+			if(!validPassword){
+				System.out.println("Usuário não encontrado ou senha errada.");
+			}
 		}while(!validPassword);
 		
 		String option;
@@ -278,10 +277,6 @@ public class Main
 		}
 		scanner.close();
 		helper.close();
-		
-		
+			
 	}
-	
-	
-
 }
