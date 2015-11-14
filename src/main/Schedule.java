@@ -1,8 +1,7 @@
 package main;
-import java.util.Comparator;
 import java.util.Date;
 
-public class Schedule implements Comparator<Date>
+public class Schedule implements Comparable<Schedule>
 {
 	private long pid;
 	public Date starterDate;
@@ -53,10 +52,11 @@ public class Schedule implements Comparator<Date>
 	{
 		;
 	}
+	
 
 	@Override
-	public int compare(Date d1, Date d2)
-	{
-		return d1.compareTo(d2);
+	public int compareTo(Schedule o) {
+		// TODO Auto-generated method stub
+		return this.starterDate.compareTo(o.starterDate);
 	}
 }

@@ -5,10 +5,13 @@ import java.util.List;
 import dao.DaoDoctor;
 import dao.DaoPatient;
 import dao.DaoUser;
+import util.HibernateHelper;
 
 /// @class SchedulingSystem
 public class SchedulingSystem
 {
+	/** Cria conexão com o banco de dados*/
+	private HibernateHelper helper;
 	/** referência para a classe que gerencia o relacionamento entre objetos da classe User e o BD*/
 	private DaoUser daoUser;
 	/** referência para a classe que gerencia o relacionamento entre objetos da classe Doctor e o BD*/
@@ -23,11 +26,15 @@ public class SchedulingSystem
 	/** Lista de pacientes*/
 	public List<Patient> listOfPatients;
 	
+
+	static String dateString = "dd/MM/yyyy";
+	static String dateAndHourString = "dd/MM/yyyy HH:mm";
+	
 	//----------Constructor method----------
 	/** construtor de um objeto da classe SchedulingSystem*/
 	SchedulingSystem()
 	{
-	
+		this.helper = new HibernateHelper();
 		this.listOfDoctors = new ArrayList<Doctor>();
 		this.listOfPatients = new ArrayList<Patient>();
 		this.listOfUsers = new ArrayList<User>();
@@ -175,6 +182,10 @@ public class SchedulingSystem
 			System.out.println(i+" : "+this.listOfPatients.get(i).getNome());
 		}
 		System.out.println("\n");
+	}
+	
+	public void closeHelper(){
+		this.helper.close();
 	}
 	
 }

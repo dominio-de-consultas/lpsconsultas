@@ -36,7 +36,7 @@ public class HibernateHelper {
         se.execute(true, true);
     }
     
-    public static void close(){
+    public void close(){
     	sessionFactory.close();
     }
     

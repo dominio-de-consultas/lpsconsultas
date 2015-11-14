@@ -16,7 +16,7 @@ public class DaoSchedule {
 	private Transaction transaction;
 	private Query query;
 
-	public List select() {
+	public List<Schedule> select() {
 		List<Schedule> lista = new ArrayList<>();
 
 		try {
