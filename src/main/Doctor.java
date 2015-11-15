@@ -84,7 +84,11 @@ public class Doctor {
 	public Integer getCRM() {
 		return (Integer) this.listOfAttributes[DoctorAttributes.CRM.ordinal()];
 	}
-
+	// --------------------
+	/**
+	 * setter para o atributo CRM
+	 * @return
+	 */
 	public void setCRM(Integer CRM) {
 		this.listOfAttributes[DoctorAttributes.CRM.ordinal()] = CRM;
 	}
@@ -95,7 +99,10 @@ public class Doctor {
 	public String getNome() {
 		return (String) this.listOfAttributes[DoctorAttributes.nome.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo nome
+	 * @return
+	 */
 	public void setNome(String nome) {
 		this.listOfAttributes[DoctorAttributes.nome.ordinal()] = nome;
 	}
@@ -106,7 +113,10 @@ public class Doctor {
 	public String getCPF() {
 		return (String) this.listOfAttributes[DoctorAttributes.CPF.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo CPF
+	 * @return
+	 */
 	public void setCPF(String cpf) {
 		this.listOfAttributes[DoctorAttributes.CPF.ordinal()] = cpf;
 	}
@@ -117,7 +127,10 @@ public class Doctor {
 	public Date getDataDeNascimento() {
 		return (Date) this.listOfAttributes[DoctorAttributes.dataDeNascimento.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo DataDeNascimento
+	 * @return
+	 */
 	public void setDataDeNascimento(Date data) {
 		this.listOfAttributes[DoctorAttributes.dataDeNascimento.ordinal()] = data;
 	}
@@ -128,7 +141,10 @@ public class Doctor {
 	public String getEspecialidade() {
 		return (String) this.listOfAttributes[DoctorAttributes.especialidade.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo especialidade
+	 * @return
+	 */
 	public void setEspecialidade(String especialidade) {
 		this.listOfAttributes[DoctorAttributes.especialidade.ordinal()] = especialidade;
 	}
@@ -140,7 +156,10 @@ public class Doctor {
 	public String getEmail() {
 		return (String) this.listOfAttributes[DoctorAttributes.email.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo email
+	 * @return
+	 */
 	public void setEmail(String email) {
 		this.listOfAttributes[DoctorAttributes.email.ordinal()] = email;
 	}
@@ -152,7 +171,10 @@ public class Doctor {
 	public String getRua() {
 		return (String) this.listOfAttributes[DoctorAttributes.rua.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo rua
+	 * @return
+	 */
 	public void setRua(String rua) {
 		this.listOfAttributes[DoctorAttributes.rua.ordinal()] = rua;
 	}
@@ -163,7 +185,10 @@ public class Doctor {
 	public String getCEP() {
 		return (String) this.listOfAttributes[DoctorAttributes.CEP.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo CEP
+	 * @return
+	 */
 	public void setCEP(String cep) {
 		this.listOfAttributes[DoctorAttributes.CEP.ordinal()] = cep;
 	}
@@ -175,12 +200,18 @@ public class Doctor {
 	public Integer getNumero() {
 		return (Integer) this.listOfAttributes[DoctorAttributes.numero.ordinal()];
 	}
+	/**
+	 * setter para o atributo número
+	 * @return
+	 */
 	public void setNumero(int numero) {
 		this.listOfAttributes[DoctorAttributes.numero.ordinal()] = numero;
 	}
 
-	
-
+	/**
+	 * setter para o atributo bairro
+	 * @return
+	 */
 	public void setBairro(String bairro) {
 		this.listOfAttributes[DoctorAttributes.bairro.ordinal()] = bairro;
 	}
@@ -191,7 +222,10 @@ public class Doctor {
 	public String getBairro() {
 		return (String) this.listOfAttributes[DoctorAttributes.bairro.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo municipio
+	 * @return
+	 */
 	public void setMunicipio(String municipio) {
 		this.listOfAttributes[DoctorAttributes.municipio.ordinal()] = municipio;
 	}
@@ -203,7 +237,10 @@ public class Doctor {
 	public String getMunicipio() {
 		return (String) this.listOfAttributes[DoctorAttributes.municipio.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo estado
+	 * @return
+	 */
 	public void setEstado(String estado) {
 		this.listOfAttributes[DoctorAttributes.estado.ordinal()] = estado;
 	}
@@ -215,7 +252,10 @@ public class Doctor {
 	public String getEstado() {
 		return (String) this.listOfAttributes[DoctorAttributes.estado.ordinal()];
 	}
-
+	/**
+	 * setter para o atributo complemento
+	 * @return
+	 */
 	public void setComplemento(String complemento) {
 		this.listOfAttributes[DoctorAttributes.complemento.ordinal()] = complemento;
 	}
@@ -227,7 +267,10 @@ public class Doctor {
 	public String getComplemento() {
 		return (String) this.listOfAttributes[DoctorAttributes.complemento.ordinal()]; 
 	}
-
+	/**
+	 * setter para o atributo telefone
+	 * @return
+	 */
 	public void setTelefone(String telefone) {
 		this.listOfAttributes[DoctorAttributes.telefone.ordinal()] = telefone;
 	}
@@ -239,7 +282,10 @@ public class Doctor {
 		return (String) this.listOfAttributes[DoctorAttributes.telefone.ordinal()];
 	}
 
-	
+	/**
+	 * Metodo que lista todos o cronograma do médico em questão.
+	 *
+	 */
 	public void printListOfSchedules() {
 		System.out.println("\nCRONOGRAMA DE "+ getNome() + "\n");
 
@@ -251,7 +297,10 @@ public class Doctor {
 			System.out.println("Disponibilidade: " + s.available.toString());
 		}
 	}
-	
+	/**
+	 * Metodo que lista todos o cronograma de horários disponíveis do médico em questão.
+	 *
+	 */
 	public void printListOfAvailableSchedules() {
 		System.out.println("\nCRONOGRAMA DE "+ getNome() + "\n");
 
