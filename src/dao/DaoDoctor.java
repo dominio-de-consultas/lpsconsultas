@@ -11,11 +11,33 @@ import org.hibernate.Transaction;
 import main.Doctor;
 import util.HibernateHelper;
 
+/**
+ * Essa classe cria uma conexão com o banco de dados para acessar a tabela doctor
+ * que guarda os médicos.
+ * @author Eliton
+ * @see {@link Doctor}, {@link HibernateHelper} 
+ */
 public class DaoDoctor {
+	/**
+	 *  Atributo que guarda a sessão que acessa o banco de dados. 
+	 *  @see {@link Session}
+	 */
 	private Session session;
+	/**
+	 * Atributo que realiza e contem as informações da transação com o banco de dados.
+	 * @see {@link Transaction}
+	 */
 	private Transaction transaction;
+	/**
+	 * Atributo que contem a Query de consulta, inserção ou remoção no bancon de dados.
+	 * @see {@link Query}
+	 */
 	private Query query;
 
+	/**
+	 * Retorna uma lista de {@link Doctor} que estão guardadas no banco de dados.
+	 * @return Uma lista de médicos que estão persistidas no banco de dados.
+	 */
 	public List<Doctor> select() {
 		List<Doctor> lista = new ArrayList<>();
 
@@ -34,6 +56,10 @@ public class DaoDoctor {
 		return lista;
 	}
 
+	/**
+	 * Insere um {@link Doctor} no banco de dados. 
+	 * @param doctor médico a ser guardado no banco de dados.
+	 */
 	public void insertUpdate(Doctor doctor) {
 		try {
 			this.session = HibernateHelper.getSessao();
@@ -48,6 +74,10 @@ public class DaoDoctor {
 		}
 	}
 
+	/**
+	 * Remove do banco de dados o médico, {@link Doctor} passado por parâmetros.
+	 * @param doctor médico a ser removido do banco de dados.
+	 */
 	public void delete(Doctor doctor) {
 		try {
 			this.session = HibernateHelper.getSessao();

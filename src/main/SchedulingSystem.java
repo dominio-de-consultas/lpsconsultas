@@ -1,4 +1,5 @@
 package main;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +26,9 @@ public class SchedulingSystem
 	public List<Doctor> listOfDoctors;
 	/** Lista de pacientes*/
 	public List<Patient> listOfPatients;
-	
 
+	static SimpleDateFormat dateAndHourFormat;
+	static SimpleDateFormat dateFormat;
 	static String dateString = "dd/MM/yyyy";
 	static String dateAndHourString = "dd/MM/yyyy HH:mm";
 	
@@ -58,6 +60,9 @@ public class SchedulingSystem
 		
 		User defaultUser = new User(attributesOfDefaultUser);
 		this.listOfUsers.add(defaultUser);
+
+		dateFormat = new SimpleDateFormat (SchedulingSystem.dateString);
+		dateAndHourFormat = new SimpleDateFormat(SchedulingSystem.dateAndHourString);
 	}
 	
 	/**

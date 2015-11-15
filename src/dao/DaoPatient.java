@@ -11,11 +11,33 @@ import org.hibernate.Transaction;
 import main.Patient;
 import util.HibernateHelper;
 
+/**
+ * Essa classe cria uma conexão com o banco de dados para acessar a tabela patient
+ * que guarda os pacientes. 
+ * @author Eliton
+ *
+ */
 public class DaoPatient {
+	/**
+	 *  Atributo que guarda a sessão que acessa o banco de dados. 
+	 *  @see {@link Session}
+	 */
 	private Session session;
+	/**
+	 * Atributo que realiza e contem as informações da transação com o banco de dados.
+	 * @see {@link Transaction}
+	 */
 	private Transaction transaction;
+	/**
+	 * Atributo que contem a Query de consulta, inserção ou remoção no bancon de dados.
+	 * @see {@link Query}
+	 */
 	private Query query;
 
+	/**
+	 * Retorna uma lista de {@link Patient} que estão guardadas no banco de dados.
+	 * @return Uma lista de pacientes que estão persistidas no banco de dados.
+	 */
 	public List<Patient> select() {
 		List<Patient> lista = new ArrayList<>();
 
@@ -34,6 +56,10 @@ public class DaoPatient {
 		return lista;
 	}
 
+	/**
+	 * Insere um {@link Patient} no banco de dados. 
+	 * @param patient paciente a ser guardado no banco de dados.
+	 */
 	public void insertUpdate(Patient patient) {
 		try {
 			this.session = HibernateHelper.getSessao();
@@ -48,6 +74,10 @@ public class DaoPatient {
 		}
 	}
 
+	/**
+	 * Remove do banco de dados o paciente, {@link Patient} passado por parâmetros.
+	 * @param patient paciente a ser removido do banco de dados.
+	 */
 	public void delete(Patient patient) {
 		try {
 			this.session = HibernateHelper.getSessao();

@@ -1,6 +1,5 @@
 package main;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -9,13 +8,9 @@ public class Main
 
 	static Date dateAux;
 	static String aux;
-	static SimpleDateFormat dateAndHourFormat;
-	static SimpleDateFormat dateFormat;
 	static Scanner scanner;
 	public static void main(String[] args)
 	{ 
-		dateFormat = new SimpleDateFormat (SchedulingSystem.dateString);
-		dateAndHourFormat = new SimpleDateFormat(SchedulingSystem.dateAndHourString);
 		scanner = new Scanner(System.in);
 
 		SchedulingSystem schedulingSystem = new SchedulingSystem();
@@ -178,7 +173,7 @@ public class Main
 			else if(i == PatientAttributes.dataDeNascimento.ordinal())
 			{
 				try {
-					dateAux = dateFormat.parse(aux);
+					dateAux = SchedulingSystem.dateFormat.parse(aux);
 					newPatient.setDataDeNascimento(dateAux);
 				} catch (ParseException e) {
 					// TODO Auto-generated catch block
@@ -206,7 +201,7 @@ public class Main
 		System.out.println("Entre com a data inicial e hora inicial(Ex.: " + SchedulingSystem.dateAndHourString + ")");
 		aux = scanner.nextLine();
 		try {
-			dateAux = dateAndHourFormat.parse(aux);
+			dateAux = SchedulingSystem.dateAndHourFormat.parse(aux);
 			newSchedule.setStarterDate(dateAux);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -221,7 +216,7 @@ public class Main
 		aux = scanner.nextLine();
 		
 		try {
-			dateAux = dateAndHourFormat.parse(aux);
+			dateAux = SchedulingSystem.dateAndHourFormat.parse(aux);
 			newSchedule.setFinalDate(dateAux);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -264,7 +259,7 @@ public class Main
 			{
 			
 				try {
-					dateAux = dateFormat.parse(aux);
+					dateAux = SchedulingSystem.dateFormat.parse(aux);
 					newDoctor.setDataDeNascimento(dateAux);
 				} catch (ParseException e) {
 					// TODO Auto-generated catch block

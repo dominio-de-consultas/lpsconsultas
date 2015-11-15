@@ -20,6 +20,7 @@ public class Doctor {
 	 * Conjunto contendo todos os cronogramas de um médicos de forma ordenada
 	 */
 	TreeSet<Schedule> listOfSchedules = new TreeSet<Schedule>();
+	/** referência para a classe que gerencia o relacionamento entre objetos da classe Schedule e o BD*/
 	DaoSchedule daoSchedule;
 	/**
 	 * Construtor para objetos da classe Doctor
@@ -29,7 +30,9 @@ public class Doctor {
 		this.listOfAttributes = new Object[DoctorAttributes.values().length];
 		daoSchedule = new DaoSchedule();
 	}
-	
+	/**
+	 * Atualiza a lista de cronogramas do médico com o que existe no banco de dados.
+	 */
 	public void updateListOfSchedules(){
 		List<Schedule> list = new ArrayList<Schedule>();
 		list = daoSchedule.select();
@@ -44,6 +47,12 @@ public class Doctor {
 			this.listOfSchedules = new TreeSet<Schedule>(list);
 	}
 	
+	/**
+	 * Insere um cronograma no banco de dados e em seguida atualiza a lista de cronogramas
+	 * chamando o método {@link Doctor#updateListOfSchedules()}.
+	 * Para isso ele usa a classe {@link DaoSchedule} e método {@link DaoSchedule#insertUpdate(Schedule)}.
+	 * @param schedule Um cronograma que será salvo no banco de dados 
+	 */
 	public void saveSchedule(Schedule schedule){
 		daoSchedule.insertUpdate(schedule);
 		updateListOfSchedules();
