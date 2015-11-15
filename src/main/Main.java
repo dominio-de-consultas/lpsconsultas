@@ -1,6 +1,7 @@
 package main;
 import java.text.ParseException;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main
@@ -138,20 +139,33 @@ public class Main
 	}
 
 	private static void createConsultation(SchedulingSystem schedulingSystem) {
-		// TODO Auto-generated method stub
+		schedulingSystem.printListOfPatients();
+		System.out.println("Escolha o  paciente que deseja ser consultado");
+		aux = scanner.nextLine();
+		Patient patient = schedulingSystem.listOfPatients.get(Integer.parseInt(aux));
+		
 		schedulingSystem.printListOfDoctors();
 		System.out.println("Escolha o doutor com o qual que deseja fazer a consulta: ");
 		aux = scanner.nextLine();
 		Doctor doctor = schedulingSystem.listOfDoctors.get(Integer.parseInt(aux));
 		
-		doctor.printListOfSchedules();
+		System.out.println("Horários disponíveis");
+		doctor.printListOfAvailableSchedules();
 		System.out.println("Escolha um horário disponível: ");
 		aux = scanner.nextLine();
 		int auxi = Integer.parseInt(aux);
 		for(Schedule s : doctor.listOfSchedules)
 			if(s.getPid().equals(auxi)){
-				s.setAvailable(false);
-				doctor.saveOrUpdateSchedule(s);
+				if(s.available == true)
+				{
+					s.setAvailable(false);
+					s.setCPF(patient.getCEP());
+					doctor.saveOrUpdateSchedule(s);
+				}
+				else
+				{
+					System.out.println("Operação negada: Horário não disponível.");
+				}
 			}
 	}
 
