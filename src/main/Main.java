@@ -143,6 +143,7 @@ public class Main
 		System.out.println("Escolha o doutor com o qual que deseja fazer a consulta: ");
 		aux = scanner.nextLine();
 		Doctor doctor = schedulingSystem.listOfDoctors.get(Integer.parseInt(aux));
+		
 		doctor.printListOfSchedules();
 		System.out.println("Escolha um horário disponível: ");
 		aux = scanner.nextLine();

@@ -251,5 +251,21 @@ public class Doctor {
 			System.out.println("Disponibilidade: " + s.available.toString());
 		}
 	}
+	
+	public void printListOfAvailableSchedules() {
+		System.out.println("\nCRONOGRAMA DE "+ getNome() + "\n");
+
+		for (Schedule s: this.listOfSchedules) {		
+			if(s.available == true)
+			{
+				System.out.println("\nID: " + s.getPid());
+				System.out.println("Início: " + s.starterDate.toString());
+				System.out.println("Término: " + s.finalDate.toString());
+				System.out.println("Disponibilidade: " + s.available.toString());
+			}
+			
+		}
+	}
+	
 
 }
