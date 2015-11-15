@@ -53,7 +53,7 @@ public class Doctor {
 	 * Para isso ele usa a classe {@link DaoSchedule} e método {@link DaoSchedule#insertUpdate(Schedule)}.
 	 * @param schedule Um cronograma que será salvo no banco de dados 
 	 */
-	public void saveSchedule(Schedule schedule){
+	public void saveOrUpdateSchedule(Schedule schedule){
 		daoSchedule.insertUpdate(schedule);
 		updateListOfSchedules();
 	}

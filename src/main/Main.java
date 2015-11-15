@@ -116,6 +116,9 @@ public class Main
 				case "17":
 					schedulingSystem.printListOfPatients();
 					break;
+				case "21":
+					createConsultation(schedulingSystem);
+					break;
 				//------------------------------------------------------------
 				//0 - encerrra o sistema
 				case "0":
@@ -132,6 +135,23 @@ public class Main
 		scanner.close();
 		schedulingSystem.closeHelper();
 			
+	}
+
+	private static void createConsultation(SchedulingSystem schedulingSystem) {
+		// TODO Auto-generated method stub
+		schedulingSystem.printListOfDoctors();
+		System.out.println("Escolha o doutor com o qual que deseja fazer a consulta: ");
+		aux = scanner.nextLine();
+		Doctor doctor = schedulingSystem.listOfDoctors.get(Integer.parseInt(aux));
+		doctor.printListOfSchedules();
+		System.out.println("Escolha um horário disponível: ");
+		aux = scanner.nextLine();
+		int auxi = Integer.parseInt(aux);
+		for(Schedule s : doctor.listOfSchedules)
+			if(s.getPid().equals(auxi)){
+				s.setAvailable(false);
+				doctor.saveOrUpdateSchedule(s);
+			}
 	}
 
 	private static void createPatient(SchedulingSystem schedulingSystem) {
@@ -227,7 +247,7 @@ public class Main
 		newSchedule.setCRM(doctor.getCRM());
 		newSchedule.setAvailable(true);
 		
-		doctor.saveSchedule(newSchedule);		
+		doctor.saveOrUpdateSchedule(newSchedule);		
 		
 	}
 
@@ -363,8 +383,8 @@ public class Main
 		
 		if(schedulingSystem.hasDoctor() && schedulingSystem.hasPatient())
 		{
-			//System.out.println("21 - Criar consulta");
-			//System.out.println("22 - Listar consulta");
+			System.out.println("21 - Criar consulta");
+			System.out.println("22 - Listar consulta");
 			//System.out.println("23 - Alterar consulta");
 			//System.out.println("24 - Buscar consulta");
 			//System.out.println("25 - Remover consulta");
