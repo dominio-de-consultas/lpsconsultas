@@ -196,11 +196,10 @@ public class Main
 		Doctor doctor = schedulingSystem.listOfDoctors.get(Integer.parseInt(aux));
 		Schedule newSchedule = new Schedule();
 		
-		System.out.println("Cronogramas existentes:");
+		System.out.println("*Cronogramas existentes:");
 		doctor.printListOfSchedules();
 		
-		
-		
+			
 		System.out.println("Entre com a data inicial e hora inicial(Ex.: " + SchedulingSystem.dateAndHourString + ")");
 		aux = scanner.nextLine();
 		try {
@@ -276,7 +275,7 @@ public class Main
 			}
 		}
 		schedulingSystem.createDoctor(newDoctor);
-		//schedulingSystem.listOfDoctors.add(newDoctor);
+		schedulingSystem.listOfDoctors.add(newDoctor);
 		
 	}
 
