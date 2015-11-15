@@ -320,7 +320,7 @@ public class Main
 			User user = schedulingSystem.listOfUsers.get(userIndex);
 			
 			System.out.println("Escolha um atributo pelo indice");
-			user.listAttributes();
+			user.printListOfAttributes();
 			Integer attributeIndex = Integer.valueOf(scanner.nextLine());
 			
 			System.out.println("Digite o novo conteudo do atributo  escolhido");
@@ -329,7 +329,7 @@ public class Main
 			user.editAttribute(attributeIndex, attributeContent);
 			
 			System.out.println("Atributos do usuario apos a alteracao");
-			user.listAttributes();
+			user.printListOfAttributes();
 		}
 		
 		else

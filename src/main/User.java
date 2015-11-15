@@ -149,7 +149,7 @@ public class User {
 	 * Método que imprime os valores dos attributos do objeto instanciado
 	 * @return
 	 */
-	void listAttributes()
+	void printListOfAttributes()
 	{
 		for(int i = 0; i < Attributes.values().length; i++)
 		{
