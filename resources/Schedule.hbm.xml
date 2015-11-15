@@ -6,7 +6,7 @@
 	<class name="main.Schedule" table="SCHEDULE">
 		<id name="pid" type="long">
 			<column name="PID" />
-			<generator class="assigned" />
+			<generator class="increment" />
 		</id>
 		<property name="starterDate" type="java.util.Date">
 			<column name="STARTERDATE"></column>
@@ -16,6 +16,9 @@
 		</property>
 		<property name="available" type="java.lang.Boolean">
 			<column name="AVAILABLE"></column>
+		</property>
+		<property name="did" type="long">
+			<column name="DID"></column>
 		</property>
 	</class>
 </hibernate-mapping>

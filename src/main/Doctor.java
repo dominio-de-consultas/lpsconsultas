@@ -1,7 +1,11 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.TreeSet;
+
+import dao.DaoSchedule;
 
 /**
  * Classe cujos objetos referem-se aos dados do cadastro de um médico cadastrado no sistema
@@ -16,12 +20,33 @@ public class Doctor {
 	 * Conjunto contendo todos os cronogramas de um médicos de forma ordenada
 	 */
 	TreeSet<Schedule> listOfSchedules = new TreeSet<Schedule>();
+	DaoSchedule daoSchedule;
 	/**
 	 * Construtor para objetos da classe Doctor
 	 */
 	public Doctor() {
 		this.listOfSchedules = new TreeSet<Schedule>();
 		this.listOfAttributes = new Object[DoctorAttributes.values().length];
+		daoSchedule = new DaoSchedule();
+	}
+	
+	public void updateListOfSchedules(){
+		List<Schedule> list = new ArrayList<Schedule>();
+		list = daoSchedule.select();
+		int i = 0;
+		for(Schedule s : list)
+		{
+			if(s.getDid() != this.getCRM())
+				list.remove(i);
+			i++;
+		}
+		if(list != null)
+			this.listOfSchedules = new TreeSet<Schedule>(list);
+	}
+	
+	public void saveSchedule(Schedule schedule){
+		daoSchedule.insertUpdate(schedule);
+		updateListOfSchedules();
 	}
 	
 	// ----------Getter e Setter genericos----------
@@ -207,10 +232,9 @@ public class Doctor {
 
 	
 	public void printListOfSchedules() {
-		System.out.println("\nCRONOGRAMA\n");
+		System.out.println("\nCRONOGRAMA DE "+ getNome() + "\n");
 
-		for (Schedule s: this.listOfSchedules) {
-			
+		for (Schedule s: this.listOfSchedules) {		
 
 			System.out.println("\nID: " + s.getPid());
 			System.out.println("Início: " + s.starterDate.toString());

@@ -95,7 +95,7 @@ public class User {
 	{
 		if(verifySchedules(doctor, starterDate, finalDate))
 		{
-			Schedule schedule = new Schedule(starterDate, finalDate, available);
+			Schedule schedule = new Schedule(starterDate, finalDate, available, doctor.getCRM());
 			doctor.listOfSchedules.add(schedule);
 		}
 		else

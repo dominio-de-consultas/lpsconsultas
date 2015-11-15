@@ -44,7 +44,10 @@ public class SchedulingSystem
 		daoPatient = new DaoPatient();
 		this.listOfDoctors = daoDoctor.select();
 		this.listOfUsers = daoUser.select();
-		this.listOfPatients = daoPatient.select();		
+		this.listOfPatients = daoPatient.select();	
+		
+		for(Doctor d : this.listOfDoctors)
+			d.updateListOfSchedules();
 		
 		String[] attributesOfDefaultUser = new String[Attributes.values().length];
 		attributesOfDefaultUser[Attributes.nome.ordinal()] = "admin";

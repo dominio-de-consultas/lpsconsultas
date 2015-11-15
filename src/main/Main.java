@@ -104,6 +104,9 @@ public class Main
 				//------------------------------------------------------------
 				//System.out.println("13 - Listar cronograma");
 				case "13":
+					for(Doctor d : schedulingSystem.listOfDoctors)
+						d.printListOfSchedules();
+						
 					break;	
 					
 				//------------------------------------------------------------
@@ -226,9 +229,10 @@ public class Main
 			e.printStackTrace();
 			System.exit(1);
 		}
-				
-		doctor.listOfSchedules.add(newSchedule);
+		newSchedule.setDid(doctor.getCRM());
+		newSchedule.setAvailable(true);
 		
+		doctor.saveSchedule(newSchedule);		
 		
 	}
 
