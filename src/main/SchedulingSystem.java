@@ -161,8 +161,15 @@ public class SchedulingSystem
 	 * Método que insere um médico no BD
 	 * @param doctor médico a ser inserido no BD
 	 */
-	public void createDoctor(Doctor doctor){
+	public void createOrUpdateDoctor(Doctor doctor){
 		daoDoctor.insertUpdate(doctor);
+	}
+	/**
+	 * Método que insere um paciente no BD
+	 * 
+	 */
+	public void createOrUpdatePatient(Patient patient){
+		daoPatient.insertUpdate(patient);
 	}
 	/**
 	 * Imprime no terminal uma lista contendo todos os médicos cadastrados no sistema

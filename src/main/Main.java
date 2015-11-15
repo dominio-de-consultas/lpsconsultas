@@ -203,6 +203,7 @@ public class Main
 				}
 			}
 		}
+		schedulingSystem.createOrUpdatePatient(newPatient);
 		schedulingSystem.listOfPatients.add(newPatient);		
 	}
 
@@ -293,7 +294,7 @@ public class Main
 				newDoctor.listOfAttributes[i] = Integer.parseInt(aux);
 			}
 		}
-		schedulingSystem.createDoctor(newDoctor);
+		schedulingSystem.createOrUpdateDoctor(newDoctor);
 		schedulingSystem.listOfDoctors.add(newDoctor);
 		
 	}
