@@ -30,22 +30,41 @@ public class Schedule implements Comparable<Schedule>
 	 * Identificador do médico que o possui.
 	 * @see Doctor
 	 */
-	public long did;
-	
+	public long crm;
+	/**
+	 * Identificador do paciente agendado para aquela data e hora.
+	 * @see Doctor
+	 */
+	public String cpf;
 	/**
 	 * 
 	 * @return Retorna id do médico que o possui.(CRM)
 	 */
-	public long getDid() {
-		return did;
+	public long getCRM() {
+		return crm;
 	}
 
 	/**
 	 * Configura o médico ao qual pertence esse cronograma, com o CRM do médico.
 	 * @param did
 	 */
-	public void setDid(long did) {
-		this.did = did;
+	public void setCRM(long did) {
+		this.crm = did;
+	}
+	/**
+	 * 
+	 * @return Retorna id do médico que o possui.(CRM)
+	 */
+	public String getCPF() {
+		return cpf;
+	}
+
+	/**
+	 * Configura o médico ao qual pertence esse cronograma, com o CRM do médico.
+	 * @param did
+	 */
+	public void setCPF(String cpf) {
+		this.cpf = cpf;
 	}
 
 	/**
@@ -124,7 +143,7 @@ public class Schedule implements Comparable<Schedule>
 		this.starterDate = starterDate;
 		this.finalDate = finalDate;
 		this.available = available;
-		this.did = did;
+		this.crm = did;
 	}
 	
 	/**
@@ -141,7 +160,7 @@ public class Schedule implements Comparable<Schedule>
 	 */
 	@Override
 	public int compareTo(Schedule o) {
-		// TODO Auto-generated method stub
+		
 		return this.starterDate.compareTo(o.starterDate);
 	}
 }

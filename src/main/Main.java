@@ -224,7 +224,7 @@ public class Main
 			e.printStackTrace();
 			System.exit(1);
 		}
-		newSchedule.setDid(doctor.getCRM());
+		newSchedule.setCRM(doctor.getCRM());
 		newSchedule.setAvailable(true);
 		
 		doctor.saveSchedule(newSchedule);		

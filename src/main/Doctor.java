@@ -39,7 +39,7 @@ public class Doctor {
 		int i = 0;
 		for(Schedule s : list)
 		{
-			if(s.getDid() != this.getCRM())
+			if(s.getCRM() != this.getCRM())
 				list.remove(i);
 			i++;
 		}
