@@ -14,5 +14,6 @@
 		<mapping resource="User.hbm.xml" />
 		<mapping resource="Schedule.hbm.xml" />
 		<mapping resource="Patient.hbm.xml" />
+		<mapping resource="Consultation.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
