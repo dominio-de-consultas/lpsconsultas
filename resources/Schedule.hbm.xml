@@ -20,5 +20,8 @@
 		<property name="CRM" type="java.lang.Integer">
 			<column name="CRM"></column>
 		</property>
+		<property name="CPF" type="java.lang.String">
+			<column name="CPF"></column>
+		</property>
 	</class>
 </hibernate-mapping>

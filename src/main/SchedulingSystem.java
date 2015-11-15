@@ -171,6 +171,19 @@ public class SchedulingSystem
 	public void createOrUpdatePatient(Patient patient){
 		daoPatient.insertUpdate(patient);
 	}
+	
+	public Boolean createConsultation(Doctor doctor, Patient patient, Integer idSchedule){
+		for(Schedule s : doctor.listOfSchedules)
+			if(s.getPid().equals(idSchedule)){
+				if(s.getAvailable()){
+					s.setAvailable(false);
+					s.setCPF(patient.getCPF());
+					doctor.saveOrUpdateSchedule(s);
+					return true;
+				}
+			}
+		return false;
+	}
 	/**
 	 * Imprime no terminal uma lista contendo todos os médicos cadastrados no sistema
 	 */

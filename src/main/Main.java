@@ -153,20 +153,15 @@ public class Main
 		doctor.printListOfAvailableSchedules();
 		System.out.println("Escolha um horário disponível: ");
 		aux = scanner.nextLine();
-		int auxi = Integer.parseInt(aux);
-		for(Schedule s : doctor.listOfSchedules)
-			if(s.getPid().equals(auxi)){
-				if(s.available == true)
-				{
-					s.setAvailable(false);
-					s.setCPF(patient.getCEP());
-					doctor.saveOrUpdateSchedule(s);
-				}
-				else
-				{
-					System.out.println("Operação negada: Horário não disponível.");
-				}
-			}
+		int idSchedule = Integer.parseInt(aux);
+		if(schedulingSystem.createConsultation(doctor, patient, idSchedule))
+		{
+			System.out.println("Operação Realizada.");
+		}
+		else
+		{
+			System.out.println("Operação negada: Horário não disponível.");
+		}		
 	}
 
 	private static void createPatient(SchedulingSystem schedulingSystem) {
