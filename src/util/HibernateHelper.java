@@ -25,7 +25,7 @@ public class HibernateHelper {
         }
     }
     
-    // Retorna a sess�o
+    // Retorna a sessão
     public static Session getSessao(){
         return sessionFactory.openSession();
     }

@@ -13,7 +13,7 @@ public class Schedule implements Comparable<Schedule>
 	/**
 	 * Identificador do cronograma
 	 */
-	private long pid;
+	private Integer pid;
 	/**
 	 * Data de início do horário disponível de um médico.
 	 */
@@ -30,7 +30,7 @@ public class Schedule implements Comparable<Schedule>
 	 * Identificador do médico que o possui.
 	 * @see Doctor
 	 */
-	public long crm;
+	public Integer crm;
 	/**
 	 * Identificador do paciente agendado para aquela data e hora.
 	 * @see Doctor
@@ -40,7 +40,7 @@ public class Schedule implements Comparable<Schedule>
 	 * 
 	 * @return Retorna id do médico que o possui.(CRM)
 	 */
-	public long getCRM() {
+	public Integer getCRM() {
 		return crm;
 	}
 
@@ -48,7 +48,7 @@ public class Schedule implements Comparable<Schedule>
 	 * Configura o médico ao qual pertence esse cronograma, com o CRM do médico.
 	 * @param did
 	 */
-	public void setCRM(long did) {
+	public void setCRM(Integer did) {
 		this.crm = did;
 	}
 	/**
@@ -71,7 +71,7 @@ public class Schedule implements Comparable<Schedule>
 	 * Retorna o identificador do cronograma.
 	 * @return
 	 */
-	public long getPid() {
+	public Integer getPid() {
 		return pid;
 	}
 
@@ -79,7 +79,7 @@ public class Schedule implements Comparable<Schedule>
 	 * Configura o identificado do cronograma.
 	 * @param pid
 	 */
-	public void setPid(long pid) {
+	public void setPid(Integer pid) {
 		this.pid = pid;
 	}
 
@@ -138,7 +138,7 @@ public class Schedule implements Comparable<Schedule>
 	 * @param available
 	 * @param did
 	 */
-	public Schedule(Date starterDate, Date finalDate, Boolean available, long did)
+	public Schedule(Date starterDate, Date finalDate, Boolean available, Integer did)
 	{
 		this.starterDate = starterDate;
 		this.finalDate = finalDate;
