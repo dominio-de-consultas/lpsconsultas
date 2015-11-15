@@ -8,7 +8,11 @@ import dao.DaoPatient;
 import dao.DaoUser;
 import util.HibernateHelper;
 
-/// @class SchedulingSystem
+/** @class SchedulingSystem
+ * 
+ * @author Eliton
+ *
+ */
 public class SchedulingSystem
 {
 	/** Cria conexão com o banco de dados*/
@@ -172,6 +176,16 @@ public class SchedulingSystem
 		daoPatient.insertUpdate(patient);
 	}
 	
+	/**
+	 * Método que configura uma consulta no BD, através do doutor passado por parâmetro 
+	 * recuperando seu cronograma, do paciente que participará da consulta e do identificador 
+	 * do cronograma.
+	 * @param doctor
+	 * @param patient
+	 * @param idSchedule
+	 * @return Retorna true para sucesso na configuração de uma consulta e false para o contrário.
+	 * @see {@link Doctor}, {@link Patient}, {@link Schedule}
+	 */
 	public Boolean createConsultation(Doctor doctor, Patient patient, Integer idSchedule){
 		for(Schedule s : doctor.listOfSchedules)
 			if(s.getPid().equals(idSchedule)){
@@ -212,6 +226,10 @@ public class SchedulingSystem
 		System.out.println("\n");
 	}
 	
+	/**
+	 * Método para fechar a conexão com o BD
+	 * @see {@link HibernateHelper}
+	 */
 	public void closeHelper(){
 		this.helper.close();
 	}
