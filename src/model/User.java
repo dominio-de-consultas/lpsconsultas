@@ -1,4 +1,4 @@
-package main;
+package model;
 
 import java.util.Date;
 
@@ -55,7 +55,7 @@ public class User {
 	 * @param attributeID posição do atributo a ser editado no enum UserAttributes
 	 * @param content valor a ser inserido
 	 */
-	void editAttribute(Integer attributeID, String content)
+	public void editAttribute(Integer attributeID, String content)
 	{
 		this.listOfAttributes[attributeID] = content;
 	}
@@ -149,7 +149,7 @@ public class User {
 	 * Método que imprime os valores dos attributos do objeto instanciado
 	 * @return
 	 */
-	void printListOfAttributes()
+	public void printListOfAttributes()
 	{
 		for(int i = 0; i < Attributes.values().length; i++)
 		{

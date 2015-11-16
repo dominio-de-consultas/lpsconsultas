@@ -8,7 +8,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import main.Schedule;
+import model.Schedule;
 import util.HibernateHelper;
 
 /**

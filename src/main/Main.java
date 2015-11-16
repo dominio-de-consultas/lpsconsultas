@@ -3,6 +3,15 @@ import java.text.ParseException;
 import java.util.Date;
 import java.util.Scanner;
 
+import model.Attributes;
+import model.Doctor;
+import model.DoctorAttributes;
+import model.Patient;
+import model.PatientAttributes;
+import model.Schedule;
+import model.SchedulingSystem;
+import model.User;
+
 public class Main
 {
 

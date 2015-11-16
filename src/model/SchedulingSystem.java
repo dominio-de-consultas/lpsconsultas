@@ -1,4 +1,4 @@
-package main;
+package model;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,14 +35,14 @@ public class SchedulingSystem
 	 */
 	private User userSession;
 
-	static SimpleDateFormat dateAndHourFormat;
-	static SimpleDateFormat dateFormat;
+	public static SimpleDateFormat dateAndHourFormat;
+	public static SimpleDateFormat dateFormat;
 	static String dateString = "dd/MM/yyyy";
-	static String dateAndHourString = "dd/MM/yyyy HH:mm";
+	public static String dateAndHourString = "dd/MM/yyyy HH:mm";
 	
 	//----------Constructor method----------
 	/** construtor de um objeto da classe SchedulingSystem*/
-	SchedulingSystem()
+	public SchedulingSystem()
 	{
 		this.helper = new HibernateHelper();
 		this.listOfDoctors = new ArrayList<Doctor>();
@@ -78,7 +78,7 @@ public class SchedulingSystem
 	 * @param userID código valor único que se refere a um certo usuário (O CPF no nosso caso)
 	 * @param password senha do usuário
 	 */
-	Boolean login(String userID, String password)
+	public Boolean login(String userID, String password)
 	{
 		for(int i = 0; i < this.listOfUsers.size(); i++)
 		{
@@ -99,18 +99,18 @@ public class SchedulingSystem
 	}
 	
 	/**Método que verifica se já existe um usuário cadastrado no sistema*/
-	Boolean hasUser()
+	public Boolean hasUser()
 	{
 		return ! this.listOfUsers.isEmpty();
 	}
 	/**Método que verifica se já existe um médico cadastrado no sistema*/
-	Boolean hasDoctor()
+	public Boolean hasDoctor()
 	{
 		return ! this.listOfDoctors.isEmpty();
 		
 	}
 	/**Método que verifica se já existe um paciente cadastrado no sistema*/
-	Boolean hasPatient()
+	public Boolean hasPatient()
 	{
 		return ! this.listOfPatients.isEmpty();
 	}
@@ -189,7 +189,7 @@ public class SchedulingSystem
 	 * @param patient
 	 * @param idSchedule
 	 * @return Retorna true para sucesso na configuração de uma consulta e false para o contrário.
-	 * @see {@link Doctor}, {@link Patient}, {@link Schedule}
+	 * @see {@link Doctor}, {@link Patient}, {@link Schedule} 
 	 */
 	public Boolean createConsultation(Doctor doctor, Patient patient, Integer idSchedule){
 		for(Schedule s : doctor.listOfSchedules)

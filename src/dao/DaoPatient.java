@@ -8,7 +8,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import main.Patient;
+import model.Patient;
 import util.HibernateHelper;
 
 /**

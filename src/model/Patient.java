@@ -1,4 +1,4 @@
-package main;
+package model;
 
 import java.util.Date;
 
@@ -119,7 +119,7 @@ public class Patient
 	 * setter para o atributo numero
 	 * @param numero
 	 */
-	void setNumero(Integer numero)
+	public void setNumero(Integer numero)
 	{
 		this.listOfAttributes[PatientAttributes.numero.ordinal()] = numero;
 	}
@@ -245,7 +245,7 @@ public class Patient
 	 * setter para o atributo dataDeNascimento
 	 * @param dataDeNascimento
 	 */
-	void setDataDeNascimento(Date dataDeNascimento)
+	public void setDataDeNascimento(Date dataDeNascimento)
 	{
 		this.listOfAttributes[PatientAttributes.dataDeNascimento.ordinal()] = dataDeNascimento;
 	}
@@ -317,7 +317,7 @@ public class Patient
 	 * setter para o atributo doadoDeOrgaos
 	 * @param doadorDeOrgaos
 	 */
-	void setDoadorDeOrgaos(Boolean doadorDeOrgaos)
+	public void setDoadorDeOrgaos(Boolean doadorDeOrgaos)
 	{
 		this.listOfAttributes[PatientAttributes.doadorDeOrgaos.ordinal()] = doadorDeOrgaos;
 	}
@@ -325,7 +325,7 @@ public class Patient
 	/**
 	 * Construtor que inicializa a lista de atributos do paciente. 
 	 */
-	Patient()
+	public Patient()
 	{
 		this.listOfAttributes = new Object[PatientAttributes.values().length];
 	}
