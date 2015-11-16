@@ -67,6 +67,11 @@ public class Doctor {
 	Object getX(int attributeID) {
 		return this.listOfAttributes[attributeID];
 	}
+	
+	public void printDoctor(){
+		for(int i = 0; i < DoctorAttributes.values().length; i++) 
+			System.out.println(DoctorAttributes.values()[i].toString() +": " + this.getX(i));			
+	}
 
 	/**
 	 * setter genérico, sendo necessário especificar o atributo e o dado a ser adicionado 

@@ -99,6 +99,11 @@ public class Main
 				//System.out.println("07 - Listar medicos");
 				case "07":
 					schedulingSystem.printListOfDoctors();
+					System.out.println("Escolha o médico para detalhes ou -1 para voltar.");
+					aux = scanner.nextLine();
+					int a = Integer.parseInt(aux);
+					if(a > -1)
+						schedulingSystem.listOfDoctors.get(a).printDoctor();
 					break;
 				//------------------------------------------------------------
 				//System.out.println("11 - Criar cronograma");
