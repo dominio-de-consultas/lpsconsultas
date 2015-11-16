@@ -120,6 +120,9 @@ public class Main
 				case "21":
 					createConsultation(schedulingSystem);
 					break;
+				case "22":
+					for(Doctor d : schedulingSystem.listOfDoctors)
+						d.printListOfSchedules();
 				//------------------------------------------------------------
 				//0 - encerrra o sistema
 				case "0":
