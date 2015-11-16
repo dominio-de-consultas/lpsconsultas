@@ -135,7 +135,7 @@ public class Main
 					break;
 				case "22":
 					for(Doctor d : schedulingSystem.listOfDoctors)
-						d.printListOfSchedules();
+						d.printListOfConsultation();
 					break;
 				//------------------------------------------------------------
 				//0 - encerrra o sistema

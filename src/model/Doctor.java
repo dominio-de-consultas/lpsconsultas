@@ -305,6 +305,27 @@ public class Doctor {
 			System.out.println("Para o paciente: "+ s.getCPF());
 		}
 	}
+	
+	/**
+	 * Metodo que lista todos o cronograma do médico em questão.
+	 *
+	 */
+	public void printListOfConsultation() {
+		System.out.println("\nConsultas de "+ getNome() + "\n");
+
+		for (Schedule s: this.listOfSchedules) {		
+			if(!s.getAvailable())
+			{
+				System.out.println("\nID: " + s.getPid());
+				System.out.println("Início: " + s.starterDate.toString());
+				System.out.println("Término: " + s.finalDate.toString());
+				System.out.println("Disponibilidade: " + s.available.toString());
+				System.out.println("Marcado por(CPF): " + s.cpfUser);
+				System.out.println("Pertence ao médico(CRM): " + s.getCRM());
+				System.out.println("Para o paciente: "+ s.getCPF());
+			}
+		}
+	}
 	/**
 	 * Metodo que lista todos o cronograma de horários disponíveis do médico em questão.
 	 *
