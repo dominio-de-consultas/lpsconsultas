@@ -301,7 +301,8 @@ public class Doctor {
 			System.out.println("Término: " + s.finalDate.toString());
 			System.out.println("Disponibilidade: " + s.available.toString());
 			System.out.println("Marcado por(CPF): " + s.cpfUser);
-			System.out.println("Pertence co médico(CRM): " + s.getCRM());			
+			System.out.println("Pertence ao médico(CRM): " + s.getCRM());
+			System.out.println("Para o paciente: "+ s.getCPF());
 		}
 	}
 	/**
