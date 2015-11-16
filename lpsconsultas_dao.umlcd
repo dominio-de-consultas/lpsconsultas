@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_ymO6UIyUEeWSKqZLVQxjvw">
+  <modelElement href="lpsconsultas.uml#_w629oIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1IpzwIyUEeWSKqZLVQxjvw" targetItem="_1IuFOYyUEeWSKqZLVQxjvw" sourceItem="_1IpMsIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1IpzwoyUEeWSKqZLVQxjvw" targetItem="_1IuFS4yUEeWSKqZLVQxjvw" sourceItem="_1IpzwYyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1Iqa0YyUEeWSKqZLVQxjvw" targetItem="_1IuFUIyUEeWSKqZLVQxjvw" sourceItem="_1Iqa0IyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1IrB4YyUEeWSKqZLVQxjvw" targetItem="_1IuFVoyUEeWSKqZLVQxjvw" sourceItem="_1IrB4IyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1Is3EIyUEeWSKqZLVQxjvw" source="_1IuFOYyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xq7vsIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JTUAIyUEeWSKqZLVQxjvw" position="130.0,130.0"/>
+    <stereotypes xmi:id="_1Is3EYyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xq-zAIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1Is3EoyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1Is3E4yUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xq7vsYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1Is3FIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1Is3FYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1Is3FoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="session" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlKe4IyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1Is3F4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1Is3GIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1IteIIyUEeWSKqZLVQxjvw" source="_1IuFOYyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xq-zAYyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JT7EIyUEeWSKqZLVQxjvw" position="150.0,150.0"/>
+    <stereotypes xmi:id="_1IteIYyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrB2UIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1IteIoyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1IteI4yUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xq-zAoyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1IteJIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1IteJYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1IteJoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="transaction" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlM7IIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1IteJ4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1IteKIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1IuFMIyUEeWSKqZLVQxjvw" source="_1IuFOYyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrCdYIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JT7EYyUEeWSKqZLVQxjvw" position="170.0,170.0"/>
+    <stereotypes xmi:id="_1IuFMYyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrE5oIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1IuFMoyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1IuFM4yUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrCdYYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1IuFNIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1IuFNYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1IuFNoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="query" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlOwUIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1IuFN4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1IuFOIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1Iy9sYyUEeWSKqZLVQxjvw" targetItem="_1I5EUIyUEeWSKqZLVQxjvw" sourceItem="_1Iy9sIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1Iy9soyUEeWSKqZLVQxjvw" source="_1I5EUIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrFgsIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JT7EoyUEeWSKqZLVQxjvw" position="190.0,190.0"/>
+    <stereotypes xmi:id="_1I1Z84yUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrIkAIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1I1Z8IyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1I1Z8YyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrFgsYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I2oEYyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1I2oEIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1I1Z8oyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="session" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlSasIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I2oE4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1I2oEoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1Iy9s4yUEeWSKqZLVQxjvw" source="_1I5EUIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrIkAYyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JT7E4yUEeWSKqZLVQxjvw" position="210.0,210.0"/>
+    <stereotypes xmi:id="_1I2BAoyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrLnUIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1I1Z9IyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1I2BAIyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrIkAoyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I3PIoyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1I3PIYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1I2BAYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="transaction" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlU28IyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I3PJIyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1I3PI4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1IzkwIyUEeWSKqZLVQxjvw" source="_1I5EUIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrMOYIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JUiIIyUEeWSKqZLVQxjvw" position="230.0,230.0"/>
+    <stereotypes xmi:id="_1I2BBoyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrPRsIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1I2BA4yUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1I2BBIyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrMOYYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I32MIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1I3PJoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1I2BBYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="query" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlWsIIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I32MoyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1I32MYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1IzkwoyUEeWSKqZLVQxjvw" targetItem="_1I5EYoyUEeWSKqZLVQxjvw" sourceItem="_1IzkwYyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1I0L0YyUEeWSKqZLVQxjvw" targetItem="_1I5EZ4yUEeWSKqZLVQxjvw" sourceItem="_1I0L0IyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1I0y4IyUEeWSKqZLVQxjvw" targetItem="_1I5EbYyUEeWSKqZLVQxjvw" sourceItem="_1I0L0oyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1I9VwYyUEeWSKqZLVQxjvw" targetItem="_1JFRkIyUEeWSKqZLVQxjvw" sourceItem="_1I9VwIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1I980IyUEeWSKqZLVQxjvw" target="_1JFRkIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xsLs4YyUEeWSKqZLVQxjvw"/>
+    <stereotypes xmi:id="_1JAZE4yUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xsNiEIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1JAZEIyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1JAZEYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xsLs4oyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JCOQYyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JCOQIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1JAZEoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="daoSchedule" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xmzdoIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1JC1UIyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xm0rwIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1JCOQ4yUEeWSKqZLVQxjvw" label="~"/>
+      <cardinality xmi:id="_1JCOQoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1I980YyUEeWSKqZLVQxjvw" source="_1JFRkIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrPRsYyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JUiIYyUEeWSKqZLVQxjvw" position="250.0,250.0"/>
+    <stereotypes xmi:id="_1JBAI4yUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrSVAIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1JBAIIyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1JBAIYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrPRsoyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JC1UoyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JC1UYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1JBAIoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="session" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlaWgIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JC1VIyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JC1U4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1I980oyUEeWSKqZLVQxjvw" source="_1JFRkIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrS8EIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JUiIoyUEeWSKqZLVQxjvw" position="270.0,270.0"/>
+    <stereotypes xmi:id="_1JBnMIyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrV_YIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1JBAJIyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1JBAJYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrS8EYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JDcYoyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JDcYYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1JBAJoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="transaction" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlcywIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JDcZIyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JDcY4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1I9804yUEeWSKqZLVQxjvw" source="_1JFRkIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrWmcIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JUiI4yUEeWSKqZLVQxjvw" position="290.0,290.0"/>
+    <stereotypes xmi:id="_1JBnNIyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrZCsIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1JBnMYyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1JBnMoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrWmcYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JDcZ4yUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JDcZoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1JBnM4yUEeWSKqZLVQxjvw" aggregationKind="NONE" name="query" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlfPAIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JEDcYyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JEDcIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1I-j4YyUEeWSKqZLVQxjvw" targetItem="_1JFRooyUEeWSKqZLVQxjvw" sourceItem="_1I-j4IyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1I_K8YyUEeWSKqZLVQxjvw" targetItem="_1JFRp4yUEeWSKqZLVQxjvw" sourceItem="_1I_K8IyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1I_yAIyUEeWSKqZLVQxjvw" targetItem="_1JFRrYyUEeWSKqZLVQxjvw" sourceItem="_1I_K8oyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1JJjAYyUEeWSKqZLVQxjvw" targetItem="_1JPpoIyUEeWSKqZLVQxjvw" sourceItem="_1JJjAIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1JKKEIyUEeWSKqZLVQxjvw" source="_1JPpoIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrZpwIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JVJMIyUEeWSKqZLVQxjvw" position="310.0,310.0"/>
+    <stereotypes xmi:id="_1JMmUoyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrctEIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1JL_QIyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1JMmUIyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrZpwYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JN0cIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JNNY4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1JMmUYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="session" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlhrQIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JN0coyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JN0cYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1JKKEYyUEeWSKqZLVQxjvw" source="_1JPpoIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrctEYyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JVJMYyUEeWSKqZLVQxjvw" position="330.0,330.0"/>
+    <stereotypes xmi:id="_1JMmVoyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrfwYIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1JMmU4yUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1JMmVIyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrdUIIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JN0dYyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JN0dIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1JMmVYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="transaction" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xlkHgIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JObgIyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JN0doyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_1JKKEoyUEeWSKqZLVQxjvw" source="_1JPpoIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xrgXcIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JVJMoyUEeWSKqZLVQxjvw" position="350.0,350.0"/>
+    <stereotypes xmi:id="_1JNNYoyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xrjawIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_1JMmV4yUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_1JNNYIyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xrgXcYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JObg4yUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JObgoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_1JNNYYyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="query" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xllVoYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JObhYyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JObhIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1JKxIYyUEeWSKqZLVQxjvw" targetItem="_1JQQwYyUEeWSKqZLVQxjvw" sourceItem="_1JKxIIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1JKxI4yUEeWSKqZLVQxjvw" targetItem="_1JQQxoyUEeWSKqZLVQxjvw" sourceItem="_1JKxIoyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_1JLYMYyUEeWSKqZLVQxjvw" targetItem="_1JQQzIyUEeWSKqZLVQxjvw" sourceItem="_1JLYMIyUEeWSKqZLVQxjvw"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1IpMsIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1IpzwIyUEeWSKqZLVQxjvw" text="Essa classe cria uma conexão com o banco de dados para acessar a tabela doctor&#xD;&#xA;que guarda os médicos.&#xD;&#xA;@author Eliton&#xD;&#xA;@see {@link Doctor}, {@link HibernateHelper}" item="_1IuFOYyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xp-tcIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1IpzwYyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1IpzwoyUEeWSKqZLVQxjvw" text="Retorna uma lista de {@link Doctor} que estão guardadas no banco de dados.&#xD;&#xA;&#x9; * @return Uma lista de médicos que estão persistidas no banco de dados." item="_1IuFS4yUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xp_UgIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1Iqa0IyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1Iqa0YyUEeWSKqZLVQxjvw" text="Insere um {@link Doctor} no banco de dados. &#xD;&#xA;&#x9; * @param doctor médico a ser guardado no banco de dados." item="_1IuFUIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xp_7kIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1IrB4IyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1IrB4YyUEeWSKqZLVQxjvw" text="Remove do banco de dados o médico, {@link Doctor} passado por parâmetros.&#xD;&#xA;&#x9; * @param doctor médico a ser removido do banco de dados." item="_1IuFVoyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xp_7kYyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1Iy9sIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1Iy9sYyUEeWSKqZLVQxjvw" text="Essa classe cria uma conexão com o banco de dados para acessar a tabela patient&#xD;&#xA;que guarda os pacientes. &#xD;&#xA;@author Eliton&#xD;&#xA; *" item="_1I5EUIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqAioIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1IzkwYyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1IzkwoyUEeWSKqZLVQxjvw" text="Retorna uma lista de {@link Patient} que estão guardadas no banco de dados.&#xD;&#xA;&#x9; * @return Uma lista de pacientes que estão persistidas no banco de dados." item="_1I5EYoyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqAioYyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1I0L0IyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1I0L0YyUEeWSKqZLVQxjvw" text="Insere um {@link Patient} no banco de dados. &#xD;&#xA;&#x9; * @param patient paciente a ser guardado no banco de dados." item="_1I5EZ4yUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqBJsIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1I0L0oyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1I0y4IyUEeWSKqZLVQxjvw" text="Remove do banco de dados o paciente, {@link Patient} passado por parâmetros.&#xD;&#xA;&#x9; * @param patient paciente a ser removido do banco de dados." item="_1I5EbYyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqBJsYyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1I9VwIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1I9VwYyUEeWSKqZLVQxjvw" text="Essa classe cria uma conexão com o banco de dados para acessar a tabela schedule&#xD;&#xA;que guarda os cronogramas dos doutores.&#xD;&#xA;@author Eliton&#xD;&#xA;@see {@link Doctor}, {@link HibernateHelper}, {@link Schedule}&#xD;&#xA; *" item="_1JFRkIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqBwwIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1I-j4IyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1I-j4YyUEeWSKqZLVQxjvw" text="Retorna uma lista de {@link Schedule} que estão guardadas no banco de dados.&#xD;&#xA;&#x9; * @return Uma lista de cronograma que estão persistidas no banco de dados." item="_1JFRooyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqBwwYyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1I_K8IyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1I_K8YyUEeWSKqZLVQxjvw" text="Insere um {@link Schedule} no banco de dados. &#xD;&#xA;&#x9; * @param schedule cronograma a ser guardado no banco de dados." item="_1JFRp4yUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqCX0IyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1I_K8oyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1I_yAIyUEeWSKqZLVQxjvw" text="Remove do banco de dados o cronograma, {@link Schedule} passado por parâmetros.&#xD;&#xA;&#x9; * @param schedule cronograma a ser removido do banco de dados." item="_1JFRrYyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqCX0YyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1JJjAIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1JJjAYyUEeWSKqZLVQxjvw" text="Essa classe cria uma conexão com o banco de dados para acessar a tabela user&#xD;&#xA;que guarda os usuários do sistema. &#xD;&#xA;@author Eliton&#xD;&#xA; *" item="_1JPpoIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqC-4IyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1JKxIIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1JKxIYyUEeWSKqZLVQxjvw" text="Retorna uma lista de {@link User} que estão guardadas no banco de dados.&#xD;&#xA;&#x9; * @return Uma lista de usuário que estão persistidas no banco de dados." item="_1JQQwYyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqC-4YyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1JKxIoyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1JKxI4yUEeWSKqZLVQxjvw" text="Insere um {@link User} no banco de dados. &#xD;&#xA;&#x9; * @param user usuário a ser guardado no banco de dados." item="_1JQQxoyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqDl8IyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_1JLYMIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_1JLYMYyUEeWSKqZLVQxjvw" text="Remove do banco de dados o usuário, {@link User} passado por parâmetros.&#xD;&#xA;&#x9; * @param user usuário a ser removido do banco de dados." item="_1JQQzIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqDl8YyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1IuFOYyUEeWSKqZLVQxjvw" comments="_1IpMsIyUEeWSKqZLVQxjvw" targetConnectionVisual="_1IpzwIyUEeWSKqZLVQxjvw" name="DaoDoctor" associationsOut="_1Is3EIyUEeWSKqZLVQxjvw _1IteIIyUEeWSKqZLVQxjvw _1IuFMIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xLokkIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1IuFOoyUEeWSKqZLVQxjvw" position="50.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_1IuFO4yUEeWSKqZLVQxjvw" label="+"/>
+    <attributes xmi:id="_1IuFPIyUEeWSKqZLVQxjvw" name="session">
+      <modelElement href="lpsconsultas.uml#_xlKe4IyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1IuFPYyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlMUEIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1IuFPoyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1IuFP4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1IuFQIyUEeWSKqZLVQxjvw" name="Session">
+        <modelElement href="lpsconsultas.uml#_xeAuAIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1IuFQYyUEeWSKqZLVQxjvw" name="transaction">
+      <modelElement href="lpsconsultas.uml#_xlM7IIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1IuFQoyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlOJQIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1IuFQ4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1IuFRIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1IuFRYyUEeWSKqZLVQxjvw" name="Transaction">
+        <modelElement href="lpsconsultas.uml#_xeFmgIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1IuFRoyUEeWSKqZLVQxjvw" name="query">
+      <modelElement href="lpsconsultas.uml#_xlOwUIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1IuFR4yUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlP-cIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1IuFSIyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1IuFSYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1IuFSoyUEeWSKqZLVQxjvw" name="Query">
+        <modelElement href="lpsconsultas.uml#_xd8ckIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_1IuFS4yUEeWSKqZLVQxjvw" comments="_1IpzwYyUEeWSKqZLVQxjvw" targetConnectionVisual="_1IpzwoyUEeWSKqZLVQxjvw" name="select">
+      <modelElement href="lpsconsultas.uml#_xLuEIIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1IuFTIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1IuFTYyUEeWSKqZLVQxjvw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_1IuFToyUEeWSKqZLVQxjvw">
+        <modelElement href="lpsconsultas.uml#_xLvSQIyUEeWSKqZLVQxjvw"/>
+        <type xmi:id="_1IuFT4yUEeWSKqZLVQxjvw" name="Doctor">
+          <modelElement href="lpsconsultas.uml#_xRZ1YIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_1IuFUIyUEeWSKqZLVQxjvw" comments="_1Iqa0IyUEeWSKqZLVQxjvw" targetConnectionVisual="_1Iqa0YyUEeWSKqZLVQxjvw" name="insertUpdate">
+      <modelElement href="lpsconsultas.uml#_xeLGEIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1IuFUYyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1IuFUoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1IuFU4yUEeWSKqZLVQxjvw" name="doctor">
+        <modelElement href="lpsconsultas.uml#_xeLGEYyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1IuFVIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1IuFVYyUEeWSKqZLVQxjvw" name="Doctor">
+          <modelElement href="lpsconsultas.uml#_xRZ1YIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_1IuFVoyUEeWSKqZLVQxjvw" comments="_1IrB4IyUEeWSKqZLVQxjvw" targetConnectionVisual="_1IrB4YyUEeWSKqZLVQxjvw" name="delete">
+      <modelElement href="lpsconsultas.uml#_xeMUMIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1IuFV4yUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1IuFWIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1IuFWYyUEeWSKqZLVQxjvw" name="doctor">
+        <modelElement href="lpsconsultas.uml#_xeMUMYyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1IuFWoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1IuFW4yUEeWSKqZLVQxjvw" name="Doctor">
+          <modelElement href="lpsconsultas.uml#_xRZ1YIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1I5EUIyUEeWSKqZLVQxjvw" comments="_1Iy9sIyUEeWSKqZLVQxjvw" targetConnectionVisual="_1Iy9sYyUEeWSKqZLVQxjvw" name="DaoPatient" associationsOut="_1Iy9soyUEeWSKqZLVQxjvw _1Iy9s4yUEeWSKqZLVQxjvw _1IzkwIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xL9UsIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1I5EUYyUEeWSKqZLVQxjvw" position="348.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_1I5EUoyUEeWSKqZLVQxjvw" label="+"/>
+    <attributes xmi:id="_1I5EU4yUEeWSKqZLVQxjvw" name="session">
+      <modelElement href="lpsconsultas.uml#_xlSasIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1I5EVIyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlUP4IyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1I5EVYyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1I5EVoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1I5EV4yUEeWSKqZLVQxjvw" name="Session">
+        <modelElement href="lpsconsultas.uml#_xeAuAIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1I5EWIyUEeWSKqZLVQxjvw" name="transaction">
+      <modelElement href="lpsconsultas.uml#_xlU28IyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1I5EWYyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlWFEIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1I5EWoyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1I5EW4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1I5EXIyUEeWSKqZLVQxjvw" name="Transaction">
+        <modelElement href="lpsconsultas.uml#_xeFmgIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1I5EXYyUEeWSKqZLVQxjvw" name="query">
+      <modelElement href="lpsconsultas.uml#_xlWsIIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1I5EXoyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlX6QIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1I5EX4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1I5EYIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1I5EYYyUEeWSKqZLVQxjvw" name="Query">
+        <modelElement href="lpsconsultas.uml#_xd8ckIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_1I5EYoyUEeWSKqZLVQxjvw" comments="_1IzkwYyUEeWSKqZLVQxjvw" targetConnectionVisual="_1IzkwoyUEeWSKqZLVQxjvw" name="select">
+      <modelElement href="lpsconsultas.uml#_xL_w8IyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I5EY4yUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1I5EZIyUEeWSKqZLVQxjvw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_1I5EZYyUEeWSKqZLVQxjvw">
+        <modelElement href="lpsconsultas.uml#_xMAYAIyUEeWSKqZLVQxjvw"/>
+        <type xmi:id="_1I5EZoyUEeWSKqZLVQxjvw" name="Patient">
+          <modelElement href="lpsconsultas.uml#_xPzS4IyUEeWSKqZLVQxjvw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_1I5EZ4yUEeWSKqZLVQxjvw" comments="_1I0L0IyUEeWSKqZLVQxjvw" targetConnectionVisual="_1I0L0YyUEeWSKqZLVQxjvw" name="insertUpdate">
+      <modelElement href="lpsconsultas.uml#_xeWFMIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I5EaIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1I5EaYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1I5EaoyUEeWSKqZLVQxjvw" name="patient">
+        <modelElement href="lpsconsultas.uml#_xeWFMYyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1I5Ea4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1I5EbIyUEeWSKqZLVQxjvw" name="Patient">
+          <modelElement href="lpsconsultas.uml#_xPzS4IyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_1I5EbYyUEeWSKqZLVQxjvw" comments="_1I0L0oyUEeWSKqZLVQxjvw" targetConnectionVisual="_1I0y4IyUEeWSKqZLVQxjvw" name="delete">
+      <modelElement href="lpsconsultas.uml#_xeXTUIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1I5EboyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1I5Eb4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1I5EcIyUEeWSKqZLVQxjvw" name="patient">
+        <modelElement href="lpsconsultas.uml#_xeXTUYyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1I5EcYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1I5EcoyUEeWSKqZLVQxjvw" name="Patient">
+          <modelElement href="lpsconsultas.uml#_xPzS4IyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1JFRkIyUEeWSKqZLVQxjvw" comments="_1I9VwIyUEeWSKqZLVQxjvw" targetConnectionVisual="_1I9VwYyUEeWSKqZLVQxjvw" name="DaoSchedule" associationsIn="_1I980IyUEeWSKqZLVQxjvw" associationsOut="_1I980YyUEeWSKqZLVQxjvw _1I980oyUEeWSKqZLVQxjvw _1I9804yUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xMT6AIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JFRkYyUEeWSKqZLVQxjvw" position="-287.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_1JFRkoyUEeWSKqZLVQxjvw" label="+"/>
+    <attributes xmi:id="_1JFRk4yUEeWSKqZLVQxjvw" name="session">
+      <modelElement href="lpsconsultas.uml#_xlaWgIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1JFRlIyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlcLsIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1JFRlYyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JFRloyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1JFRl4yUEeWSKqZLVQxjvw" name="Session">
+        <modelElement href="lpsconsultas.uml#_xeAuAIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1JFRmIyUEeWSKqZLVQxjvw" name="transaction">
+      <modelElement href="lpsconsultas.uml#_xlcywIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1JFRmYyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xleA4IyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1JFRmoyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JFRm4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1JFRnIyUEeWSKqZLVQxjvw" name="Transaction">
+        <modelElement href="lpsconsultas.uml#_xeFmgIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1JFRnYyUEeWSKqZLVQxjvw" name="query">
+      <modelElement href="lpsconsultas.uml#_xlfPAIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1JFRnoyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlgdIIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1JFRn4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JFRoIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1JFRoYyUEeWSKqZLVQxjvw" name="Query">
+        <modelElement href="lpsconsultas.uml#_xd8ckIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_1JFRooyUEeWSKqZLVQxjvw" comments="_1I-j4IyUEeWSKqZLVQxjvw" targetConnectionVisual="_1I-j4YyUEeWSKqZLVQxjvw" name="select">
+      <modelElement href="lpsconsultas.uml#_xMWWQIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JFRo4yUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JFRpIyUEeWSKqZLVQxjvw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_1JFRpYyUEeWSKqZLVQxjvw">
+        <modelElement href="lpsconsultas.uml#_xMW9UIyUEeWSKqZLVQxjvw"/>
+        <type xmi:id="_1JFRpoyUEeWSKqZLVQxjvw" name="Schedule">
+          <modelElement href="lpsconsultas.uml#_xOg5cIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_1JFRp4yUEeWSKqZLVQxjvw" comments="_1I_K8IyUEeWSKqZLVQxjvw" targetConnectionVisual="_1I_K8YyUEeWSKqZLVQxjvw" name="insertUpdate">
+      <modelElement href="lpsconsultas.uml#_xegdQIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JFRqIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JFRqYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1JFRqoyUEeWSKqZLVQxjvw" name="schedule">
+        <modelElement href="lpsconsultas.uml#_xegdQYyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1JFRq4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1JFRrIyUEeWSKqZLVQxjvw" name="Schedule">
+          <modelElement href="lpsconsultas.uml#_xOg5cIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_1JFRrYyUEeWSKqZLVQxjvw" comments="_1I_K8oyUEeWSKqZLVQxjvw" targetConnectionVisual="_1I_yAIyUEeWSKqZLVQxjvw" name="delete">
+      <modelElement href="lpsconsultas.uml#_xehrYIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JFRroyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JFRr4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1JFRsIyUEeWSKqZLVQxjvw" name="schedule">
+        <modelElement href="lpsconsultas.uml#_xehrYYyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1JFRsYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1JFRsoyUEeWSKqZLVQxjvw" name="Schedule">
+          <modelElement href="lpsconsultas.uml#_xOg5cIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1JPpoIyUEeWSKqZLVQxjvw" comments="_1JJjAIyUEeWSKqZLVQxjvw" targetConnectionVisual="_1JJjAYyUEeWSKqZLVQxjvw" name="DaoUser" associationsOut="_1JKKEIyUEeWSKqZLVQxjvw _1JKKEYyUEeWSKqZLVQxjvw _1JKKEoyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xMjxoIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_1JQQsIyUEeWSKqZLVQxjvw" position="-558.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_1JQQsYyUEeWSKqZLVQxjvw" label="+"/>
+    <attributes xmi:id="_1JQQsoyUEeWSKqZLVQxjvw" name="session">
+      <modelElement href="lpsconsultas.uml#_xlhrQIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1JQQs4yUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xljgcIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1JQQtIyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JQQtYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1JQQtoyUEeWSKqZLVQxjvw" name="Session">
+        <modelElement href="lpsconsultas.uml#_xeAuAIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1JQQt4yUEeWSKqZLVQxjvw" name="transaction">
+      <modelElement href="lpsconsultas.uml#_xlkHgIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1JQQuIyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xllVoIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1JQQuYyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JQQuoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1JQQu4yUEeWSKqZLVQxjvw" name="Transaction">
+        <modelElement href="lpsconsultas.uml#_xeFmgIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_1JQQvIyUEeWSKqZLVQxjvw" name="query">
+      <modelElement href="lpsconsultas.uml#_xllVoYyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_1JQQvYyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xlnK0IyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_1JQQvoyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_1JQQv4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_1JQQwIyUEeWSKqZLVQxjvw" name="Query">
+        <modelElement href="lpsconsultas.uml#_xd8ckIyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_1JQQwYyUEeWSKqZLVQxjvw" comments="_1JKxIIyUEeWSKqZLVQxjvw" targetConnectionVisual="_1JKxIYyUEeWSKqZLVQxjvw" name="select">
+      <modelElement href="lpsconsultas.uml#_xMm08IyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JQQwoyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JQQw4yUEeWSKqZLVQxjvw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_1JQQxIyUEeWSKqZLVQxjvw">
+        <modelElement href="lpsconsultas.uml#_xMm08YyUEeWSKqZLVQxjvw"/>
+        <type xmi:id="_1JQQxYyUEeWSKqZLVQxjvw" name="User">
+          <modelElement href="lpsconsultas.uml#_xTI6wIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_1JQQxoyUEeWSKqZLVQxjvw" comments="_1JKxIoyUEeWSKqZLVQxjvw" targetConnectionVisual="_1JKxI4yUEeWSKqZLVQxjvw" name="insertUpdate">
+      <modelElement href="lpsconsultas.uml#_xepnMIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JQQx4yUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JQQyIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1JQQyYyUEeWSKqZLVQxjvw" name="user">
+        <modelElement href="lpsconsultas.uml#_xeqOQIyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1JQQyoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1JQQy4yUEeWSKqZLVQxjvw" name="User">
+          <modelElement href="lpsconsultas.uml#_xTI6wIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_1JQQzIyUEeWSKqZLVQxjvw" comments="_1JLYMIyUEeWSKqZLVQxjvw" targetConnectionVisual="_1JLYMYyUEeWSKqZLVQxjvw" name="delete">
+      <modelElement href="lpsconsultas.uml#_xeq1UIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_1JQQzYyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_1JQQzoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_1JQQz4yUEeWSKqZLVQxjvw" name="user">
+        <modelElement href="lpsconsultas.uml#_xercYIyUEeWSKqZLVQxjvw"/>
+        <cardinality xmi:id="_1JQQ0IyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+        <type xmi:id="_1JQQ0YyUEeWSKqZLVQxjvw" name="User">
+          <modelElement href="lpsconsultas.uml#_xTI6wIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

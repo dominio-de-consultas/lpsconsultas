@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_ymJawIyUEeWSKqZLVQxjvw">
+  <modelElement href="lpsconsultas.uml#_w6uawIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_04ZKMIyUEeWSKqZLVQxjvw" targetItem="_04hGAIyUEeWSKqZLVQxjvw" sourceItem="_04YjIIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_04ZxQYyUEeWSKqZLVQxjvw" targetItem="_04hGF4yUEeWSKqZLVQxjvw" sourceItem="_04ZxQIyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_04aYUIyUEeWSKqZLVQxjvw" targetItem="_04hGHIyUEeWSKqZLVQxjvw" sourceItem="_04ZxQoyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_04aYUoyUEeWSKqZLVQxjvw" targetItem="_04hGH4yUEeWSKqZLVQxjvw" sourceItem="_04aYUYyUEeWSKqZLVQxjvw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_04dboIyUEeWSKqZLVQxjvw" source="_04hGAIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xsOJIIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_04po4IyUEeWSKqZLVQxjvw" position="70.0,70.0"/>
+    <stereotypes xmi:id="_04dboYyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xsQlYIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_04dbooyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_04dbo4yUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xsOJIYyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04dbpIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_04dbpYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_04dbpoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="sessionFactory" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xnG_oIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04dbp4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_04dbqIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_04epwIyUEeWSKqZLVQxjvw" source="_04hGAIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xsQlYYyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_04po4YyUEeWSKqZLVQxjvw" position="90.0,90.0"/>
+    <stereotypes xmi:id="_04epwYyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xsTosIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_04epwoyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_04epw4yUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xsQlYoyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04epxIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_04epxYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_04epxoyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="configuration" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xnI00IyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04epx4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_04epyIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_04f34IyUEeWSKqZLVQxjvw" source="_04hGAIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xsTosYyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_04qP8IyUEeWSKqZLVQxjvw" position="110.0,110.0"/>
+    <stereotypes xmi:id="_04f34YyUEeWSKqZLVQxjvw" name="Reference">
+      <modelElement href="lpsconsultas.uml#_xsWsAIyUEeWSKqZLVQxjvw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_04f34oyUEeWSKqZLVQxjvw" text=""/>
+    <sourceRole xmi:id="_04f344yUEeWSKqZLVQxjvw" aggregationKind="NONE" name="">
+      <modelElement href="lpsconsultas.uml#_xsTosoyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04f35IyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_04f35YyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_04f35oyUEeWSKqZLVQxjvw" aggregationKind="NONE" name="registry" navigable="true">
+      <modelElement href="lpsconsultas.uml#_xnKqAIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04f354yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_04f36IyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_04YjIIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_04ZKMIyUEeWSKqZLVQxjvw" text="Classe que auxilia na conexão com o BD &#xD;&#xA;@author Eliton&#xD;&#xA; *" item="_04hGAIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqlxcIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_04ZxQIyUEeWSKqZLVQxjvw" sourceConnectionVisual="_04ZxQYyUEeWSKqZLVQxjvw" text="Método que retorna uma sessão criada. (Singleton)&#xD;&#xA;     * @return uma sessão criada" item="_04hGF4yUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqlxcYyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_04ZxQoyUEeWSKqZLVQxjvw" sourceConnectionVisual="_04aYUIyUEeWSKqZLVQxjvw" text="Método que atualiza os dados do banco de dados." item="_04hGHIyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqmYgIyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_04aYUYyUEeWSKqZLVQxjvw" sourceConnectionVisual="_04aYUoyUEeWSKqZLVQxjvw" text="Método que fecha a conexão existente com o banco de dados." item="_04hGH4yUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xqmYgYyUEeWSKqZLVQxjvw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_04hGAIyUEeWSKqZLVQxjvw" comments="_04YjIIyUEeWSKqZLVQxjvw" targetConnectionVisual="_04ZKMIyUEeWSKqZLVQxjvw" name="HibernateHelper" associationsOut="_04dboIyUEeWSKqZLVQxjvw _04epwIyUEeWSKqZLVQxjvw _04f34IyUEeWSKqZLVQxjvw">
+    <modelElement href="lpsconsultas.uml#_xUatIIyUEeWSKqZLVQxjvw"/>
+    <visualProperties xmi:id="_04hGAYyUEeWSKqZLVQxjvw" position="50.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_04hGAoyUEeWSKqZLVQxjvw" label="+"/>
+    <attributes xmi:id="_04hGA4yUEeWSKqZLVQxjvw" name="sessionFactory" staticAttribute="true">
+      <modelElement href="lpsconsultas.uml#_xnG_oIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_04hGBIyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xnINwIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_04hGBYyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_04hGBoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_04hGB4yUEeWSKqZLVQxjvw" name="SessionFactory">
+        <modelElement href="lpsconsultas.uml#_xhp34IyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_04hGCIyUEeWSKqZLVQxjvw" name="configuration" staticAttribute="true">
+      <modelElement href="lpsconsultas.uml#_xnI00IyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_04hGCYyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xnKC8IyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_04hGCoyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_04hGC4yUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_04hGDIyUEeWSKqZLVQxjvw" name="Configuration">
+        <modelElement href="lpsconsultas.uml#_xhzB0YyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_04hGDYyUEeWSKqZLVQxjvw" name="registry" staticAttribute="true">
+      <modelElement href="lpsconsultas.uml#_xnKqAIyUEeWSKqZLVQxjvw"/>
+      <stereotypes xmi:id="_04hGDoyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xnL4IIyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_04hGD4yUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_04hGEIyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <type xmi:id="_04hGEYyUEeWSKqZLVQxjvw" name="ServiceRegistry">
+        <modelElement href="lpsconsultas.uml#_xh2FIYyUEeWSKqZLVQxjvw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_04hGEoyUEeWSKqZLVQxjvw" name="_initializer1" staticOperation="true">
+      <modelElement href="lpsconsultas.uml#_xUdJYIyUEeWSKqZLVQxjvw"/>
+      <keywords xmi:id="_04hGE4yUEeWSKqZLVQxjvw" keyword="init"/>
+      <stereotypes xmi:id="_04hGFIyUEeWSKqZLVQxjvw" name="LegacyStyledElement">
+        <modelElement href="lpsconsultas.uml#_xUdwcYyUEeWSKqZLVQxjvw"/>
+      </stereotypes>
+      <visibility xmi:id="_04hGFYyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_04hGFoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_04hGF4yUEeWSKqZLVQxjvw" comments="_04ZxQIyUEeWSKqZLVQxjvw" targetConnectionVisual="_04ZxQYyUEeWSKqZLVQxjvw" name="getSessao" staticOperation="true">
+      <modelElement href="lpsconsultas.uml#_xUeXgIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04hGGIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_04hGGYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_04hGGoyUEeWSKqZLVQxjvw">
+        <modelElement href="lpsconsultas.uml#_xkty8IyUEeWSKqZLVQxjvw"/>
+        <type xmi:id="_04hGG4yUEeWSKqZLVQxjvw" name="Session">
+          <modelElement href="lpsconsultas.uml#_xeAuAIyUEeWSKqZLVQxjvw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_04hGHIyUEeWSKqZLVQxjvw" comments="_04ZxQoyUEeWSKqZLVQxjvw" targetConnectionVisual="_04aYUIyUEeWSKqZLVQxjvw" name="atualizarBD" staticOperation="true">
+      <modelElement href="lpsconsultas.uml#_xUfloIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04hGHYyUEeWSKqZLVQxjvw" label="-"/>
+      <cardinality xmi:id="_04hGHoyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_04hGH4yUEeWSKqZLVQxjvw" comments="_04aYUYyUEeWSKqZLVQxjvw" targetConnectionVisual="_04aYUoyUEeWSKqZLVQxjvw" name="close">
+      <modelElement href="lpsconsultas.uml#_xUgMsIyUEeWSKqZLVQxjvw"/>
+      <visibility xmi:id="_04hGIIyUEeWSKqZLVQxjvw" label="+"/>
+      <cardinality xmi:id="_04hGIYyUEeWSKqZLVQxjvw" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
