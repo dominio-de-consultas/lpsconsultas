@@ -295,6 +295,8 @@ public class Doctor {
 			System.out.println("Início: " + s.starterDate.toString());
 			System.out.println("Término: " + s.finalDate.toString());
 			System.out.println("Disponibilidade: " + s.available.toString());
+			System.out.println("Marcado por(CPF): " + s.cpfUser);
+			System.out.println("Pertence co médico(CRM): " + s.getCRM());			
 		}
 	}
 	/**

@@ -30,6 +30,10 @@ public class SchedulingSystem
 	public List<Doctor> listOfDoctors;
 	/** Lista de pacientes*/
 	public List<Patient> listOfPatients;
+	/**
+	 * Usuário da sessão
+	 */
+	private User userSession;
 
 	static SimpleDateFormat dateAndHourFormat;
 	static SimpleDateFormat dateFormat;
@@ -86,6 +90,7 @@ public class SchedulingSystem
 				user.listOfAttributes[Attributes.senha.ordinal()].equals(password)
 			)
 			{
+				this.userSession = user;
 				return true;
 			}
 		}
@@ -179,7 +184,7 @@ public class SchedulingSystem
 	/**
 	 * Método que configura uma consulta no BD, através do doutor passado por parâmetro 
 	 * recuperando seu cronograma, do paciente que participará da consulta e do identificador 
-	 * do cronograma.
+	 * do cronograma e também adiciona a consulta o usuário que cria a consulta.
 	 * @param doctor
 	 * @param patient
 	 * @param idSchedule
@@ -192,6 +197,7 @@ public class SchedulingSystem
 				if(s.getAvailable()){
 					s.setAvailable(false);
 					s.setCPF(patient.getCPF());
+					s.setCpfUser(this.userSession.getCPF());
 					doctor.saveOrUpdateSchedule(s);
 					return true;
 				}

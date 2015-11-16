@@ -1,7 +1,6 @@
 package main;
 import java.text.ParseException;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main
@@ -123,6 +122,7 @@ public class Main
 				case "22":
 					for(Doctor d : schedulingSystem.listOfDoctors)
 						d.printListOfSchedules();
+					break;
 				//------------------------------------------------------------
 				//0 - encerrra o sistema
 				case "0":

@@ -23,5 +23,8 @@
 		<property name="CPF" type="java.lang.String">
 			<column name="CPF"></column>
 		</property>
+		<property name="CpfUser" type="java.lang.String">
+			<column name="CPFUSER"></column>
+		</property>
 	</class>
 </hibernate-mapping>

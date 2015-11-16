@@ -37,6 +37,24 @@ public class Schedule implements Comparable<Schedule>
 	 */
 	public String cpf;
 	/**
+	 * Identificador do usuário que agendou a consulta.
+	 */
+	public String cpfUser;
+	/**
+	 * @return Retorna o cpf do usuário que criou a consulta.
+	 */
+	public String getCpfUser() {
+		return cpfUser;
+	}
+
+	/**
+	 * @param cpfUser Configura o cpf do usuário que criou a consulta.
+	 */
+	public void setCpfUser(String cpfUser) {
+		this.cpfUser = cpfUser;
+	}
+
+	/**
 	 * 
 	 * @return Retorna id do médico que o possui.(CRM)
 	 */
