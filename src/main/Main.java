@@ -27,8 +27,6 @@ public class Main
 		Boolean validPassword = false;
 		do
 		{
-			System.out.println("Lista de usuários cadastrados:");
-			schedulingSystem.printListOfUsers();
 			
 			System.out.println("LOGIN");			
 			System.out.print("CPF: ");
@@ -50,7 +48,6 @@ public class Main
 		{
 			panelOptions(schedulingSystem);
 			option = scanner.nextLine();
-			option = option.toUpperCase();
 			
 			switch (option)
 			{
@@ -182,7 +179,6 @@ public class Main
 	}
 
 	private static void createPatient(SchedulingSystem schedulingSystem) {
-		// TODO Auto-generated method stub
 		Patient newPatient = new Patient();
 		
 		
@@ -223,7 +219,6 @@ public class Main
 					dateAux = SchedulingSystem.dateFormat.parse(aux);
 					newPatient.setDataDeNascimento(dateAux);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
 					schedulingSystem.closeHelper();
 					e.printStackTrace();
 					System.exit(1);
@@ -235,9 +230,9 @@ public class Main
 	}
 
 	private static void insertSchedule(SchedulingSystem schedulingSystem) {
-		// TODO Auto-generated method stub
-		System.out.println("\nEscolha um médico:");
+		
 		schedulingSystem.printListOfDoctors();
+		System.out.println("\nEscolha um médico:");
 		aux = scanner.nextLine();
 		Doctor doctor = schedulingSystem.listOfDoctors.get(Integer.parseInt(aux));
 		Schedule newSchedule = new Schedule();
@@ -252,7 +247,6 @@ public class Main
 			dateAux = SchedulingSystem.dateAndHourFormat.parse(aux);
 			newSchedule.setStarterDate(dateAux);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			schedulingSystem.closeHelper();
 			e.printStackTrace();
 			System.exit(1);
@@ -267,7 +261,6 @@ public class Main
 			dateAux = SchedulingSystem.dateAndHourFormat.parse(aux);
 			newSchedule.setFinalDate(dateAux);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			schedulingSystem.closeHelper();
 			e.printStackTrace();
 			System.exit(1);
@@ -280,7 +273,6 @@ public class Main
 	}
 
 	private static void createDoctor(SchedulingSystem schedulingSystem) {
-		// TODO Auto-generated method stub
 		Doctor newDoctor = new Doctor();
 		for(int i = 0; i < DoctorAttributes.values().length; i++)
 		{
@@ -310,7 +302,6 @@ public class Main
 					dateAux = SchedulingSystem.dateFormat.parse(aux);
 					newDoctor.setDataDeNascimento(dateAux);
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
 					schedulingSystem.closeHelper();
 					e.printStackTrace();
 					System.exit(1);
@@ -327,7 +318,6 @@ public class Main
 	}
 
 	private static void editUser(SchedulingSystem schedulingSystem) {
-		// TODO Auto-generated method stub
 		if(schedulingSystem.hasUser())
 		{
 			schedulingSystem.printListOfUsers();

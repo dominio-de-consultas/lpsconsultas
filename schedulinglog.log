@@ -1,0 +1,16 @@
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:261 - HHH000388: Unsuccessful: create table DOCTOR (CRM integer not null, NOME varchar(255), CPF varchar(255), DATADENASCIMENTO datetime, ESPECIALIDADE varchar(255), EMAIL varchar(255), RUA varchar(255), CEP varchar(255), numero integer, BAIRRO varchar(255), MUNICIPIO varchar(255), ESTADO varchar(255), COMPLEMENTO varchar(255), TELEFONE varchar(255), primary key (CRM))
+HHH000388: Unsuccessful: create table DOCTOR (CRM integer not null, NOME varchar(255), CPF varchar(255), DATADENASCIMENTO datetime, ESPECIALIDADE varchar(255), EMAIL varchar(255), RUA varchar(255), CEP varchar(255), numero integer, BAIRRO varchar(255), MUNICIPIO varchar(255), ESTADO varchar(255), COMPLEMENTO varchar(255), TELEFONE varchar(255), primary key (CRM))
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:262 - Table 'DOCTOR' already exists
+Table 'DOCTOR' already exists
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:261 - HHH000388: Unsuccessful: create table PATIENT (CPF varchar(255) not null, NOME varchar(255), DATADENASCIMENTO datetime, EMAIL varchar(255), RUA varchar(255), CEP varchar(255), NUMERO integer, BAIRRO varchar(255), MUNICIPIO varchar(255), ESTADO varchar(255), COMPLEMENTO varchar(255), TELEFONE varchar(255), TIPOSANGUINEO varchar(255), ALERGIAS varchar(255), DESCRICAOHISTORICOFAMILIAR varchar(255), DOADORDEORGAOS bit, primary key (CPF))
+HHH000388: Unsuccessful: create table PATIENT (CPF varchar(255) not null, NOME varchar(255), DATADENASCIMENTO datetime, EMAIL varchar(255), RUA varchar(255), CEP varchar(255), NUMERO integer, BAIRRO varchar(255), MUNICIPIO varchar(255), ESTADO varchar(255), COMPLEMENTO varchar(255), TELEFONE varchar(255), TIPOSANGUINEO varchar(255), ALERGIAS varchar(255), DESCRICAOHISTORICOFAMILIAR varchar(255), DOADORDEORGAOS bit, primary key (CPF))
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:262 - Table 'PATIENT' already exists
+Table 'PATIENT' already exists
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:261 - HHH000388: Unsuccessful: create table SCHEDULE (PID integer not null, STARTERDATE datetime, FINALDATE datetime, AVAILABLE bit, CRM integer, CPF varchar(255), CPFUSER varchar(255), primary key (PID))
+HHH000388: Unsuccessful: create table SCHEDULE (PID integer not null, STARTERDATE datetime, FINALDATE datetime, AVAILABLE bit, CRM integer, CPF varchar(255), CPFUSER varchar(255), primary key (PID))
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:262 - Table 'SCHEDULE' already exists
+Table 'SCHEDULE' already exists
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:261 - HHH000388: Unsuccessful: create table USER (CPF varchar(255) not null, NOME varchar(255), SENHA varchar(255), TELEFONE varchar(255), EMAIL varchar(255), primary key (CPF))
+HHH000388: Unsuccessful: create table USER (CPF varchar(255) not null, NOME varchar(255), SENHA varchar(255), TELEFONE varchar(255), EMAIL varchar(255), primary key (CPF))
+16/11/15 19:32 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate:262 - Table 'USER' already exists
+Table 'USER' already exists
