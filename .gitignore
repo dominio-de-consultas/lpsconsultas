@@ -17,7 +17,7 @@ hs_err_pid*
 *.log
 
 #umls
-umls/*
+/umls/*
 *.umlcd
 *.uml
 
