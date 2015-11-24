@@ -30,7 +30,7 @@ public class DaoSchedule {
 	 */
 	private Transaction transaction;
 	/**
-	 * Atributo que contem a Query de consulta, inserção ou remoção no bancon de dados.
+	 * Atributo que contem a Query de consulta, inserção ou remoção no banco de dados.
 	 * @see {@link Query}
 	 */
 	private Query query;
