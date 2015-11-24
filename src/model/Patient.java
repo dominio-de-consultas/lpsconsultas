@@ -38,7 +38,7 @@ public class Patient
 	 * getter para o atributo nome.
 	 * @return
 	 */
-	String getNome()
+	public String getNome()
 	{
 		return (String) this.listOfAttributes[PatientAttributes.nome.ordinal()];
 	}
@@ -56,7 +56,7 @@ public class Patient
 	 * getter para o atributo CPF. 
 	 * @return
 	 */
-	String getCPF()
+	public String getCPF()
 	{
 		return (String) this.listOfAttributes[PatientAttributes.CPF.ordinal()];
 	}

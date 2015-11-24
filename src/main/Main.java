@@ -9,7 +9,6 @@ import model.DoctorAttributes;
 import model.Patient;
 import model.PatientAttributes;
 import model.Schedule;
-import model.SchedulingSystem;
 import model.User;
 
 public class Main

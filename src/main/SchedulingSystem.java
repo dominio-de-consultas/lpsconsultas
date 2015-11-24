@@ -1,4 +1,4 @@
-package model;
+package main;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,11 @@ import java.util.List;
 import dao.DaoDoctor;
 import dao.DaoPatient;
 import dao.DaoUser;
+import model.Attributes;
+import model.Doctor;
+import model.Patient;
+import model.Schedule;
+import model.User;
 import util.HibernateHelper;
 
 /** @class SchedulingSystem

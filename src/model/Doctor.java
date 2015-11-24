@@ -19,7 +19,7 @@ public class Doctor {
 	/**
 	 * Conjunto contendo todos os cronogramas de um médicos de forma ordenada
 	 */
-	TreeSet<Schedule> listOfSchedules = new TreeSet<Schedule>();
+	public TreeSet<Schedule> listOfSchedules = new TreeSet<Schedule>();
 	/** referência para a classe que gerencia o relacionamento entre objetos da classe Schedule e o BD*/
 	DaoSchedule daoSchedule;
 	/**

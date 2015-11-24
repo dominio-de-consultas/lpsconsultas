@@ -41,7 +41,7 @@ public class User {
 	 * Construtor de um objeto da classe User que já inicializa os valores dos atributos do objeto com os valores corretos.
 	 * @param attributesOfUser
 	 */
-	User(String[] attributesOfUser)
+	public User(String[] attributesOfUser)
 	{
 		
 		this.listOfAttributes = new String[Attributes.values().length];
@@ -64,7 +64,7 @@ public class User {
 	 * getter para a variável nome
 	 * @return
 	 */
-	String getNome()
+	public String getNome()
 	{
 		return this.listOfAttributes[Attributes.nome.ordinal()].toString();
 	}
@@ -80,7 +80,7 @@ public class User {
 	 * getter para a variável CPF
 	 * @return
 	 */
-	String getCPF()
+	public String getCPF()
 	{
 		return this.listOfAttributes[Attributes.CPF.ordinal()].toString();
 		
