@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 /**
  * Classe cujos objetos referem-se aos dados do cadastro de um usuário cadastrado no sistema
  *
@@ -155,48 +153,5 @@ public class User {
 		{
 			System.out.println(i+" : "+Attributes.values()[i].toString()+" : "+this.listOfAttributes[i].toString());
 		}
-	}
-	/**
-	 * Adiciona um cronograma ao médico especificado
-	 * @param doctor
-	 * @param starterDate
-	 * @param finalDate
-	 * @param available
-	 */
-	public void addSchedule(Doctor doctor, Date starterDate, Date finalDate, Boolean available)
-	{
-		if(verifySchedules(doctor, starterDate, finalDate))
-		{
-			Schedule schedule = new Schedule(starterDate, finalDate, available, doctor.getCRM());
-			doctor.listOfSchedules.add(schedule);
-		}
-		else
-		{
-			System.out.println("Já existem um cronograma neste horário");
-		}
-		
-	}
-	/**
-	 * Verifica se um certo cronograma pode ser criado
-	 */
-	Boolean verifySchedules(Doctor doctor, Date starterDate, Date finalDate)
-	{
-		for(Schedule s : doctor.listOfSchedules)
-		{
-			if
-			(
-				(starterDate.after(s.starterDate) && starterDate.before(s.finalDate))	
-				||
-				(finalDate.before(s.finalDate) && finalDate.after(s.starterDate))
-				||
-				(starterDate.before(s.starterDate) && finalDate.after(s.finalDate))
-			)
-			{
-				return false;
-			}
-		}
-			
-		
-		return true;
 	}
 }

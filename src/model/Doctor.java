@@ -30,33 +30,6 @@ public class Doctor {
 		this.listOfAttributes = new Object[DoctorAttributes.values().length];
 		daoSchedule = new DaoSchedule();
 	}
-	/**
-	 * Atualiza a lista de cronogramas do médico com o que existe no banco de dados.
-	 */
-	public void updateListOfSchedules(){
-		List<Schedule> list = new ArrayList<Schedule>();
-		list = daoSchedule.select();
-		int i = 0;
-		for(Schedule s : list)
-		{
-			if(s.getCRM() != this.getCRM())
-				list.remove(i);
-			i++;
-		}
-		if(list != null)
-			this.listOfSchedules = new TreeSet<Schedule>(list);
-	}
-	
-	/**
-	 * Insere um cronograma no banco de dados e em seguida atualiza a lista de cronogramas
-	 * chamando o método {@link Doctor#updateListOfSchedules()}.
-	 * Para isso ele usa a classe {@link DaoSchedule} e método {@link DaoSchedule#insertUpdate(Schedule)}.
-	 * @param schedule Um cronograma que será salvo no banco de dados 
-	 */
-	public void saveOrUpdateSchedule(Schedule schedule){
-		daoSchedule.insertUpdate(schedule);
-		updateListOfSchedules();
-	}
 	
 	// ----------Getter e Setter genericos----------
 	/**
@@ -343,6 +316,99 @@ public class Doctor {
 			}
 			
 		}
+	}
+
+	/**
+	 * Atualiza a lista de cronogramas do médico com o que existe no banco de dados.
+	 */
+	public void updateListOfSchedules(){
+		List<Schedule> list = new ArrayList<Schedule>();
+		list = daoSchedule.select();
+		int i = 0;
+		List<Schedule> list2 = new ArrayList<Schedule>();
+		for(Schedule s : list)
+		{
+			if(s.getCRM().equals(this.getCRM()))
+				list2.add(s);
+			i++;
+		}
+		if(list != null)
+			this.listOfSchedules = new TreeSet<Schedule>(list2);
+	}
+	
+	/**
+	 * Insere um cronograma no banco de dados e em seguida atualiza a lista de cronogramas
+	 * chamando o método {@link Doctor#updateListOfSchedules()}.
+	 * Para isso ele usa a classe {@link DaoSchedule} e método {@link DaoSchedule#insertUpdate(Schedule)}.
+	 * @param schedule Um cronograma que será salvo no banco de dados 
+	 */
+	public void saveOrUpdateSchedule(Schedule schedule){
+		daoSchedule.insertUpdate(schedule);
+		updateListOfSchedules();
+	}
+
+	/**
+	 * Adiciona um cronograma ao médico especificado
+	 * @param starterDate
+	 * @param finalDate
+	 * @param available
+	 */
+	public boolean addSchedule( Date starterDate, Date finalDate, Boolean available)
+	{
+		if(verifySchedules(starterDate, finalDate))
+		{
+			Schedule schedule = new Schedule(starterDate, finalDate, available, getCRM());
+			saveOrUpdateSchedule(schedule);
+			return true;
+		}
+		
+		System.out.println("Já existem um cronograma neste horário");
+		
+		return false;
+		
+	}
+
+	/**
+	 * Adiciona um cronograma ao médico especificado
+	 * @param starterDate
+	 * @param finalDate
+	 * @param available
+	 */
+	public boolean addSchedule(Schedule schedule)
+	{
+		if(verifySchedules(schedule.starterDate, schedule.finalDate))
+		{
+			saveOrUpdateSchedule(schedule);
+			return true;
+		}
+		
+		System.out.println("Já existem um cronograma neste horário");
+		
+		return false;
+		
+	}
+	/**
+	 * Verifica se um certo cronograma pode ser criado
+	 */
+	Boolean verifySchedules( Date starterDate, Date finalDate)
+	{
+		for(Schedule s : listOfSchedules)
+		{
+			if
+			(
+				(starterDate.after(s.starterDate) && starterDate.before(s.finalDate))	
+				||
+				(finalDate.before(s.finalDate) && finalDate.after(s.starterDate))
+				||
+				(starterDate.before(s.starterDate) && finalDate.after(s.finalDate))
+			)
+			{
+				return false;
+			}
+		}
+			
+		
+		return true;
 	}
 	
 

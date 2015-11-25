@@ -267,7 +267,8 @@ public class Main
 		newSchedule.setCRM(doctor.getCRM());
 		newSchedule.setAvailable(true);
 		
-		doctor.saveOrUpdateSchedule(newSchedule);		
+		if(!doctor.addSchedule(newSchedule))
+			insertSchedule(schedulingSystem);
 		
 	}
 
